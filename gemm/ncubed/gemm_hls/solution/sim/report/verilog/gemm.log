@@ -1,0 +1,32 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+make[1]: Entering directory '/nfs/home/xushuoxiang/Machsuite_V0.1/gemm/ncubed/gemm_hls/solution/sim/wrapc'
+   Build using "/nfs/home/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_gemm.cpp
+   Compiling (apcc) gemm.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/nfs/home/tools/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'xushuoxiang' on host 'open21' (Linux_x86_64 version 5.15.0-89-generic) on Thu Dec 14 23:08:17 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.2 LTS
+INFO: [HLS 200-10] In directory '/nfs/home/xushuoxiang/Machsuite_V0.1/gemm/ncubed/gemm_hls/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_xushuoxiang/35328061702566497995633
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) harness.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/nfs/home/tools/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'xushuoxiang' on host 'open21' (Linux_x86_64 version 5.15.0-89-generic) on Thu Dec 14 23:08:21 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.2 LTS
+INFO: [HLS 200-10] In directory '/nfs/home/xushuoxiang/Machsuite_V0.1/gemm/ncubed/gemm_hls/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_xushuoxiang/35329081702566501070192
+INFO: [APCC 202-1] APCC is done.
+   Compiling apatb_gemm_ir.ll
+   Generating cosim.tv.exe
+make[1]: Leaving directory '/nfs/home/xushuoxiang/Machsuite_V0.1/gemm/ncubed/gemm_hls/solution/sim/wrapc'
+ERROR: [COSIM-317] C++ compile error.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

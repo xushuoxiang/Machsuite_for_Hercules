@@ -1,0 +1,7 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:52:22 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4621531686736342516508
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.56 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 7.72 seconds; peak allocated memory: 19.320 MB.

@@ -1,0 +1,99 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:51:52 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop'
+Sourcing Tcl script 'hls.tcl'
+INFO: [HLS 200-1510] Running: source hls.tcl
+INFO: [HLS 200-1510] Running: open_project backprop_syn 
+INFO: [HLS 200-10] Opening project '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn'.
+INFO: [HLS 200-1510] Running: add_files backprop.c 
+INFO: [HLS 200-10] Adding design file 'backprop.c' to the project
+INFO: [HLS 200-1510] Running: add_files input.data 
+INFO: [HLS 200-10] Adding design file 'input.data' to the project
+INFO: [HLS 200-1510] Running: add_files check.data 
+INFO: [HLS 200-10] Adding design file 'check.data' to the project
+INFO: [HLS 200-1510] Running: add_files local_support.c 
+INFO: [HLS 200-10] Adding design file 'local_support.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../../common/support.c 
+INFO: [HLS 200-10] Adding test bench file '../../common/support.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../../common/support.h 
+INFO: [HLS 200-10] Adding test bench file '../../common/support.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../../common/harness.c 
+INFO: [HLS 200-10] Adding test bench file '../../common/harness.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb local_support.c 
+INFO: [HLS 200-10] Adding test bench file 'local_support.c' to the project
+INFO: [HLS 200-1510] Running: set_top backprop 
+INFO: [HLS 200-1510] Running: open_solution -reset solution 
+INFO: [HLS 200-10] Opening and resetting solution '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+WARNING: [HLS 200-40] No /home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/solution.aps file found.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part virtex7 
+INFO: [HLS 200-1611] Setting target device to 'xc7v585t-ffg1761-2'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+   Compiling(apcc) ../../../../local_support.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:51:55 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4618591686736315969213
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.23 seconds. Total CPU system time: 0.16 seconds. Total elapsed time: 7.4 seconds; peak allocated memory: 19.324 MB.
+   Compiling(apcc) ../../../../../../common/harness.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:52:04 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4619551686736324804286
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.09 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 7.23 seconds; peak allocated memory: 19.324 MB.
+   Compiling(apcc) ../../../../../../common/support.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:52:13 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4620431686736333513132
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.39 seconds. Total CPU system time: 0.17 seconds. Total elapsed time: 7.57 seconds; peak allocated memory: 19.324 MB.
+   Compiling(apcc) ../../../../backprop.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:52:22 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4621531686736342516508
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.56 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 7.72 seconds; peak allocated memory: 19.320 MB.
+   Generating csim.exe
+make[1]: Leaving directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+Benchmark results are incorrect
+@E Simulation failed: Function 'main' returns nonzero value '255'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 95.09 seconds. CPU system time: 1.14 seconds. Elapsed time: 94.97 seconds; current allocated memory: -1033.656 MB.
+4
+    while executing
+"source hls.tcl"
+    invoked from within
+"hls::main hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 97.94 seconds. Total CPU system time: 1.75 seconds. Total elapsed time: 96.99 seconds; peak allocated memory: 459.500 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Wed Jun 14 17:53:29 2023...

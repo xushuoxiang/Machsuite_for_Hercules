@@ -1,0 +1,40 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+   Compiling(apcc) ../../../../local_support.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:51:55 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4618591686736315969213
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.23 seconds. Total CPU system time: 0.16 seconds. Total elapsed time: 7.4 seconds; peak allocated memory: 19.324 MB.
+   Compiling(apcc) ../../../../../../common/harness.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:52:04 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4619551686736324804286
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.09 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 7.23 seconds; peak allocated memory: 19.324 MB.
+   Compiling(apcc) ../../../../../../common/support.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:52:13 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4620431686736333513132
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.39 seconds. Total CPU system time: 0.17 seconds. Total elapsed time: 7.57 seconds; peak allocated memory: 19.324 MB.
+   Compiling(apcc) ../../../../backprop.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'fzwwj95' on host 'fzwwj95-Precision-3650-Tower' (Linux_x86_64 version 5.15.0-67-generic) on Wed Jun 14 17:52:22 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_fzwwj95/4621531686736342516508
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.56 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 7.72 seconds; peak allocated memory: 19.320 MB.
+   Generating csim.exe
+make[1]: Leaving directory '/home/fzwwj95/Desktop/MachSuite/backprop/backprop/backprop_syn/solution/csim/build'
+Benchmark results are incorrect
+ERR: [SIM 100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 3] *************** CSIM finish ***************

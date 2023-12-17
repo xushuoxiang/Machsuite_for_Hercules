@@ -1,0 +1,8 @@
+INFO: [HLS 200-10] Running '/nfs/home/tools/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'xushuoxiang' on host 'open21' (Linux_x86_64 version 5.15.0-89-generic) on Thu Dec 14 23:08:21 CST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.2 LTS
+INFO: [HLS 200-10] In directory '/nfs/home/xushuoxiang/Machsuite_V0.1/gemm/ncubed/gemm_hls/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_xushuoxiang/35329081702566501070192
+INFO: [APCC 202-1] APCC is done.
