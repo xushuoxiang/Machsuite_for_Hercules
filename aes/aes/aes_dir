@@ -2,7 +2,10 @@
 #no mults... feel free to sweep other things!
 
 #select memory resources
-set_directive_resource -core RAM_1P_BRAM "aes256_encrypt_ecb" ctx
+#set_directive_resource -core RAM_1P_BRAM "aes256_encrypt_ecb" ctx
+set_directive_resource -core RAM_1P_BRAM "aes256_encrypt_ecb" key
+set_directive_resource -core RAM_1P_BRAM "aes256_encrypt_ecb" enckey
+set_directive_resource -core RAM_1P_BRAM "aes256_encrypt_ecb" deckey
 set_directive_resource -core RAM_1P_BRAM "aes256_encrypt_ecb" k
 set_directive_resource -core RAM_1P_BRAM "aes256_encrypt_ecb" buf
 
