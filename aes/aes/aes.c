@@ -173,32 +173,34 @@ void aes_expandEncKey(uint8_t *k, uint8_t *rc)
 } /* aes_expandEncKey */
 
 /* -------------------------------------------------------------------------- */
-void aes256_encrypt_ecb(aes256_context *ctx, uint8_t k[32], uint8_t buf[16])
+//void aes256_encrypt_ecb(aes256_context *ctx, uint8_t k[32], uint8_t buf[16])
+void aes256_encrypt_ecb(uint8_t key[32], uint8_t enckey[32], uint8_t deckey[32], uint8_t k[32], uint8_t buf[16])
 {
     //INIT
     uint8_t rcon = 1;
     uint8_t i;
 
-    ecb1 : for (i = 0; i < sizeof(ctx->key); i++){
-        ctx->enckey[i] = ctx->deckey[i] = k[i];
+    aes256_context* temp;
+    ecb1 : for (i = 0; i < sizeof(temp->key); i++){
+        enckey[i] = deckey[i] = k[i];
     }
     ecb2 : for (i = 8;--i;){
-        aes_expandEncKey(ctx->deckey, &rcon);
+        aes_expandEncKey(deckey, &rcon);
     }
 
     //DEC
-    aes_addRoundKey_cpy(buf, ctx->enckey, ctx->key);
+    aes_addRoundKey_cpy(buf, enckey, key);
     ecb3 : for(i = 1, rcon = 1; i < 14; ++i)
     {
         aes_subBytes(buf);
         aes_shiftRows(buf);
         aes_mixColumns(buf);
-        if( i & 1 ) aes_addRoundKey( buf, &ctx->key[16]);
-        else aes_expandEncKey(ctx->key, &rcon), aes_addRoundKey(buf, ctx->key);
+        if( i & 1 ) aes_addRoundKey( buf, &key[16]);
+        else aes_expandEncKey(key, &rcon), aes_addRoundKey(buf, key);
     }
     aes_subBytes(buf);
     aes_shiftRows(buf);
-    aes_expandEncKey(ctx->key, &rcon);
-    aes_addRoundKey(buf, ctx->key);
+    aes_expandEncKey(key, &rcon);
+    aes_addRoundKey(buf, key);
 } /* aes256_encrypt */
 

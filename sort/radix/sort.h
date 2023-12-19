@@ -24,7 +24,22 @@ In Proceedings of the 3rd Workshop on General-Purpose Computation on Graphics Pr
 #define SCAN_BLOCK 16
 #define SCAN_RADIX BUCKETSIZE/SCAN_BLOCK
 
-void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX]);
+//#define ENABLE_HERCULES 1
+#define HERCULES_BUFFER 256*1024
+#define ID_a 0
+#define ID_b 1
+#define ID_bucket 2
+#define ID_sum 3
+//enum DataID{ID_a=0, ID_b, ID_bucket, ID_sum};
+typedef struct hercules_checkdata
+{
+  int ID;
+  int address;
+  int data;
+  int time;
+}hercules_checkdata;
+
+void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX], hercules_checkdata checkdata[HERCULES_BUFFER]);
 
 ////////////////////////////////////////////////////////////////////////////////
 // Test harness interface code.
@@ -34,4 +49,5 @@ struct bench_args_t {
   int b[SIZE];
   int bucket[BUCKETSIZE];
   int sum[SCAN_RADIX];
+  hercules_checkdata checkdata[HERCULES_BUFFER];
 };

@@ -7,47 +7,72 @@ In Proceedings of the 3rd Workshop on General-Purpose Computation on Graphics Pr
 
 #include "sort.h"
 
-void local_scan(int bucket[BUCKETSIZE])
+int global_time=0;
+int lastval=0;
+void hercules_check_function(hercules_checkdata checkdata[HERCULES_BUFFER], int ID_in, int address_in, int data_in){
+    checkdata[global_time].ID=ID_in;
+    checkdata[global_time].address=address_in;
+    checkdata[global_time].data=data_in;
+    checkdata[global_time].time=global_time;
+    global_time++;
+}
+
+
+
+void local_scan(int bucket[BUCKETSIZE], hercules_checkdata checkdata[HERCULES_BUFFER], int exp)
 {
     int radixID, i, bucket_indx;
+    bucket[0]=lastval;
     local_1 : for (radixID=0; radixID<SCAN_RADIX; radixID++) {
         local_2 : for (i=1; i<SCAN_BLOCK; i++){
             bucket_indx = radixID*SCAN_BLOCK + i;
             bucket[bucket_indx] += bucket[bucket_indx-1];
+#ifdef ENABLE_HERCULES
+            hercules_check_function(checkdata, ID_bucket, bucket_indx, bucket[bucket_indx]);
+#endif
         }
     }
 }
 
-void sum_scan(int sum[SCAN_RADIX], int bucket[BUCKETSIZE])
+void sum_scan(int sum[SCAN_RADIX], int bucket[BUCKETSIZE], hercules_checkdata checkdata[HERCULES_BUFFER])
 {
     int radixID, bucket_indx;
     sum[0] = 0;
     sum_1 : for (radixID=1; radixID<SCAN_RADIX; radixID++) {
         bucket_indx = radixID*SCAN_BLOCK - 1;
         sum[radixID] = sum[radixID-1] + bucket[bucket_indx];
+#ifdef ENABLE_HERCULES
+        hercules_check_function(checkdata, ID_sum, radixID, sum[radixID]);
+#endif
     }
 }
 
-void last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX])
+void last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX], hercules_checkdata checkdata[HERCULES_BUFFER])
 {
     int radixID, i, bucket_indx;
     last_1:for (radixID=0; radixID<SCAN_RADIX; radixID++) {
         last_2:for (i=0; i<SCAN_BLOCK; i++) {
             bucket_indx = radixID * SCAN_BLOCK + i;
             bucket[bucket_indx] = bucket[bucket_indx] + sum[radixID];
-         }
+#ifdef ENABLE_HERCULES
+            hercules_check_function(checkdata, ID_bucket, bucket_indx, bucket[bucket_indx]);
+#endif 
+        }
     }
 }
 
-void init(int bucket[BUCKETSIZE])
+void init(int bucket[BUCKETSIZE], hercules_checkdata checkdata[HERCULES_BUFFER])
 {
     int i;
     init_1 : for (i=0; i<BUCKETSIZE; i++) {
         bucket[i] = 0;
+#ifdef ENABLE_HERCULES
+        hercules_check_function(checkdata, ID_bucket, i, bucket[i]);
+#endif
     }
 }
 
-void hist(int bucket[BUCKETSIZE], int a[SIZE], int exp)
+void hist(int bucket[BUCKETSIZE], int a[SIZE], int exp, hercules_checkdata checkdata[HERCULES_BUFFER])
 {
     int blockID, i, bucket_indx, a_indx;
     blockID = 0;
@@ -56,11 +81,15 @@ void hist(int bucket[BUCKETSIZE], int a[SIZE], int exp)
             a_indx = blockID * ELEMENTSPERBLOCK + i;
             bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;
             bucket[bucket_indx]++;
+#ifdef ENABLE_HERCULES
+            hercules_check_function(checkdata, ID_bucket, bucket_indx, bucket[bucket_indx]);
+#endif
         }
     }
+    lastval=bucket[0];
 }
 
-void update(int b[SIZE], int bucket[BUCKETSIZE], int a[SIZE], int exp)
+void update(int b[SIZE], int bucket[BUCKETSIZE], int a[SIZE], int exp, hercules_checkdata checkdata[HERCULES_BUFFER], int mark_a)
 {
     int i, blockID, bucket_indx, a_indx;
     blockID = 0;
@@ -70,34 +99,46 @@ void update(int b[SIZE], int bucket[BUCKETSIZE], int a[SIZE], int exp)
             bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> exp) & 0x3)*NUMOFBLOCKS + blockID;
             a_indx = blockID * ELEMENTSPERBLOCK + i;
             b[bucket[bucket_indx]] = a[a_indx];
+#ifdef ENABLE_HERCULES
+            if(mark_a == 1){
+                hercules_check_function(checkdata, ID_a, bucket[bucket_indx], b[bucket[bucket_indx]]);
+            }
+            else{
+                hercules_check_function(checkdata, ID_b, bucket[bucket_indx], b[bucket[bucket_indx]]);
+            }
+#endif
             bucket[bucket_indx]++;
+#ifdef ENABLE_HERCULES
+            hercules_check_function(checkdata, ID_bucket, bucket_indx, bucket[bucket_indx]);
+#endif
         }
     }
 }
 
-void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX]){
+void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX], hercules_checkdata checkdata[HERCULES_BUFFER]){
+#pragma HLS INTERFACE ap_memory port=bucket storage_type=ram_1p
     int exp=0;
     int valid_buffer=0;
     #define BUFFER_A 0
     #define BUFFER_B 1
 
     sort_1 : for (exp=0; exp<32; exp+=2) {
-        init(bucket);
+        init(bucket, checkdata);
         if (valid_buffer == BUFFER_A) {
-            hist(bucket, a, exp);
+            hist(bucket, a, exp, checkdata);
         } else {
-            hist(bucket, b, exp);
+            hist(bucket, b, exp, checkdata);
         }
 
-        local_scan(bucket);
-        sum_scan(sum, bucket);
-        last_step_scan(bucket, sum);
+        local_scan(bucket, checkdata, exp);
+        sum_scan(sum, bucket, checkdata);
+        last_step_scan(bucket, sum, checkdata);
 
         if (valid_buffer==BUFFER_A) {
-            update(b, bucket, a, exp);
+            update(b, bucket, a, exp, checkdata, 0);
             valid_buffer = BUFFER_B;
         } else {
-            update(a, bucket, b, exp);
+            update(a, bucket, b, exp, checkdata, 1);
             valid_buffer = BUFFER_A;
         }
     }

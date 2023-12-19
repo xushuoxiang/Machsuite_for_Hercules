@@ -5,7 +5,7 @@ int INPUT_SIZE = sizeof(struct bench_args_t);
 
 void run_benchmark( void *vargs ) {
   struct bench_args_t *args = (struct bench_args_t *)vargs;
-  ss_sort( args->a, args->b, args->bucket, args->sum );
+  ss_sort( args->a, args->b, args->bucket, args->sum , args->checkdata);
 }
 
 /* Input format:
@@ -64,6 +64,13 @@ int check_data( void *vdata, void *vref ) {
   int has_errors = 0;
   int i;
   TYPE data_sum, ref_sum;
+  #ifdef ENABLE_HERCULES
+  FILE* fp1 = fopen("hercules.txt","w+");
+  for(int temp=0;temp<HERCULES_BUFFER;temp++){
+    fprintf(fp1, "ID:%d, Address:%d, Data:%d, Time:%d\n",data->checkdata[temp].ID, data->checkdata[temp].address, data->checkdata[temp].data, data->checkdata[temp].time);
+  }
+  fclose(fp1);
+  #endif
 
   // Check sortedness and sum
   data_sum = data->a[0];

@@ -20,4 +20,4 @@ hls: $(KERN).c $(KERN).h
 	vivado_hls hls.tcl
 
 clean:
-	rm -f $(KERN) generate output.data *.log
+	rm -f $(KERN) generate output.data *.log -r spmv_syn
