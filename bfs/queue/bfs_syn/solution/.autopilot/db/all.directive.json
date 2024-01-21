@@ -1,0 +1,107 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "bfs",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "nodes"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "bfs",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "edges"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "bfs",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "level"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "bfs",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "level_counts"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "bfs",
+          "label": "loop_neighbors",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "bfs",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "bfs"
+              }]
+          }
+        },
+        {
+          "functionName": "bfs",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "bfs"
+              }]
+          }
+        }
+      ]
+    }]}

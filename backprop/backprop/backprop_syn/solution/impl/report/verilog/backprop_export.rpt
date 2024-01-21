@@ -1,0 +1,23 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.1
+Project:             backprop_syn
+Solution:            solution
+Device target:       xc7v585t-ffg1761-2
+Report date:         Wed Dec 20 22:08:16 CST 2023
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:          73299
+FF:           83631
+DSP:            110
+BRAM:            43
+URAM:             0
+LATCH:            0
+SRL:           9696
+CLB:              0
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      7.197
+Timing met

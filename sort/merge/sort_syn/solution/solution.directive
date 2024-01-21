@@ -1,0 +1,39 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="ms_mergesort" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="a" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="merge" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="a" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="ms_mergesort" label="mergesort_label2" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="merge" label="merge_label1" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="merge" label="merge_label2" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="merge" label="merge_label3" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="ms_mergesort" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="ms_mergesort"/>
+            </pragma>
+        </directive>
+        <directive functionName="ms_mergesort" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="ms_mergesort"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

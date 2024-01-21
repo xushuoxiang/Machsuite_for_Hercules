@@ -1,0 +1,283 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'backprop_Pipeline_VITIS_LOOP_139_1'" level="0">
+<item name = "Date">Wed Dec 20 21:42:53 2023
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">backprop_syn</item>
+<item name = "Solution">solution (Vivado IP Flow Target)</item>
+<item name = "Product family">virtex7</item>
+<item name = "Target device">xc7v585t-ffg1761-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.671 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">424, 424, 4.240 us, 4.240 us, 424, 424, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_139_1">422, 422, 39, 32, 1, 13, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 673, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 860, -</column>
+<column name="Register">-, -, 304, -, -</column>
+<specialColumn name="Available">1590, 1260, 728400, 364200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln139_fu_1260_p2">+, 0, 0, 13, 4, 1</column>
+<column name="arrayidx10_sum231_fu_1270_p2">+, 0, 0, 19, 12, 12</column>
+<column name="icmp_ln139_fu_1254_p2">icmp, 0, 0, 9, 4, 3</column>
+<column name="or_ln141_10_fu_1404_p2">or, 0, 0, 10, 10, 4</column>
+<column name="or_ln141_11_fu_1414_p2">or, 0, 0, 10, 10, 4</column>
+<column name="or_ln141_12_fu_1424_p2">or, 0, 0, 10, 10, 4</column>
+<column name="or_ln141_13_fu_1434_p2">or, 0, 0, 10, 10, 4</column>
+<column name="or_ln141_14_fu_1444_p2">or, 0, 0, 10, 10, 4</column>
+<column name="or_ln141_15_fu_1454_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_16_fu_1464_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_17_fu_1474_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_18_fu_1484_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_19_fu_1494_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_1_fu_1314_p2">or, 0, 0, 10, 10, 2</column>
+<column name="or_ln141_20_fu_1504_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_21_fu_1514_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_22_fu_1524_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_23_fu_1534_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_24_fu_1544_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_25_fu_1554_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_26_fu_1564_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_27_fu_1574_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_28_fu_1584_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_29_fu_1594_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_2_fu_1324_p2">or, 0, 0, 10, 10, 2</column>
+<column name="or_ln141_30_fu_1604_p2">or, 0, 0, 10, 10, 5</column>
+<column name="or_ln141_31_fu_1614_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_32_fu_1624_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_33_fu_1634_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_34_fu_1644_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_35_fu_1654_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_36_fu_1664_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_37_fu_1674_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_38_fu_1684_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_39_fu_1694_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_3_fu_1334_p2">or, 0, 0, 10, 10, 3</column>
+<column name="or_ln141_40_fu_1704_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_41_fu_1714_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_42_fu_1724_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_43_fu_1734_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_44_fu_1744_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_45_fu_1754_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_46_fu_1764_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_47_fu_1774_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_48_fu_1784_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_49_fu_1794_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_4_fu_1344_p2">or, 0, 0, 10, 10, 3</column>
+<column name="or_ln141_50_fu_1804_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_51_fu_1814_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_52_fu_1824_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_53_fu_1834_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_54_fu_1844_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_55_fu_1854_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_56_fu_1864_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_57_fu_1874_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_58_fu_1884_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_59_fu_1894_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_5_fu_1354_p2">or, 0, 0, 10, 10, 3</column>
+<column name="or_ln141_60_fu_1904_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_61_fu_1914_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_62_fu_1924_p2">or, 0, 0, 10, 10, 6</column>
+<column name="or_ln141_6_fu_1364_p2">or, 0, 0, 10, 10, 3</column>
+<column name="or_ln141_7_fu_1374_p2">or, 0, 0, 10, 10, 4</column>
+<column name="or_ln141_8_fu_1384_p2">or, 0, 0, 10, 10, 4</column>
+<column name="or_ln141_9_fu_1394_p2">or, 0, 0, 10, 10, 4</column>
+<column name="or_ln141_fu_1303_p2">or, 0, 0, 10, 10, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">156, 33, 1, 33</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0_reg">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i_15">9, 2, 4, 8</column>
+<column name="delta_weights1_address0">156, 33, 10, 330</column>
+<column name="delta_weights1_address1">156, 33, 10, 330</column>
+<column name="grp_fu_1228_p0">13, 3, 64, 192</column>
+<column name="grp_fu_1228_p1">156, 33, 64, 2112</column>
+<column name="grp_fu_1232_p0">13, 3, 64, 192</column>
+<column name="grp_fu_1232_p1">156, 33, 64, 2112</column>
+<column name="i_fu_300">9, 2, 4, 8</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">32, 0, 32, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="empty_40_reg_2280">64, 0, 64, 0</column>
+<column name="i_15_reg_2261">4, 0, 4, 0</column>
+<column name="i_fu_300">4, 0, 4, 0</column>
+<column name="icmp_ln139_reg_2266">1, 0, 1, 0</column>
+<column name="reg_1236">64, 0, 64, 0</column>
+<column name="reg_1241">64, 0, 64, 0</column>
+<column name="tmp_s_reg_2286">4, 0, 10, 6</column>
+<column name="training_data_load_reg_2275">64, 0, 64, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="grp_fu_6776_p_din0">out, 64, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="grp_fu_6776_p_din1">out, 64, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="grp_fu_6776_p_dout0">in, 64, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="grp_fu_6776_p_ce">out, 1, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="grp_fu_6780_p_din0">out, 64, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="grp_fu_6780_p_din1">out, 64, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="grp_fu_6780_p_dout0">in, 64, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="grp_fu_6780_p_ce">out, 1, ap_ctrl_hs, backprop_Pipeline_VITIS_LOOP_139_1, return value</column>
+<column name="phi_mul">in, 12, ap_none, phi_mul, scalar</column>
+<column name="training_data_address0">out, 12, ap_memory, training_data, array</column>
+<column name="training_data_ce0">out, 1, ap_memory, training_data, array</column>
+<column name="training_data_q0">in, 64, ap_memory, training_data, array</column>
+<column name="oracle_activations1_load">in, 64, ap_none, oracle_activations1_load, scalar</column>
+<column name="delta_weights1_address0">out, 10, ap_memory, delta_weights1, array</column>
+<column name="delta_weights1_ce0">out, 1, ap_memory, delta_weights1, array</column>
+<column name="delta_weights1_we0">out, 1, ap_memory, delta_weights1, array</column>
+<column name="delta_weights1_d0">out, 64, ap_memory, delta_weights1, array</column>
+<column name="delta_weights1_address1">out, 10, ap_memory, delta_weights1, array</column>
+<column name="delta_weights1_ce1">out, 1, ap_memory, delta_weights1, array</column>
+<column name="delta_weights1_we1">out, 1, ap_memory, delta_weights1, array</column>
+<column name="delta_weights1_d1">out, 64, ap_memory, delta_weights1, array</column>
+<column name="oracle_activations1_load_1">in, 64, ap_none, oracle_activations1_load_1, scalar</column>
+<column name="oracle_activations1_load_2">in, 64, ap_none, oracle_activations1_load_2, scalar</column>
+<column name="oracle_activations1_load_3">in, 64, ap_none, oracle_activations1_load_3, scalar</column>
+<column name="oracle_activations1_load_4">in, 64, ap_none, oracle_activations1_load_4, scalar</column>
+<column name="oracle_activations1_load_5">in, 64, ap_none, oracle_activations1_load_5, scalar</column>
+<column name="oracle_activations1_load_6">in, 64, ap_none, oracle_activations1_load_6, scalar</column>
+<column name="oracle_activations1_load_7">in, 64, ap_none, oracle_activations1_load_7, scalar</column>
+<column name="oracle_activations1_load_8">in, 64, ap_none, oracle_activations1_load_8, scalar</column>
+<column name="oracle_activations1_load_9">in, 64, ap_none, oracle_activations1_load_9, scalar</column>
+<column name="oracle_activations1_load_10">in, 64, ap_none, oracle_activations1_load_10, scalar</column>
+<column name="oracle_activations1_load_11">in, 64, ap_none, oracle_activations1_load_11, scalar</column>
+<column name="oracle_activations1_load_12">in, 64, ap_none, oracle_activations1_load_12, scalar</column>
+<column name="oracle_activations1_load_13">in, 64, ap_none, oracle_activations1_load_13, scalar</column>
+<column name="oracle_activations1_load_14">in, 64, ap_none, oracle_activations1_load_14, scalar</column>
+<column name="oracle_activations1_load_15">in, 64, ap_none, oracle_activations1_load_15, scalar</column>
+<column name="oracle_activations1_load_16">in, 64, ap_none, oracle_activations1_load_16, scalar</column>
+<column name="oracle_activations1_load_17">in, 64, ap_none, oracle_activations1_load_17, scalar</column>
+<column name="oracle_activations1_load_18">in, 64, ap_none, oracle_activations1_load_18, scalar</column>
+<column name="oracle_activations1_load_19">in, 64, ap_none, oracle_activations1_load_19, scalar</column>
+<column name="oracle_activations1_load_20">in, 64, ap_none, oracle_activations1_load_20, scalar</column>
+<column name="oracle_activations1_load_21">in, 64, ap_none, oracle_activations1_load_21, scalar</column>
+<column name="oracle_activations1_load_22">in, 64, ap_none, oracle_activations1_load_22, scalar</column>
+<column name="oracle_activations1_load_23">in, 64, ap_none, oracle_activations1_load_23, scalar</column>
+<column name="oracle_activations1_load_24">in, 64, ap_none, oracle_activations1_load_24, scalar</column>
+<column name="oracle_activations1_load_25">in, 64, ap_none, oracle_activations1_load_25, scalar</column>
+<column name="oracle_activations1_load_26">in, 64, ap_none, oracle_activations1_load_26, scalar</column>
+<column name="oracle_activations1_load_27">in, 64, ap_none, oracle_activations1_load_27, scalar</column>
+<column name="oracle_activations1_load_28">in, 64, ap_none, oracle_activations1_load_28, scalar</column>
+<column name="oracle_activations1_load_29">in, 64, ap_none, oracle_activations1_load_29, scalar</column>
+<column name="oracle_activations1_load_30">in, 64, ap_none, oracle_activations1_load_30, scalar</column>
+<column name="oracle_activations1_load_31">in, 64, ap_none, oracle_activations1_load_31, scalar</column>
+<column name="oracle_activations1_load_32">in, 64, ap_none, oracle_activations1_load_32, scalar</column>
+<column name="oracle_activations1_load_33">in, 64, ap_none, oracle_activations1_load_33, scalar</column>
+<column name="oracle_activations1_load_34">in, 64, ap_none, oracle_activations1_load_34, scalar</column>
+<column name="oracle_activations1_load_35">in, 64, ap_none, oracle_activations1_load_35, scalar</column>
+<column name="oracle_activations1_load_36">in, 64, ap_none, oracle_activations1_load_36, scalar</column>
+<column name="oracle_activations1_load_37">in, 64, ap_none, oracle_activations1_load_37, scalar</column>
+<column name="oracle_activations1_load_38">in, 64, ap_none, oracle_activations1_load_38, scalar</column>
+<column name="oracle_activations1_load_39">in, 64, ap_none, oracle_activations1_load_39, scalar</column>
+<column name="oracle_activations1_load_40">in, 64, ap_none, oracle_activations1_load_40, scalar</column>
+<column name="oracle_activations1_load_41">in, 64, ap_none, oracle_activations1_load_41, scalar</column>
+<column name="oracle_activations1_load_42">in, 64, ap_none, oracle_activations1_load_42, scalar</column>
+<column name="oracle_activations1_load_43">in, 64, ap_none, oracle_activations1_load_43, scalar</column>
+<column name="oracle_activations1_load_44">in, 64, ap_none, oracle_activations1_load_44, scalar</column>
+<column name="oracle_activations1_load_45">in, 64, ap_none, oracle_activations1_load_45, scalar</column>
+<column name="oracle_activations1_load_46">in, 64, ap_none, oracle_activations1_load_46, scalar</column>
+<column name="oracle_activations1_load_47">in, 64, ap_none, oracle_activations1_load_47, scalar</column>
+<column name="oracle_activations1_load_48">in, 64, ap_none, oracle_activations1_load_48, scalar</column>
+<column name="oracle_activations1_load_49">in, 64, ap_none, oracle_activations1_load_49, scalar</column>
+<column name="oracle_activations1_load_50">in, 64, ap_none, oracle_activations1_load_50, scalar</column>
+<column name="oracle_activations1_load_51">in, 64, ap_none, oracle_activations1_load_51, scalar</column>
+<column name="oracle_activations1_load_52">in, 64, ap_none, oracle_activations1_load_52, scalar</column>
+<column name="oracle_activations1_load_53">in, 64, ap_none, oracle_activations1_load_53, scalar</column>
+<column name="oracle_activations1_load_54">in, 64, ap_none, oracle_activations1_load_54, scalar</column>
+<column name="oracle_activations1_load_55">in, 64, ap_none, oracle_activations1_load_55, scalar</column>
+<column name="oracle_activations1_load_56">in, 64, ap_none, oracle_activations1_load_56, scalar</column>
+<column name="oracle_activations1_load_57">in, 64, ap_none, oracle_activations1_load_57, scalar</column>
+<column name="oracle_activations1_load_58">in, 64, ap_none, oracle_activations1_load_58, scalar</column>
+<column name="oracle_activations1_load_59">in, 64, ap_none, oracle_activations1_load_59, scalar</column>
+<column name="oracle_activations1_load_60">in, 64, ap_none, oracle_activations1_load_60, scalar</column>
+<column name="oracle_activations1_load_61">in, 64, ap_none, oracle_activations1_load_61, scalar</column>
+<column name="oracle_activations1_load_62">in, 64, ap_none, oracle_activations1_load_62, scalar</column>
+<column name="oracle_activations1_load_63">in, 64, ap_none, oracle_activations1_load_63, scalar</column>
+</table>
+</item>
+</section>
+</profile>

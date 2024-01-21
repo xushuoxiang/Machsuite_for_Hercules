@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="backprop.c" path="/nfs/home/xushuoxiang/Machsuite_V0.1/backprop/backprop/backprop.c"/>
+    <originFiles name="input.data" path="/nfs/home/xushuoxiang/Machsuite_V0.1/backprop/backprop/input.data"/>
+    <originFiles name="check.data" path="/nfs/home/xushuoxiang/Machsuite_V0.1/backprop/backprop/check.data"/>
+    <originFiles name="local_support.c" path="/nfs/home/xushuoxiang/Machsuite_V0.1/backprop/backprop/local_support.c"/>
+  </source>
+  <testbench>
+    <originFiles name="support.c" path="/nfs/home/xushuoxiang/Machsuite_V0.1/common/support.c"/>
+    <originFiles name="support.h" path="/nfs/home/xushuoxiang/Machsuite_V0.1/common/support.h"/>
+    <originFiles name="harness.c" path="/nfs/home/xushuoxiang/Machsuite_V0.1/common/harness.c"/>
+    <originFiles name="local_support.c" path="/nfs/home/xushuoxiang/Machsuite_V0.1/backprop/backprop/local_support.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

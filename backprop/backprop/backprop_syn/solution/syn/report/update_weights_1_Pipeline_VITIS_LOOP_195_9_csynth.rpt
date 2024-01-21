@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'update_weights_1_Pipeline_VITIS_LOOP_195_9'
+================================================================
+* Date:           Wed Dec 20 21:42:55 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        backprop_syn
+* Solution:       solution (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7v585t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.148 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      275|      275|  2.750 us|  2.750 us|  275|  275|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_195_9  |      273|      273|        22|          4|          1|    64|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      27|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     3|     445|     782|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     194|    -|
+|Register         |        -|     -|     541|      64|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     3|     986|    1067|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1590|  1260|  728400|  364200|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|    ~0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------+------------------------------------+---------+----+-----+-----+-----+
+    |                 Instance                |               Module               | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------------------------------+------------------------------------+---------+----+-----+-----+-----+
+    |dadddsub_64ns_64ns_64_5_full_dsp_1_U507  |dadddsub_64ns_64ns_64_5_full_dsp_1  |        0|   3|  445|  782|    0|
+    +-----------------------------------------+------------------------------------+---------+----+-----+-----+-----+
+    |Total                                    |                                    |        0|   3|  445|  782|    0|
+    +-----------------------------------------+------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln195_fu_116_p2   |         +|   0|  0|  14|           7|           1|
+    |icmp_ln195_fu_110_p2  |      icmp|   0|  0|  11|           7|           8|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  27|          15|          11|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                          |  21|          5|    1|          5|
+    |ap_done_int                        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0            |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1            |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter5            |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg   |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter2_reg   |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter3_reg   |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter4_reg   |   9|          2|    1|          2|
+    |ap_sig_allocacmp_bias_norm_load_2  |   9|          2|   64|        128|
+    |ap_sig_allocacmp_i                 |   9|          2|    7|         14|
+    |bias_norm_fu_44                    |   9|          2|   64|        128|
+    |grp_fu_88_opcode                   |  13|          3|    2|          6|
+    |grp_fu_88_p0                       |  13|          3|   64|        192|
+    |grp_fu_88_p1                       |  13|          3|   64|        192|
+    |grp_fu_92_p0                       |  13|          3|   64|        192|
+    |grp_fu_92_p1                       |  13|          3|   64|        192|
+    |i_5_fu_48                          |   9|          2|    7|         14|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              | 194|         44|  409|       1079|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   4|   0|    4|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
+    |bias_norm_fu_44                   |  64|   0|   64|          0|
+    |biases2_addr_reg_178              |   6|   0|    6|          0|
+    |biases2_load_reg_189              |  64|   0|   64|          0|
+    |d_biases2_load_reg_184            |  64|   0|   64|          0|
+    |i_5_fu_48                         |   7|   0|    7|          0|
+    |icmp_ln195_reg_169                |   1|   0|    1|          0|
+    |mul3_reg_194                      |  64|   0|   64|          0|
+    |mul5_reg_211                      |  64|   0|   64|          0|
+    |sub2_reg_204                      |  64|   0|   64|          0|
+    |biases2_addr_reg_178              |  64|  32|    6|          0|
+    |icmp_ln195_reg_169                |  64|  32|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 541|  64|  420|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|grp_fu_393_p_din0       |  out|   64|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|grp_fu_393_p_din1       |  out|   64|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|grp_fu_393_p_dout0      |   in|   64|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|grp_fu_393_p_ce         |  out|    1|  ap_ctrl_hs|  update_weights.1_Pipeline_VITIS_LOOP_195_9|  return value|
+|d_biases2_address0      |  out|    6|   ap_memory|                                   d_biases2|         array|
+|d_biases2_ce0           |  out|    1|   ap_memory|                                   d_biases2|         array|
+|d_biases2_q0            |   in|   64|   ap_memory|                                   d_biases2|         array|
+|biases2_address0        |  out|    6|   ap_memory|                                     biases2|         array|
+|biases2_ce0             |  out|    1|   ap_memory|                                     biases2|         array|
+|biases2_we0             |  out|    1|   ap_memory|                                     biases2|         array|
+|biases2_d0              |  out|   64|   ap_memory|                                     biases2|         array|
+|biases2_address1        |  out|    6|   ap_memory|                                     biases2|         array|
+|biases2_ce1             |  out|    1|   ap_memory|                                     biases2|         array|
+|biases2_q1              |   in|   64|   ap_memory|                                     biases2|         array|
+|bias_norm_4_out         |  out|   64|      ap_vld|                             bias_norm_4_out|       pointer|
+|bias_norm_4_out_ap_vld  |  out|    1|      ap_vld|                             bias_norm_4_out|       pointer|
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+

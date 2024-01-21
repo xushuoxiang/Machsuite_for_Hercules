@@ -5,7 +5,11 @@ int INPUT_SIZE = sizeof(struct bench_args_t);
 
 void run_benchmark( void *vargs ) {
   struct bench_args_t *args = (struct bench_args_t *)vargs;
-  ms_mergesort( args->a );
+  ms_mergesort( args->a 
+  #ifdef ENABLE_HERCULES
+  , args->checkdata, &args->hercules_buffer_size
+  #endif
+  );
 }
 
 /* Input format:
@@ -64,6 +68,9 @@ int check_data( void *vdata, void *vref ) {
   int has_errors = 0;
   int i;
   TYPE data_sum, ref_sum;
+#ifdef ENABLE_HERCULES
+  dump_checkdata(data->checkdata, data->hercules_buffer_size);
+#endif
 
   // Check sortedness and sum
   data_sum = data->a[0];

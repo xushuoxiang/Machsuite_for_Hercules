@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="bfs" xd:componentRef="bfs_highlevel" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="starting_node" xd:originalName="starting_node" xd:direction="in" xd:interfaceRef="starting_node" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(hercules_buffer_size)" xd:originalName="hercules_buffer_size" xd:direction="out" xd:interfaceRef="hercules_buffer_size" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="1" xd:firstOut="1"/>
+  <xd:arg xd:name="nodes_q0" xd:originalName="nodes_q0" xd:direction="in" xd:interfaceRef="nodes_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="128"/>
+  <xd:arg xd:name="nodes_q1" xd:originalName="nodes_q1" xd:direction="in" xd:interfaceRef="nodes_q1" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="128"/>
+  <xd:arg xd:name="edges_q0" xd:originalName="edges_q0" xd:direction="in" xd:interfaceRef="edges_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="64"/>
+  <xd:arg xd:name="level_d0" xd:originalName="level_d0" xd:direction="out" xd:interfaceRef="level_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="8"/>
+  <xd:arg xd:name="level_q0" xd:originalName="level_q0" xd:direction="in" xd:interfaceRef="level_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="8"/>
+  <xd:arg xd:name="level_counts_d0" xd:originalName="level_counts_d0" xd:direction="out" xd:interfaceRef="level_counts_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="64"/>
+  <xd:arg xd:name="level_counts_q0" xd:originalName="level_counts_q0" xd:direction="in" xd:interfaceRef="level_counts_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="64"/>
+  <xd:arg xd:name="checkdata_d0" xd:originalName="checkdata_d0" xd:direction="out" xd:interfaceRef="checkdata_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="128"/>
+  <xd:arg xd:name="checkdata_d1" xd:originalName="checkdata_d1" xd:direction="out" xd:interfaceRef="checkdata_d1" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="128"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="1609" xd:FF="500" xd:BRAM="1" xd:DSP="0"/>
+</xd:acceleratorMap>

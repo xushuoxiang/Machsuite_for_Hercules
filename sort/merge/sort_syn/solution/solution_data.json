@@ -1,0 +1,584 @@
+{
+  "Top": "ms_mergesort",
+  "RtlTop": "ms_mergesort",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "ms_mergesort_",
+  "SourceLanguage": "c",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu19eg",
+    "Package": "-ffvc1760",
+    "Speed": "-2-i",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "a": {
+      "index": "0",
+      "direction": "inout",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "a_address0",
+          "name": "a_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "a_ce0",
+          "name": "a_ce0",
+          "usage": "control",
+          "direction": "inout"
+        },
+        {
+          "type": "port",
+          "interface": "a_we0",
+          "name": "a_we0",
+          "usage": "control",
+          "direction": "inout"
+        },
+        {
+          "type": "port",
+          "interface": "a_d0",
+          "name": "a_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "a_q0",
+          "name": "a_q0",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "checkdata": {
+      "index": "1",
+      "direction": "out",
+      "srcType": "*",
+      "srcSize": "128",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "checkdata_address0",
+          "name": "checkdata_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "checkdata_ce0",
+          "name": "checkdata_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "checkdata_we0",
+          "name": "checkdata_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "checkdata_d0",
+          "name": "checkdata_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "checkdata_address1",
+          "name": "checkdata_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "checkdata_ce1",
+          "name": "checkdata_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "checkdata_we1",
+          "name": "checkdata_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "checkdata_d1",
+          "name": "checkdata_d1",
+          "usage": "data",
+          "direction": "out"
+        }
+      ]
+    },
+    "hercules_buffer_size": {
+      "index": "2",
+      "direction": "out",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "hercules_buffer_size",
+          "name": "hercules_buffer_size",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "hercules_buffer_size_ap_vld",
+          "name": "hercules_buffer_size_ap_vld",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_export -ipname=sort_highlevel",
+      "config_export -version=1.1.0",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ],
+    "DirectiveTcl": [
+      "set_directive_resource ms_mergesort a -core RAM_1P_BRAM",
+      "set_directive_resource merge a -core RAM_1P_BRAM",
+      "set_directive_pipeline ms_mergesort\/mergesort_label2 ",
+      "set_directive_pipeline merge\/merge_label1 ",
+      "set_directive_pipeline merge\/merge_label2 ",
+      "set_directive_pipeline merge\/merge_label3 ",
+      "set_directive_top ms_mergesort -name ms_mergesort",
+      "set_directive_top ms_mergesort -name ms_mergesort"
+    ],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "ms_mergesort"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "Uncertainty": "2.7",
+    "IsCombinational": "0",
+    "II": "x",
+    "Latency": "undef"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "sort_highlevel",
+    "Version": "1.1",
+    "DisplayName": "Sort_highlevel",
+    "Revision": "0",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_sort_highlevel_1_1.zip"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/..\/..\/common\/hercules.c",
+      "..\/..\/sort.c"
+    ],
+    "Vhdl": [
+      "impl\/vhdl\/ms_mergesort_merge_1.vhd",
+      "impl\/vhdl\/ms_mergesort_merge_1_temp.vhd",
+      "impl\/vhdl\/ms_mergesort.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/ms_mergesort_merge_1.v",
+      "impl\/verilog\/ms_mergesort_merge_1_temp.v",
+      "impl\/verilog\/ms_mergesort.v"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "DesignXml": ".autopilot\/db\/ms_mergesort.design.xml",
+    "DebugDir": ".debug",
+    "ProtoInst": ["\/nfs\/home\/xushuoxiang\/Machsuite_for_insertbug\/Machsuite_V0.1\/sort\/merge\/sort_syn\/solution\/.debug\/ms_mergesort.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "a_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "11",
+      "portMap": {"a_address0": "DATA"},
+      "ports": ["a_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "a"
+        }]
+    },
+    "a_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"a_d0": "DATA"},
+      "ports": ["a_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "a"
+        }]
+    },
+    "a_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"a_q0": "DATA"},
+      "ports": ["a_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "a"
+        }]
+    },
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {"ASSOCIATED_RESET": "ap_rst"},
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "busTypeName": "acc_handshake",
+      "mode": "slave",
+      "portMap": {
+        "ap_start": "start",
+        "ap_done": "done",
+        "ap_idle": "idle",
+        "ap_ready": "ready"
+      },
+      "ports": [
+        "ap_done",
+        "ap_idle",
+        "ap_ready",
+        "ap_start"
+      ]
+    },
+    "ap_rst": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_HIGH"},
+      "portMap": {"ap_rst": "RST"},
+      "ports": ["ap_rst"]
+    },
+    "checkdata_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "21",
+      "portMap": {"checkdata_address0": "DATA"},
+      "ports": ["checkdata_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "checkdata"
+        }]
+    },
+    "checkdata_address1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "21",
+      "portMap": {"checkdata_address1": "DATA"},
+      "ports": ["checkdata_address1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "checkdata"
+        }]
+    },
+    "checkdata_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "128",
+      "portMap": {"checkdata_d0": "DATA"},
+      "ports": ["checkdata_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "checkdata"
+        }]
+    },
+    "checkdata_d1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "128",
+      "portMap": {"checkdata_d1": "DATA"},
+      "ports": ["checkdata_d1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "checkdata"
+        }]
+    },
+    "hercules_buffer_size": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"hercules_buffer_size": "DATA"},
+      "ports": ["hercules_buffer_size"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "hercules_buffer_size"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "a_address0": {
+      "dir": "out",
+      "width": "11"
+    },
+    "a_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "a_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "a_d0": {
+      "dir": "out",
+      "width": "32"
+    },
+    "a_q0": {
+      "dir": "in",
+      "width": "32"
+    },
+    "checkdata_address0": {
+      "dir": "out",
+      "width": "21"
+    },
+    "checkdata_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "checkdata_we0": {
+      "dir": "out",
+      "width": "16"
+    },
+    "checkdata_d0": {
+      "dir": "out",
+      "width": "128"
+    },
+    "checkdata_address1": {
+      "dir": "out",
+      "width": "21"
+    },
+    "checkdata_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "checkdata_we1": {
+      "dir": "out",
+      "width": "16"
+    },
+    "checkdata_d1": {
+      "dir": "out",
+      "width": "128"
+    },
+    "hercules_buffer_size": {
+      "dir": "out",
+      "width": "32"
+    },
+    "hercules_buffer_size_ap_vld": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "ms_mergesort",
+      "Instances": [{
+          "ModuleName": "merge_1",
+          "InstanceName": "grp_merge_1_fu_124"
+        }]
+    },
+    "Info": {
+      "merge_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "ms_mergesort": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "merge_1": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.465"
+        },
+        "Loops": [
+          {
+            "Name": "merge_label1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "merge_label2",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "merge_label3",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "4",
+          "AVAIL_BRAM": "1968",
+          "UTIL_BRAM": "~0",
+          "FF": "904",
+          "AVAIL_FF": "1045440",
+          "UTIL_FF": "~0",
+          "LUT": "1553",
+          "AVAIL_LUT": "522720",
+          "UTIL_LUT": "~0",
+          "DSP": "0",
+          "AVAIL_DSP": "1968",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "128",
+          "UTIL_URAM": "0"
+        }
+      },
+      "ms_mergesort": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.465"
+        },
+        "Loops": [{
+            "Name": "mergesort_label1",
+            "TripCount": "11",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": "",
+            "Loops": [{
+                "Name": "mergesort_label2",
+                "TripCount": "",
+                "Latency": "",
+                "PipelineII": "",
+                "PipelineDepth": ""
+              }]
+          }],
+        "Area": {
+          "BRAM_18K": "4",
+          "AVAIL_BRAM": "1968",
+          "UTIL_BRAM": "~0",
+          "FF": "1103",
+          "AVAIL_FF": "1045440",
+          "UTIL_FF": "~0",
+          "LUT": "2237",
+          "AVAIL_LUT": "522720",
+          "UTIL_LUT": "~0",
+          "DSP": "0",
+          "AVAIL_DSP": "1968",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "128",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2024-01-16 02:18:16 CST",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2020.2"
+  }
+}

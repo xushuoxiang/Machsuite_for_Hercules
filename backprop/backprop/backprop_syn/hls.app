@@ -1,8 +1,10 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="backprop_syn" top="backprop">
+<project xmlns="com.autoesl.autopilot.project" name="backprop_syn" top="backprop">
+    <includePaths/>
+    <libraryPaths/>
     <Simulation argv="">
-        <SimFlow name="csim" setup="false" optimizeCompile="false" clean="false" ldflags="" mflags=""/>
+        <SimFlow name="csim" ldflags="" mflags=""/>
     </Simulation>
-    <files>
+    <files xmlns="">
         <file name="../../local_support.c" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
         <file name="../../../../common/harness.c" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
         <file name="../../../../common/support.h" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
@@ -12,8 +14,8 @@
         <file name="input.data" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="backprop.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
-    <solutions>
-        <solution name="solution" status=""/>
+    <solutions xmlns="">
+        <solution name="solution" status="active"/>
     </solutions>
-</AutoPilot:project>
+</project>
 

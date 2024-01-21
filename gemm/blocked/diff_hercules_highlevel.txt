@@ -1,0 +1,464 @@
+317769c317769
+< ID:5, Address:2081, Data:8, Time:317768
+---
+> ID:5, Address:2081, Data:9, Time:317768
+317773c317773
+< ID:5, Address:2083, Data:8, Time:317772
+---
+> ID:5, Address:2083, Data:9, Time:317772
+317779,317781c317779,317781
+< ID:5, Address:2086, Data:9, Time:317778
+< ID:6, Address:0, Data:0, Time:317779
+< ID:5, Address:2087, Data:9, Time:317780
+---
+> ID:5, Address:2086, Data:10, Time:317778
+> ID:6, Address:0, Data:1, Time:317779
+> ID:5, Address:2087, Data:10, Time:317780
+317784c317784
+< ID:5, Address:2080, Data:7, Time:317783
+---
+> ID:5, Address:2080, Data:8, Time:317783
+317796c317796
+< ID:5, Address:2086, Data:9, Time:317795
+---
+> ID:5, Address:2086, Data:10, Time:317795
+317798c317798
+< ID:5, Address:2087, Data:9, Time:317797
+---
+> ID:5, Address:2087, Data:10, Time:317797
+317807c317807
+< ID:5, Address:2083, Data:9, Time:317806
+---
+> ID:5, Address:2083, Data:10, Time:317806
+317809c317809
+< ID:5, Address:2084, Data:7, Time:317808
+---
+> ID:5, Address:2084, Data:8, Time:317808
+317811c317811
+< ID:5, Address:2085, Data:8, Time:317810
+---
+> ID:5, Address:2085, Data:9, Time:317810
+317815c317815
+< ID:5, Address:2087, Data:10, Time:317814
+---
+> ID:5, Address:2087, Data:11, Time:317814
+317824c317824
+< ID:5, Address:2083, Data:9, Time:317823
+---
+> ID:5, Address:2083, Data:10, Time:317823
+317826c317826
+< ID:5, Address:2084, Data:7, Time:317825
+---
+> ID:5, Address:2084, Data:8, Time:317825
+317828c317828
+< ID:5, Address:2085, Data:8, Time:317827
+---
+> ID:5, Address:2085, Data:9, Time:317827
+317832c317832
+< ID:5, Address:2087, Data:10, Time:317831
+---
+> ID:5, Address:2087, Data:11, Time:317831
+326405c326405
+< ID:5, Address:2081, Data:9, Time:326404
+---
+> ID:5, Address:2081, Data:10, Time:326404
+326409c326409
+< ID:5, Address:2083, Data:9, Time:326408
+---
+> ID:5, Address:2083, Data:10, Time:326408
+326413c326413
+< ID:5, Address:2085, Data:8, Time:326412
+---
+> ID:5, Address:2085, Data:9, Time:326412
+326415c326415
+< ID:5, Address:2086, Data:10, Time:326414
+---
+> ID:5, Address:2086, Data:11, Time:326414
+326417c326417
+< ID:5, Address:2087, Data:10, Time:326416
+---
+> ID:5, Address:2087, Data:11, Time:326416
+326422c326422
+< ID:5, Address:2081, Data:9, Time:326421
+---
+> ID:5, Address:2081, Data:10, Time:326421
+326430c326430
+< ID:5, Address:2085, Data:8, Time:326429
+---
+> ID:5, Address:2085, Data:9, Time:326429
+326432c326432
+< ID:5, Address:2086, Data:10, Time:326431
+---
+> ID:5, Address:2086, Data:11, Time:326431
+326434c326434
+< ID:5, Address:2087, Data:11, Time:326433
+---
+> ID:5, Address:2087, Data:12, Time:326433
+326439c326439
+< ID:5, Address:2081, Data:9, Time:326438
+---
+> ID:5, Address:2081, Data:10, Time:326438
+326447c326447
+< ID:5, Address:2085, Data:8, Time:326446
+---
+> ID:5, Address:2085, Data:9, Time:326446
+326449c326449
+< ID:5, Address:2086, Data:10, Time:326448
+---
+> ID:5, Address:2086, Data:11, Time:326448
+326451c326451
+< ID:5, Address:2087, Data:11, Time:326450
+---
+> ID:5, Address:2087, Data:12, Time:326450
+326456c326456
+< ID:5, Address:2081, Data:9, Time:326455
+---
+> ID:5, Address:2081, Data:10, Time:326455
+326468c326468
+< ID:5, Address:2087, Data:11, Time:326467
+---
+> ID:5, Address:2087, Data:12, Time:326467
+326473c326473
+< ID:5, Address:2081, Data:9, Time:326472
+---
+> ID:5, Address:2081, Data:10, Time:326472
+326481c326481
+< ID:5, Address:2085, Data:9, Time:326480
+---
+> ID:5, Address:2085, Data:10, Time:326480
+326483c326483
+< ID:5, Address:2086, Data:11, Time:326482
+---
+> ID:5, Address:2086, Data:12, Time:326482
+326485c326485
+< ID:5, Address:2087, Data:11, Time:326484
+---
+> ID:5, Address:2087, Data:12, Time:326484
+326494c326494
+< ID:5, Address:2083, Data:10, Time:326493
+---
+> ID:5, Address:2083, Data:11, Time:326493
+326496c326496
+< ID:5, Address:2084, Data:8, Time:326495
+---
+> ID:5, Address:2084, Data:9, Time:326495
+326498c326498
+< ID:5, Address:2085, Data:9, Time:326497
+---
+> ID:5, Address:2085, Data:10, Time:326497
+326502c326502
+< ID:5, Address:2087, Data:12, Time:326501
+---
+> ID:5, Address:2087, Data:13, Time:326501
+326505c326505
+< ID:5, Address:2080, Data:9, Time:326504
+---
+> ID:5, Address:2080, Data:10, Time:326504
+326507c326507
+< ID:5, Address:2081, Data:10, Time:326506
+---
+> ID:5, Address:2081, Data:11, Time:326506
+326515c326515
+< ID:5, Address:2085, Data:9, Time:326514
+---
+> ID:5, Address:2085, Data:10, Time:326514
+326517c326517
+< ID:5, Address:2086, Data:12, Time:326516
+---
+> ID:5, Address:2086, Data:13, Time:326516
+326519c326519
+< ID:5, Address:2087, Data:12, Time:326518
+---
+> ID:5, Address:2087, Data:13, Time:326518
+326522c326522
+< ID:5, Address:2080, Data:9, Time:326521
+---
+> ID:5, Address:2080, Data:10, Time:326521
+326524c326524
+< ID:5, Address:2081, Data:10, Time:326523
+---
+> ID:5, Address:2081, Data:11, Time:326523
+326528c326528
+< ID:5, Address:2083, Data:11, Time:326527
+---
+> ID:5, Address:2083, Data:12, Time:326527
+326532c326532
+< ID:5, Address:2085, Data:9, Time:326531
+---
+> ID:5, Address:2085, Data:10, Time:326531
+326534c326534
+< ID:5, Address:2086, Data:12, Time:326533
+---
+> ID:5, Address:2086, Data:13, Time:326533
+326536c326536
+< ID:5, Address:2087, Data:12, Time:326535
+---
+> ID:5, Address:2087, Data:13, Time:326535
+335109c335109
+< ID:5, Address:2081, Data:10, Time:335108
+---
+> ID:5, Address:2081, Data:11, Time:335108
+335113c335113
+< ID:5, Address:2083, Data:11, Time:335112
+---
+> ID:5, Address:2083, Data:12, Time:335112
+335119c335119
+< ID:5, Address:2086, Data:12, Time:335118
+---
+> ID:5, Address:2086, Data:13, Time:335118
+335121c335121
+< ID:5, Address:2087, Data:13, Time:335120
+---
+> ID:5, Address:2087, Data:14, Time:335120
+335126c335126
+< ID:5, Address:2081, Data:10, Time:335125
+---
+> ID:5, Address:2081, Data:11, Time:335125
+335132c335132
+< ID:5, Address:2084, Data:9, Time:335131
+---
+> ID:5, Address:2084, Data:10, Time:335131
+335136c335136
+< ID:5, Address:2086, Data:12, Time:335135
+---
+> ID:5, Address:2086, Data:13, Time:335135
+335138c335138
+< ID:5, Address:2087, Data:13, Time:335137
+---
+> ID:5, Address:2087, Data:14, Time:335137
+335151c335151
+< ID:5, Address:2085, Data:10, Time:335150
+---
+> ID:5, Address:2085, Data:11, Time:335150
+335153c335153
+< ID:5, Address:2086, Data:12, Time:335152
+---
+> ID:5, Address:2086, Data:13, Time:335152
+335155c335155
+< ID:5, Address:2087, Data:13, Time:335154
+---
+> ID:5, Address:2087, Data:14, Time:335154
+335160c335160
+< ID:5, Address:2081, Data:11, Time:335159
+---
+> ID:5, Address:2081, Data:12, Time:335159
+335164c335164
+< ID:5, Address:2083, Data:12, Time:335163
+---
+> ID:5, Address:2083, Data:13, Time:335163
+335166c335166
+< ID:5, Address:2084, Data:10, Time:335165
+---
+> ID:5, Address:2084, Data:11, Time:335165
+335168c335168
+< ID:5, Address:2085, Data:10, Time:335167
+---
+> ID:5, Address:2085, Data:11, Time:335167
+335170c335170
+< ID:5, Address:2086, Data:13, Time:335169
+---
+> ID:5, Address:2086, Data:14, Time:335169
+335172c335172
+< ID:5, Address:2087, Data:14, Time:335171
+---
+> ID:5, Address:2087, Data:15, Time:335171
+335181c335181
+< ID:5, Address:2083, Data:12, Time:335180
+---
+> ID:5, Address:2083, Data:13, Time:335180
+335183c335183
+< ID:5, Address:2084, Data:10, Time:335182
+---
+> ID:5, Address:2084, Data:11, Time:335182
+335187c335187
+< ID:5, Address:2086, Data:13, Time:335186
+---
+> ID:5, Address:2086, Data:14, Time:335186
+335189c335189
+< ID:5, Address:2087, Data:14, Time:335188
+---
+> ID:5, Address:2087, Data:15, Time:335188
+335192c335192
+< ID:5, Address:2080, Data:11, Time:335191
+---
+> ID:5, Address:2080, Data:12, Time:335191
+335194c335194
+< ID:5, Address:2081, Data:12, Time:335193
+---
+> ID:5, Address:2081, Data:13, Time:335193
+335200c335200
+< ID:5, Address:2084, Data:10, Time:335199
+---
+> ID:5, Address:2084, Data:11, Time:335199
+335202c335202
+< ID:5, Address:2085, Data:11, Time:335201
+---
+> ID:5, Address:2085, Data:12, Time:335201
+335206c335206
+< ID:5, Address:2087, Data:14, Time:335205
+---
+> ID:5, Address:2087, Data:15, Time:335205
+335219c335219
+< ID:5, Address:2085, Data:11, Time:335218
+---
+> ID:5, Address:2085, Data:12, Time:335218
+335221c335221
+< ID:5, Address:2086, Data:14, Time:335220
+---
+> ID:5, Address:2086, Data:15, Time:335220
+335223c335223
+< ID:5, Address:2087, Data:15, Time:335222
+---
+> ID:5, Address:2087, Data:16, Time:335222
+335232c335232
+< ID:5, Address:2083, Data:13, Time:335231
+---
+> ID:5, Address:2083, Data:14, Time:335231
+335238c335238
+< ID:5, Address:2086, Data:14, Time:335237
+---
+> ID:5, Address:2086, Data:15, Time:335237
+335240c335240
+< ID:5, Address:2087, Data:15, Time:335239
+---
+> ID:5, Address:2087, Data:16, Time:335239
+343817c343817
+< ID:5, Address:2083, Data:13, Time:343816
+---
+> ID:5, Address:2083, Data:14, Time:343816
+343823c343823
+< ID:5, Address:2086, Data:14, Time:343822
+---
+> ID:5, Address:2086, Data:15, Time:343822
+343825c343825
+< ID:5, Address:2087, Data:15, Time:343824
+---
+> ID:5, Address:2087, Data:16, Time:343824
+343830c343830
+< ID:5, Address:2081, Data:13, Time:343829
+---
+> ID:5, Address:2081, Data:14, Time:343829
+343836c343836
+< ID:5, Address:2084, Data:11, Time:343835
+---
+> ID:5, Address:2084, Data:12, Time:343835
+343838c343838
+< ID:5, Address:2085, Data:12, Time:343837
+---
+> ID:5, Address:2085, Data:13, Time:343837
+343840c343840
+< ID:5, Address:2086, Data:15, Time:343839
+---
+> ID:5, Address:2086, Data:16, Time:343839
+343842c343842
+< ID:5, Address:2087, Data:15, Time:343841
+---
+> ID:5, Address:2087, Data:16, Time:343841
+343849c343849
+< ID:5, Address:2082, Data:13, Time:343848
+---
+> ID:5, Address:2082, Data:14, Time:343848
+343851c343851
+< ID:5, Address:2083, Data:14, Time:343850
+---
+> ID:5, Address:2083, Data:15, Time:343850
+343853c343853
+< ID:5, Address:2084, Data:11, Time:343852
+---
+> ID:5, Address:2084, Data:12, Time:343852
+343855c343855
+< ID:5, Address:2085, Data:12, Time:343854
+---
+> ID:5, Address:2085, Data:13, Time:343854
+343859c343859
+< ID:5, Address:2087, Data:15, Time:343858
+---
+> ID:5, Address:2087, Data:16, Time:343858
+343868c343868
+< ID:5, Address:2083, Data:14, Time:343867
+---
+> ID:5, Address:2083, Data:15, Time:343867
+343870c343870
+< ID:5, Address:2084, Data:11, Time:343869
+---
+> ID:5, Address:2084, Data:12, Time:343869
+343872c343872
+< ID:5, Address:2085, Data:12, Time:343871
+---
+> ID:5, Address:2085, Data:13, Time:343871
+343876c343876
+< ID:5, Address:2087, Data:15, Time:343875
+---
+> ID:5, Address:2087, Data:16, Time:343875
+343881c343881
+< ID:5, Address:2081, Data:14, Time:343880
+---
+> ID:5, Address:2081, Data:15, Time:343880
+343887c343887
+< ID:5, Address:2084, Data:11, Time:343886
+---
+> ID:5, Address:2084, Data:12, Time:343886
+343889c343889
+< ID:5, Address:2085, Data:12, Time:343888
+---
+> ID:5, Address:2085, Data:13, Time:343888
+343891c343891
+< ID:5, Address:2086, Data:16, Time:343890
+---
+> ID:5, Address:2086, Data:17, Time:343890
+343893c343893
+< ID:5, Address:2087, Data:16, Time:343892
+---
+> ID:5, Address:2087, Data:17, Time:343892
+343898c343898
+< ID:5, Address:2081, Data:14, Time:343897
+---
+> ID:5, Address:2081, Data:15, Time:343897
+343904c343904
+< ID:5, Address:2084, Data:11, Time:343903
+---
+> ID:5, Address:2084, Data:12, Time:343903
+343906c343906
+< ID:5, Address:2085, Data:12, Time:343905
+---
+> ID:5, Address:2085, Data:13, Time:343905
+343908c343908
+< ID:5, Address:2086, Data:16, Time:343907
+---
+> ID:5, Address:2086, Data:17, Time:343907
+343910c343910
+< ID:5, Address:2087, Data:16, Time:343909
+---
+> ID:5, Address:2087, Data:17, Time:343909
+343915c343915
+< ID:5, Address:2081, Data:14, Time:343914
+---
+> ID:5, Address:2081, Data:15, Time:343914
+343921c343921
+< ID:5, Address:2084, Data:11, Time:343920
+---
+> ID:5, Address:2084, Data:12, Time:343920
+343923c343923
+< ID:5, Address:2085, Data:12, Time:343922
+---
+> ID:5, Address:2085, Data:13, Time:343922
+343925c343925
+< ID:5, Address:2086, Data:16, Time:343924
+---
+> ID:5, Address:2086, Data:17, Time:343924
+343927c343927
+< ID:5, Address:2087, Data:16, Time:343926
+---
+> ID:5, Address:2087, Data:17, Time:343926
+343936c343936
+< ID:5, Address:2083, Data:15, Time:343935
+---
+> ID:5, Address:2083, Data:16, Time:343935
+343942c343942
+< ID:5, Address:2086, Data:16, Time:343941
+---
+> ID:5, Address:2086, Data:17, Time:343941
+343944c343944
+< ID:5, Address:2087, Data:16, Time:343943
+---
+> ID:5, Address:2087, Data:17, Time:343943

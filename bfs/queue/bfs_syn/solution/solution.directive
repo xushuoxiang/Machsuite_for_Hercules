@@ -1,0 +1,42 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="bfs" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="nodes" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="bfs" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="edges" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="bfs" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="level" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="bfs" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="level_counts" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="bfs" label="loop_neighbors" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="bfs" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="bfs"/>
+            </pragma>
+        </directive>
+        <directive functionName="bfs" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="bfs"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

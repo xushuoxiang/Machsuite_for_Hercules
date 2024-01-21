@@ -1,0 +1,169 @@
+
+;; Function bbgemm (bbgemm, funcdef_no=8, decl_uid=3037, cgraph_uid=9, symbol_order=8)
+
+
+Analyzing function body size: bbgemm
+   fp_expression set
+
+IPA function summary for bbgemm/8 fp_expression
+  global time:     44.000000
+  self size:       45
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:43.000000, time:44.000000
+    size:2.000000, time:0.000000,  executed if:(not inlined)
+  calls:
+
+bbgemm (double * m1, double * m2, double * prod, struct hercules_checkdata * checkdata, int * hercules_buffer_size)
+{
+  double mul;
+  double temp_x;
+  int k_row;
+  int i_row;
+  int kk;
+  int jj;
+  int j;
+  int k;
+  int i;
+  int _1;
+  int _2;
+  int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  double * _6;
+  int _7;
+  int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  double * _11;
+  double _12;
+  int _13;
+  int _14;
+  long unsigned int _15;
+  long unsigned int _16;
+  double * _17;
+  double _18;
+  int _19;
+  int _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  double * _23;
+  double _24;
+  int global_time.0_25;
+
+  <bb 2> :
+loopjj:
+  jj_36 = 0;
+  goto <bb 17>; [INV]
+
+  <bb 3> :
+loopkk:
+  kk_40 = 0;
+  goto <bb 15>; [INV]
+
+  <bb 4> :
+loopi:
+  i_42 = 0;
+  goto <bb 13>; [INV]
+
+  <bb 5> :
+loopk:
+  k_44 = 0;
+  goto <bb 11>; [INV]
+
+  <bb 6> :
+  i_row_46 = i_26 * 64;
+  _1 = k_27 + kk_30;
+  k_row_47 = _1 * 64;
+  _2 = i_row_46 + k_27;
+  _3 = kk_30 + _2;
+  _4 = (long unsigned int) _3;
+  _5 = _4 * 8;
+  _6 = m1_48(D) + _5;
+  temp_x_49 = *_6;
+
+  <bb 7> :
+loopj:
+  j_50 = 0;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  _7 = k_row_47 + j_28;
+  _8 = jj_29 + _7;
+  _9 = (long unsigned int) _8;
+  _10 = _9 * 8;
+  _11 = m2_52(D) + _10;
+  _12 = *_11;
+  mul_53 = temp_x_49 * _12;
+  _13 = i_row_46 + j_28;
+  _14 = jj_29 + _13;
+  _15 = (long unsigned int) _14;
+  _16 = _15 * 8;
+  _17 = prod_54(D) + _16;
+  _18 = *_17;
+  _19 = i_row_46 + j_28;
+  _20 = jj_29 + _19;
+  _21 = (long unsigned int) _20;
+  _22 = _21 * 8;
+  _23 = prod_54(D) + _22;
+  _24 = mul_53 + _18;
+  *_23 = _24;
+  j_56 = j_28 + 1;
+
+  <bb 9> :
+  # j_28 = PHI <j_50(7), j_56(8)>
+  if (j_28 <= 7)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  k_51 = k_27 + 1;
+
+  <bb 11> :
+  # k_27 = PHI <k_44(5), k_51(10)>
+  if (k_27 <= 7)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 12> :
+  i_45 = i_26 + 1;
+
+  <bb 13> :
+  # i_26 = PHI <i_42(4), i_45(12)>
+  if (i_26 <= 63)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  kk_43 = kk_30 + 8;
+
+  <bb 15> :
+  # kk_30 = PHI <kk_40(3), kk_43(14)>
+  if (kk_30 <= 63)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 16> :
+  jj_41 = jj_29 + 8;
+
+  <bb 17> :
+  # jj_29 = PHI <jj_36(2), jj_41(16)>
+  if (jj_29 <= 63)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 18> :
+  global_time.0_25 = global_time;
+  *hercules_buffer_size_38(D) = global_time.0_25;
+  return;
+
+}
+
+

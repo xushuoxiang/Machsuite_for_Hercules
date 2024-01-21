@@ -17,7 +17,13 @@ generate: $(FILES) generate.c
 	./generate
 
 hls: $(KERN).c $(KERN).h
-	vitis_hls hls.tcl
+	hls_operation=2 vitis_hls hls.tcl
+
+csynth: $(KERN).c $(KERN).h
+	hls_operation=0 vitis_hls hls.tcl
+
+cosim: $(KERN).c $(KERN).h
+	hls_operation=1 vitis_hls hls.tcl 
 
 clean:
 	rm -f $(KERN) generate output.data *.log -r fft_syn 

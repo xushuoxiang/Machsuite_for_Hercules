@@ -1,0 +1,2014 @@
+
+
+================================================================
+== Vitis HLS Report for 'update_weights_1'
+================================================================
+* Date:           Wed Dec 20 21:42:57 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        backprop_syn
+* Solution:       solution (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7v585t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.148 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    20547|    20547|  0.205 ms|  0.205 ms|  20547|  20547|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |                                                                          |                                                               |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |                                 Instance                                 |                             Module                            |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+        +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2_fu_110    |update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2    |     3347|     3347|  33.470 us|  33.470 us|   3347|   3347|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_169_3_fu_119                     |update_weights_1_Pipeline_VITIS_LOOP_169_3                     |      275|      275|   2.750 us|   2.750 us|    275|    275|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8_fu_128    |update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8    |    16403|    16403|   0.164 ms|   0.164 ms|  16403|  16403|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_195_9_fu_137                     |update_weights_1_Pipeline_VITIS_LOOP_195_9                     |      275|      275|   2.750 us|   2.750 us|    275|    275|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14_fu_146  |update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14  |      787|      787|   7.870 us|   7.870 us|    787|    787|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155                    |update_weights_1_Pipeline_VITIS_LOOP_221_15                    |       30|       30|   0.300 us|   0.300 us|     30|     30|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5_fu_168    |update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5    |      857|      857|   8.570 us|   8.570 us|    857|    857|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_182_6_fu_175                     |update_weights_1_Pipeline_VITIS_LOOP_182_6                     |       89|       89|   0.890 us|   0.890 us|     89|     89|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11_fu_182  |update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11  |     4121|     4121|  41.210 us|  41.210 us|   4121|   4121|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_208_12_fu_189                    |update_weights_1_Pipeline_VITIS_LOOP_208_12                    |       89|       89|   0.890 us|   0.890 us|     89|     89|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17_fu_196  |update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17  |      217|      217|   2.170 us|   2.170 us|    217|    217|       no|
+        |grp_update_weights_1_Pipeline_VITIS_LOOP_234_18_fu_203                    |update_weights_1_Pipeline_VITIS_LOOP_234_18                    |       28|       28|   0.280 us|   0.280 us|     28|     28|       no|
+        +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       4|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|    23|    6898|    6257|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     646|    -|
+|Register         |        -|     -|     420|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|    23|    7318|    6907|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1590|  1260|  728400|  364200|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     1|       1|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+------+------+-----+
+    |                                 Instance                                 |                             Module                            | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+------+------+-----+
+    |dsqrt_64ns_64ns_64_21_no_dsp_1_U537                                       |dsqrt_64ns_64ns_64_21_no_dsp_1                                 |        0|   0|     0|     0|    0|
+    |dsqrt_64ns_64ns_64_21_no_dsp_1_U538                                       |dsqrt_64ns_64ns_64_21_no_dsp_1                                 |        0|   0|     0|     0|    0|
+    |dsqrt_64ns_64ns_64_21_no_dsp_1_U539                                       |dsqrt_64ns_64ns_64_21_no_dsp_1                                 |        0|   0|     0|     0|    0|
+    |dsqrt_64ns_64ns_64_21_no_dsp_1_U540                                       |dsqrt_64ns_64ns_64_21_no_dsp_1                                 |        0|   0|     0|     0|    0|
+    |dsqrt_64ns_64ns_64_21_no_dsp_1_U541                                       |dsqrt_64ns_64ns_64_21_no_dsp_1                                 |        0|   0|     0|     0|    0|
+    |dsqrt_64ns_64ns_64_21_no_dsp_1_U542                                       |dsqrt_64ns_64ns_64_21_no_dsp_1                                 |        0|   0|     0|     0|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2_fu_110    |update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2    |        0|   0|   559|   390|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_169_3_fu_119                     |update_weights_1_Pipeline_VITIS_LOOP_169_3                     |        0|   0|   541|   285|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5_fu_168    |update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5    |        0|   0|   272|   183|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_182_6_fu_175                     |update_weights_1_Pipeline_VITIS_LOOP_182_6                     |        0|   0|   254|    95|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8_fu_128    |update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8    |        0|   3|  1012|  1182|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_195_9_fu_137                     |update_weights_1_Pipeline_VITIS_LOOP_195_9                     |        0|   3|   986|  1067|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11_fu_182  |update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11  |        0|   0|   280|   191|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_208_12_fu_189                    |update_weights_1_Pipeline_VITIS_LOOP_208_12                    |        0|   0|   254|    95|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14_fu_146  |update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14  |        0|   3|  1013|  1198|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155                    |update_weights_1_Pipeline_VITIS_LOOP_221_15                    |        0|  14|  1216|  1257|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17_fu_196  |update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17  |        0|   0|   266|   226|    0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_234_18_fu_203                    |update_weights_1_Pipeline_VITIS_LOOP_234_18                    |        0|   0|   245|    88|    0|
+    +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                                     |                                                               |        0|  23|  6898|  6257|    0|
+    +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state24_on_subcall_done  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_on_subcall_done   |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|   4|           2|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+-----+-----------+-----+-----------+
+    |        Name       | LUT | Input Size| Bits| Total Bits|
+    +-------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm          |  123|         25|    1|         25|
+    |biases1_address0   |   13|          3|    6|         18|
+    |biases1_address1   |   13|          3|    6|         18|
+    |biases1_ce0        |   13|          3|    1|          3|
+    |biases1_ce1        |   13|          3|    1|          3|
+    |biases1_d0         |   13|          3|   64|        192|
+    |biases1_we0        |   13|          3|    1|          3|
+    |biases2_address0   |   13|          3|    6|         18|
+    |biases2_address1   |   13|          3|    6|         18|
+    |biases2_ce0        |   13|          3|    1|          3|
+    |biases2_ce1        |   13|          3|    1|          3|
+    |biases2_d0         |   13|          3|   64|        192|
+    |biases2_we0        |   13|          3|    1|          3|
+    |biases3_address0   |   13|          3|    2|          6|
+    |biases3_ce0        |   13|          3|    1|          3|
+    |biases3_ce1        |    9|          2|    1|          2|
+    |biases3_d0         |   13|          3|   64|        192|
+    |biases3_we0        |   13|          3|    1|          3|
+    |grp_fu_369_ce      |    9|          2|    1|          2|
+    |grp_fu_373_ce      |    9|          2|    1|          2|
+    |grp_fu_377_ce      |    9|          2|    1|          2|
+    |grp_fu_381_ce      |    9|          2|    1|          2|
+    |grp_fu_385_ce      |    9|          2|    1|          2|
+    |grp_fu_389_ce      |    9|          2|    1|          2|
+    |grp_fu_393_ce      |    9|          2|    1|          2|
+    |grp_fu_397_ce      |    9|          2|    1|          2|
+    |weights1_address0  |   13|          3|   10|         30|
+    |weights1_address1  |   13|          3|   10|         30|
+    |weights1_ce0       |   13|          3|    1|          3|
+    |weights1_ce1       |   13|          3|    1|          3|
+    |weights1_d0        |   13|          3|   64|        192|
+    |weights1_we0       |   13|          3|    1|          3|
+    |weights2_address0  |   13|          3|   12|         36|
+    |weights2_address1  |   13|          3|   12|         36|
+    |weights2_ce0       |   13|          3|    1|          3|
+    |weights2_ce1       |   13|          3|    1|          3|
+    |weights2_d0        |   13|          3|   64|        192|
+    |weights2_we0       |   13|          3|    1|          3|
+    |weights3_address0  |   13|          3|    8|         24|
+    |weights3_address1  |   13|          3|    8|         24|
+    |weights3_ce0       |   13|          3|    1|          3|
+    |weights3_ce1       |   13|          3|    1|          3|
+    |weights3_d0        |   13|          3|   64|        192|
+    |weights3_we0       |   13|          3|    1|          3|
+    +-------------------+-----+-----------+-----+-----------+
+    |Total              |  646|        145|  497|       1504|
+    +-------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                          Name                                         | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                              |  24|   0|   24|          0|
+    |bias_norm_3_reg_354                                                                    |  64|   0|   64|          0|
+    |bias_norm_4_reg_364                                                                    |  64|   0|   64|          0|
+    |bias_norm_reg_344                                                                      |  64|   0|   64|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2_fu_110_ap_start_reg    |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_169_3_fu_119_ap_start_reg                     |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5_fu_168_ap_start_reg    |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_182_6_fu_175_ap_start_reg                     |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8_fu_128_ap_start_reg    |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_195_9_fu_137_ap_start_reg                     |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11_fu_182_ap_start_reg  |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_208_12_fu_189_ap_start_reg                    |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14_fu_146_ap_start_reg  |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155_ap_start_reg                    |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17_fu_196_ap_start_reg  |   1|   0|    1|          0|
+    |grp_update_weights_1_Pipeline_VITIS_LOOP_234_18_fu_203_ap_start_reg                    |   1|   0|    1|          0|
+    |norm_1_reg_339                                                                         |  64|   0|   64|          0|
+    |norm_3_reg_359                                                                         |  64|   0|   64|          0|
+    |norm_reg_349                                                                           |  64|   0|   64|          0|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                  | 420|   0|  420|          0|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++----------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6768_p_din0    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6768_p_din1    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6768_p_opcode  |  out|    2|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6768_p_dout0   |   in|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6768_p_ce      |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6776_p_din0    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6776_p_din1    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6776_p_dout0   |   in|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6776_p_ce      |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6772_p_din0    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6772_p_din1    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6772_p_opcode  |  out|    2|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6772_p_dout0   |   in|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6772_p_ce      |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6780_p_din0    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6780_p_din1    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6780_p_dout0   |   in|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6780_p_ce      |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6784_p_din0    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6784_p_din1    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6784_p_dout0   |   in|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6784_p_ce      |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6792_p_din0    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6792_p_din1    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6792_p_dout0   |   in|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6792_p_ce      |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6796_p_din0    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6796_p_din1    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6796_p_dout0   |   in|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6796_p_ce      |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6800_p_din0    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6800_p_din1    |  out|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6800_p_dout0   |   in|   64|  ap_ctrl_hs|  update_weights.1|  return value|
+|grp_fu_6800_p_ce      |  out|    1|  ap_ctrl_hs|  update_weights.1|  return value|
+|weights1_address0     |  out|   10|   ap_memory|          weights1|         array|
+|weights1_ce0          |  out|    1|   ap_memory|          weights1|         array|
+|weights1_we0          |  out|    1|   ap_memory|          weights1|         array|
+|weights1_d0           |  out|   64|   ap_memory|          weights1|         array|
+|weights1_address1     |  out|   10|   ap_memory|          weights1|         array|
+|weights1_ce1          |  out|    1|   ap_memory|          weights1|         array|
+|weights1_q1           |   in|   64|   ap_memory|          weights1|         array|
+|weights2_address0     |  out|   12|   ap_memory|          weights2|         array|
+|weights2_ce0          |  out|    1|   ap_memory|          weights2|         array|
+|weights2_we0          |  out|    1|   ap_memory|          weights2|         array|
+|weights2_d0           |  out|   64|   ap_memory|          weights2|         array|
+|weights2_address1     |  out|   12|   ap_memory|          weights2|         array|
+|weights2_ce1          |  out|    1|   ap_memory|          weights2|         array|
+|weights2_q1           |   in|   64|   ap_memory|          weights2|         array|
+|weights3_address0     |  out|    8|   ap_memory|          weights3|         array|
+|weights3_ce0          |  out|    1|   ap_memory|          weights3|         array|
+|weights3_we0          |  out|    1|   ap_memory|          weights3|         array|
+|weights3_d0           |  out|   64|   ap_memory|          weights3|         array|
+|weights3_address1     |  out|    8|   ap_memory|          weights3|         array|
+|weights3_ce1          |  out|    1|   ap_memory|          weights3|         array|
+|weights3_q1           |   in|   64|   ap_memory|          weights3|         array|
+|d_weights1_address0   |  out|   10|   ap_memory|        d_weights1|         array|
+|d_weights1_ce0        |  out|    1|   ap_memory|        d_weights1|         array|
+|d_weights1_q0         |   in|   64|   ap_memory|        d_weights1|         array|
+|d_weights2_address0   |  out|   12|   ap_memory|        d_weights2|         array|
+|d_weights2_ce0        |  out|    1|   ap_memory|        d_weights2|         array|
+|d_weights2_q0         |   in|   64|   ap_memory|        d_weights2|         array|
+|d_weights3_address0   |  out|    8|   ap_memory|        d_weights3|         array|
+|d_weights3_ce0        |  out|    1|   ap_memory|        d_weights3|         array|
+|d_weights3_q0         |   in|   64|   ap_memory|        d_weights3|         array|
+|biases1_address0      |  out|    6|   ap_memory|           biases1|         array|
+|biases1_ce0           |  out|    1|   ap_memory|           biases1|         array|
+|biases1_we0           |  out|    1|   ap_memory|           biases1|         array|
+|biases1_d0            |  out|   64|   ap_memory|           biases1|         array|
+|biases1_address1      |  out|    6|   ap_memory|           biases1|         array|
+|biases1_ce1           |  out|    1|   ap_memory|           biases1|         array|
+|biases1_q1            |   in|   64|   ap_memory|           biases1|         array|
+|biases2_address0      |  out|    6|   ap_memory|           biases2|         array|
+|biases2_ce0           |  out|    1|   ap_memory|           biases2|         array|
+|biases2_we0           |  out|    1|   ap_memory|           biases2|         array|
+|biases2_d0            |  out|   64|   ap_memory|           biases2|         array|
+|biases2_address1      |  out|    6|   ap_memory|           biases2|         array|
+|biases2_ce1           |  out|    1|   ap_memory|           biases2|         array|
+|biases2_q1            |   in|   64|   ap_memory|           biases2|         array|
+|biases3_address0      |  out|    2|   ap_memory|           biases3|         array|
+|biases3_ce0           |  out|    1|   ap_memory|           biases3|         array|
+|biases3_we0           |  out|    1|   ap_memory|           biases3|         array|
+|biases3_d0            |  out|   64|   ap_memory|           biases3|         array|
+|biases3_q0            |   in|   64|   ap_memory|           biases3|         array|
+|biases3_address1      |  out|    2|   ap_memory|           biases3|         array|
+|biases3_ce1           |  out|    1|   ap_memory|           biases3|         array|
+|biases3_q1            |   in|   64|   ap_memory|           biases3|         array|
+|d_biases1_address0    |  out|    6|   ap_memory|         d_biases1|         array|
+|d_biases1_ce0         |  out|    1|   ap_memory|         d_biases1|         array|
+|d_biases1_q0          |   in|   64|   ap_memory|         d_biases1|         array|
+|d_biases2_address0    |  out|    6|   ap_memory|         d_biases2|         array|
+|d_biases2_ce0         |  out|    1|   ap_memory|         d_biases2|         array|
+|d_biases2_q0          |   in|   64|   ap_memory|         d_biases2|         array|
+|p_read                |   in|   64|     ap_none|            p_read|        scalar|
+|p_read1               |   in|   64|     ap_none|           p_read1|        scalar|
+|p_read2               |   in|   64|     ap_none|           p_read2|        scalar|
++----------------------+-----+-----+------------+------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 24
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.85>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_read_4 = read i64 @_ssdm_op_Read.ap_auto.double, i64 %p_read2"   --->   Operation 25 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_read_5 = read i64 @_ssdm_op_Read.ap_auto.double, i64 %p_read1"   --->   Operation 26 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_read_6 = read i64 @_ssdm_op_Read.ap_auto.double, i64 %p_read"   --->   Operation 27 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%bias_norm_7_loc = alloca i64 1"   --->   Operation 28 'alloca' 'bias_norm_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%norm_7_loc = alloca i64 1"   --->   Operation 29 'alloca' 'norm_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%bias_norm_4_loc = alloca i64 1"   --->   Operation 30 'alloca' 'bias_norm_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%norm_4_loc = alloca i64 1"   --->   Operation 31 'alloca' 'norm_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%bias_norm_1_loc = alloca i64 1"   --->   Operation 32 'alloca' 'bias_norm_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%norm_2_loc = alloca i64 1"   --->   Operation 33 'alloca' 'norm_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2, i64 %d_weights1, i64 %weights1, i64 %norm_2_loc"   --->   Operation 34 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_169_3, i64 %d_biases1, i64 %biases1, i64 %bias_norm_1_loc"   --->   Operation 35 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8, i64 %d_weights2, i64 %weights2, i64 %norm_4_loc"   --->   Operation 36 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_195_9, i64 %d_biases2, i64 %biases2, i64 %bias_norm_4_loc"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 38 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14, i64 %d_weights3, i64 %weights3, i64 %norm_7_loc"   --->   Operation 38 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 39 [2/2] (0.85ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_221_15, i64 %p_read_6, i64 %p_read_5, i64 %p_read_4, i64 %biases3, i64 %bias_norm_7_loc"   --->   Operation 39 'call' 'call_ln0' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 40 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2, i64 %d_weights1, i64 %weights1, i64 %norm_2_loc"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 41 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_169_3, i64 %d_biases1, i64 %biases1, i64 %bias_norm_1_loc"   --->   Operation 41 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 42 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8, i64 %d_weights2, i64 %weights2, i64 %norm_4_loc"   --->   Operation 42 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 43 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_195_9, i64 %d_biases2, i64 %biases2, i64 %bias_norm_4_loc"   --->   Operation 43 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 44 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14, i64 %d_weights3, i64 %weights3, i64 %norm_7_loc"   --->   Operation 44 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 45 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_221_15, i64 %p_read_6, i64 %p_read_5, i64 %p_read_4, i64 %biases3, i64 %bias_norm_7_loc"   --->   Operation 45 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 6.61>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%norm_2_loc_load = load i64 %norm_2_loc"   --->   Operation 46 'load' 'norm_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%bias_norm_1_loc_load = load i64 %bias_norm_1_loc"   --->   Operation 47 'load' 'bias_norm_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [21/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 48 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 49 [21/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 49 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%norm_4_loc_load = load i64 %norm_4_loc"   --->   Operation 50 'load' 'norm_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%bias_norm_4_loc_load = load i64 %bias_norm_4_loc"   --->   Operation 51 'load' 'bias_norm_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [21/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 52 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 53 [21/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 53 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%norm_7_loc_load = load i64 %norm_7_loc"   --->   Operation 54 'load' 'norm_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%bias_norm_7_loc_load = load i64 %bias_norm_7_loc"   --->   Operation 55 'load' 'bias_norm_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [21/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 56 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 57 [21/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 57 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.61>
+ST_4 : Operation 58 [20/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 58 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 59 [20/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 59 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 60 [20/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 60 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 61 [20/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 61 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 62 [20/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 62 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 63 [20/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 63 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.61>
+ST_5 : Operation 64 [19/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 64 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 65 [19/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 65 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 66 [19/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 66 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 67 [19/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 67 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 68 [19/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 68 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 69 [19/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 69 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.61>
+ST_6 : Operation 70 [18/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 70 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 71 [18/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 71 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 72 [18/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 72 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 73 [18/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 73 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 74 [18/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 74 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 75 [18/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 75 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.61>
+ST_7 : Operation 76 [17/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 76 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 77 [17/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 77 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 78 [17/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 78 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 79 [17/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 79 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 80 [17/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 80 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 81 [17/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 81 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.61>
+ST_8 : Operation 82 [16/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 82 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 83 [16/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 83 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 84 [16/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 84 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 85 [16/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 85 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 86 [16/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 86 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 87 [16/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 87 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.61>
+ST_9 : Operation 88 [15/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 88 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 89 [15/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 89 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 90 [15/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 90 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 91 [15/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 91 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 92 [15/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 92 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 93 [15/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 93 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.61>
+ST_10 : Operation 94 [14/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 94 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 95 [14/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 95 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 96 [14/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 96 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 97 [14/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 97 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 98 [14/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 98 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 99 [14/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 99 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.61>
+ST_11 : Operation 100 [13/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 100 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 101 [13/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 101 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 102 [13/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 102 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 103 [13/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 103 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 104 [13/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 104 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 105 [13/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 105 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.61>
+ST_12 : Operation 106 [12/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 106 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 107 [12/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 107 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 108 [12/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 108 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 109 [12/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 109 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 110 [12/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 110 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 111 [12/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 111 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.61>
+ST_13 : Operation 112 [11/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 112 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 113 [11/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 113 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 114 [11/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 114 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 115 [11/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 115 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 116 [11/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 116 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 117 [11/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 117 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.61>
+ST_14 : Operation 118 [10/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 118 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 119 [10/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 119 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 120 [10/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 120 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 121 [10/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 121 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 122 [10/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 122 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 123 [10/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 123 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.61>
+ST_15 : Operation 124 [9/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 124 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 125 [9/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 125 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 126 [9/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 126 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 127 [9/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 127 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 128 [9/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 128 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 129 [9/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 129 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.61>
+ST_16 : Operation 130 [8/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 130 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 131 [8/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 131 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 132 [8/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 132 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 133 [8/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 133 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 134 [8/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 134 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 135 [8/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 135 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.61>
+ST_17 : Operation 136 [7/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 136 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 137 [7/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 137 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 138 [7/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 138 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 139 [7/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 139 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 140 [7/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 140 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 141 [7/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 141 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.61>
+ST_18 : Operation 142 [6/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 142 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 143 [6/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 143 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 144 [6/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 144 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 145 [6/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 145 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 146 [6/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 146 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 147 [6/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 147 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 6.61>
+ST_19 : Operation 148 [5/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 148 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 149 [5/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 149 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 150 [5/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 150 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 151 [5/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 151 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 152 [5/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 152 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 153 [5/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 153 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 6.61>
+ST_20 : Operation 154 [4/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 154 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 155 [4/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 155 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 156 [4/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 156 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 157 [4/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 157 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 158 [4/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 158 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 159 [4/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 159 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 6.61>
+ST_21 : Operation 160 [3/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 160 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 161 [3/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 161 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 162 [3/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 162 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 163 [3/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 163 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 164 [3/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 164 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 165 [3/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 165 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.61>
+ST_22 : Operation 166 [2/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 166 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 167 [2/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 167 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 168 [2/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 168 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 169 [2/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 169 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 170 [2/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 170 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 171 [2/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 171 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.61>
+ST_23 : Operation 172 [1/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 172 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 173 [2/2] (0.00ns)   --->   "%call_ln174 = call void @update_weights.1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5, i64 %weights1, i64 %norm_1" [backprop.c:174]   --->   Operation 173 'call' 'call_ln174' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 174 [1/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 174 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 175 [2/2] (0.00ns)   --->   "%call_ln175 = call void @update_weights.1_Pipeline_VITIS_LOOP_182_6, i64 %biases1, i64 %bias_norm" [backprop.c:175]   --->   Operation 175 'call' 'call_ln175' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 176 [1/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 176 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 177 [2/2] (0.00ns)   --->   "%call_ln200 = call void @update_weights.1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11, i64 %weights2, i64 %norm" [backprop.c:200]   --->   Operation 177 'call' 'call_ln200' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 178 [1/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 178 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 179 [2/2] (0.00ns)   --->   "%call_ln201 = call void @update_weights.1_Pipeline_VITIS_LOOP_208_12, i64 %biases2, i64 %bias_norm_3" [backprop.c:201]   --->   Operation 179 'call' 'call_ln201' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 180 [1/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 180 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 181 [2/2] (0.00ns)   --->   "%call_ln226 = call void @update_weights.1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17, i64 %weights3, i64 %norm_3" [backprop.c:226]   --->   Operation 181 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 182 [1/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 182 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 183 [2/2] (0.00ns)   --->   "%call_ln227 = call void @update_weights.1_Pipeline_VITIS_LOOP_234_18, i64 %biases3, i64 %bias_norm_4" [backprop.c:227]   --->   Operation 183 'call' 'call_ln227' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 0.00>
+ST_24 : Operation 184 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %biases3, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 184 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 185 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %biases2, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 185 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 186 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %biases1, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 186 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 187 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights3, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 187 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 188 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights2, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 188 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 189 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights1, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 189 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 190 [1/2] (0.00ns)   --->   "%call_ln174 = call void @update_weights.1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5, i64 %weights1, i64 %norm_1" [backprop.c:174]   --->   Operation 190 'call' 'call_ln174' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 191 [1/2] (0.00ns)   --->   "%call_ln175 = call void @update_weights.1_Pipeline_VITIS_LOOP_182_6, i64 %biases1, i64 %bias_norm" [backprop.c:175]   --->   Operation 191 'call' 'call_ln175' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 192 [1/2] (0.00ns)   --->   "%call_ln200 = call void @update_weights.1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11, i64 %weights2, i64 %norm" [backprop.c:200]   --->   Operation 192 'call' 'call_ln200' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 193 [1/2] (0.00ns)   --->   "%call_ln201 = call void @update_weights.1_Pipeline_VITIS_LOOP_208_12, i64 %biases2, i64 %bias_norm_3" [backprop.c:201]   --->   Operation 193 'call' 'call_ln201' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 194 [1/2] (0.00ns)   --->   "%call_ln226 = call void @update_weights.1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17, i64 %weights3, i64 %norm_3" [backprop.c:226]   --->   Operation 194 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 195 [1/2] (0.00ns)   --->   "%call_ln227 = call void @update_weights.1_Pipeline_VITIS_LOOP_234_18, i64 %biases3, i64 %bias_norm_4" [backprop.c:227]   --->   Operation 195 'call' 'call_ln227' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 196 [1/1] (0.00ns)   --->   "%ret_ln237 = ret" [backprop.c:237]   --->   Operation 196 'ret' 'ret_ln237' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ weights1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[01]; IO mode=ap_memory:ce=0
+Port [ weights2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[01]; IO mode=ap_memory:ce=0
+Port [ weights3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[01]; IO mode=ap_memory:ce=0
+Port [ d_weights1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ d_weights2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ d_weights3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ biases1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[01]; IO mode=ap_memory:ce=0
+Port [ biases2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[01]; IO mode=ap_memory:ce=0
+Port [ biases3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ d_biases1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ d_biases2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+p_read_4             (read         ) [ 0010000000000000000000000]
+p_read_5             (read         ) [ 0010000000000000000000000]
+p_read_6             (read         ) [ 0010000000000000000000000]
+bias_norm_7_loc      (alloca       ) [ 0111000000000000000000000]
+norm_7_loc           (alloca       ) [ 0111000000000000000000000]
+bias_norm_4_loc      (alloca       ) [ 0111000000000000000000000]
+norm_4_loc           (alloca       ) [ 0111000000000000000000000]
+bias_norm_1_loc      (alloca       ) [ 0111000000000000000000000]
+norm_2_loc           (alloca       ) [ 0111000000000000000000000]
+call_ln0             (call         ) [ 0000000000000000000000000]
+call_ln0             (call         ) [ 0000000000000000000000000]
+call_ln0             (call         ) [ 0000000000000000000000000]
+call_ln0             (call         ) [ 0000000000000000000000000]
+call_ln0             (call         ) [ 0000000000000000000000000]
+call_ln0             (call         ) [ 0000000000000000000000000]
+norm_2_loc_load      (load         ) [ 0000111111111111111111110]
+bias_norm_1_loc_load (load         ) [ 0000111111111111111111110]
+norm_4_loc_load      (load         ) [ 0000111111111111111111110]
+bias_norm_4_loc_load (load         ) [ 0000111111111111111111110]
+norm_7_loc_load      (load         ) [ 0000111111111111111111110]
+bias_norm_7_loc_load (load         ) [ 0000111111111111111111110]
+norm_1               (dsqrt        ) [ 0000000000000000000000001]
+bias_norm            (dsqrt        ) [ 0000000000000000000000001]
+norm                 (dsqrt        ) [ 0000000000000000000000001]
+bias_norm_3          (dsqrt        ) [ 0000000000000000000000001]
+norm_3               (dsqrt        ) [ 0000000000000000000000001]
+bias_norm_4          (dsqrt        ) [ 0000000000000000000000001]
+specinterface_ln0    (specinterface) [ 0000000000000000000000000]
+specinterface_ln0    (specinterface) [ 0000000000000000000000000]
+specinterface_ln0    (specinterface) [ 0000000000000000000000000]
+specinterface_ln0    (specinterface) [ 0000000000000000000000000]
+specinterface_ln0    (specinterface) [ 0000000000000000000000000]
+specinterface_ln0    (specinterface) [ 0000000000000000000000000]
+call_ln174           (call         ) [ 0000000000000000000000000]
+call_ln175           (call         ) [ 0000000000000000000000000]
+call_ln200           (call         ) [ 0000000000000000000000000]
+call_ln201           (call         ) [ 0000000000000000000000000]
+call_ln226           (call         ) [ 0000000000000000000000000]
+call_ln227           (call         ) [ 0000000000000000000000000]
+ret_ln237            (ret          ) [ 0000000000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="weights1">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="weights1"/><MemPortTyVec>0 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="weights2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="weights2"/><MemPortTyVec>0 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="weights3">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="weights3"/><MemPortTyVec>0 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="d_weights1">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="d_weights1"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="d_weights2">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="d_weights2"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="d_weights3">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="d_weights3"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="biases1">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="biases1"/><MemPortTyVec>0 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="biases2">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="biases2"/><MemPortTyVec>0 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="biases3">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="biases3"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="d_biases1">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="d_biases1"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="d_biases2">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="d_biases2"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="p_read">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="p_read1">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="p_read2">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.double"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_169_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_195_9"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_221_15"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="llvm.sqrt.f64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_182_6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_208_12"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="update_weights.1_Pipeline_VITIS_LOOP_234_18"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_17"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_18"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="bias_norm_7_loc_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="1" slack="0"/>
+<pin id="70" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="bias_norm_7_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="norm_7_loc_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="1" slack="0"/>
+<pin id="74" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="norm_7_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="bias_norm_4_loc_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="1" slack="0"/>
+<pin id="78" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="bias_norm_4_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="norm_4_loc_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="1" slack="0"/>
+<pin id="82" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="norm_4_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="bias_norm_1_loc_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="1" slack="0"/>
+<pin id="86" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="bias_norm_1_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1004" name="norm_2_loc_fu_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="1" slack="0"/>
+<pin id="90" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="norm_2_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="p_read_4_read_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="64" slack="0"/>
+<pin id="94" dir="0" index="1" bw="64" slack="0"/>
+<pin id="95" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_4/1 "/>
+</bind>
+</comp>
+
+<comp id="98" class="1004" name="p_read_5_read_fu_98">
+<pin_list>
+<pin id="99" dir="0" index="0" bw="64" slack="0"/>
+<pin id="100" dir="0" index="1" bw="64" slack="0"/>
+<pin id="101" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_5/1 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="p_read_6_read_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="64" slack="0"/>
+<pin id="106" dir="0" index="1" bw="64" slack="0"/>
+<pin id="107" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_6/1 "/>
+</bind>
+</comp>
+
+<comp id="110" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2_fu_110">
+<pin_list>
+<pin id="111" dir="0" index="0" bw="0" slack="0"/>
+<pin id="112" dir="0" index="1" bw="64" slack="0"/>
+<pin id="113" dir="0" index="2" bw="64" slack="0"/>
+<pin id="114" dir="0" index="3" bw="64" slack="0"/>
+<pin id="115" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="119" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_169_3_fu_119">
+<pin_list>
+<pin id="120" dir="0" index="0" bw="0" slack="0"/>
+<pin id="121" dir="0" index="1" bw="64" slack="0"/>
+<pin id="122" dir="0" index="2" bw="64" slack="0"/>
+<pin id="123" dir="0" index="3" bw="64" slack="0"/>
+<pin id="124" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="128" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8_fu_128">
+<pin_list>
+<pin id="129" dir="0" index="0" bw="0" slack="0"/>
+<pin id="130" dir="0" index="1" bw="64" slack="0"/>
+<pin id="131" dir="0" index="2" bw="64" slack="0"/>
+<pin id="132" dir="0" index="3" bw="64" slack="0"/>
+<pin id="133" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="137" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_195_9_fu_137">
+<pin_list>
+<pin id="138" dir="0" index="0" bw="0" slack="0"/>
+<pin id="139" dir="0" index="1" bw="64" slack="0"/>
+<pin id="140" dir="0" index="2" bw="64" slack="0"/>
+<pin id="141" dir="0" index="3" bw="64" slack="0"/>
+<pin id="142" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="146" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14_fu_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="0" slack="0"/>
+<pin id="148" dir="0" index="1" bw="64" slack="0"/>
+<pin id="149" dir="0" index="2" bw="64" slack="0"/>
+<pin id="150" dir="0" index="3" bw="64" slack="0"/>
+<pin id="151" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="155" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155">
+<pin_list>
+<pin id="156" dir="0" index="0" bw="0" slack="0"/>
+<pin id="157" dir="0" index="1" bw="64" slack="0"/>
+<pin id="158" dir="0" index="2" bw="64" slack="0"/>
+<pin id="159" dir="0" index="3" bw="64" slack="0"/>
+<pin id="160" dir="0" index="4" bw="64" slack="0"/>
+<pin id="161" dir="0" index="5" bw="64" slack="0"/>
+<pin id="162" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="168" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5_fu_168">
+<pin_list>
+<pin id="169" dir="0" index="0" bw="0" slack="0"/>
+<pin id="170" dir="0" index="1" bw="64" slack="0"/>
+<pin id="171" dir="0" index="2" bw="64" slack="0"/>
+<pin id="172" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln174/23 "/>
+</bind>
+</comp>
+
+<comp id="175" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_182_6_fu_175">
+<pin_list>
+<pin id="176" dir="0" index="0" bw="0" slack="0"/>
+<pin id="177" dir="0" index="1" bw="64" slack="0"/>
+<pin id="178" dir="0" index="2" bw="64" slack="0"/>
+<pin id="179" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln175/23 "/>
+</bind>
+</comp>
+
+<comp id="182" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11_fu_182">
+<pin_list>
+<pin id="183" dir="0" index="0" bw="0" slack="0"/>
+<pin id="184" dir="0" index="1" bw="64" slack="0"/>
+<pin id="185" dir="0" index="2" bw="64" slack="0"/>
+<pin id="186" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln200/23 "/>
+</bind>
+</comp>
+
+<comp id="189" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_208_12_fu_189">
+<pin_list>
+<pin id="190" dir="0" index="0" bw="0" slack="0"/>
+<pin id="191" dir="0" index="1" bw="64" slack="0"/>
+<pin id="192" dir="0" index="2" bw="64" slack="0"/>
+<pin id="193" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln201/23 "/>
+</bind>
+</comp>
+
+<comp id="196" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17_fu_196">
+<pin_list>
+<pin id="197" dir="0" index="0" bw="0" slack="0"/>
+<pin id="198" dir="0" index="1" bw="64" slack="0"/>
+<pin id="199" dir="0" index="2" bw="64" slack="0"/>
+<pin id="200" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln226/23 "/>
+</bind>
+</comp>
+
+<comp id="203" class="1004" name="grp_update_weights_1_Pipeline_VITIS_LOOP_234_18_fu_203">
+<pin_list>
+<pin id="204" dir="0" index="0" bw="0" slack="0"/>
+<pin id="205" dir="0" index="1" bw="64" slack="0"/>
+<pin id="206" dir="0" index="2" bw="64" slack="0"/>
+<pin id="207" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln227/23 "/>
+</bind>
+</comp>
+
+<comp id="210" class="1004" name="grp_fu_210">
+<pin_list>
+<pin id="211" dir="0" index="0" bw="64" slack="0"/>
+<pin id="212" dir="0" index="1" bw="64" slack="0"/>
+<pin id="213" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dsqrt(518) " fcode="dsqrt"/>
+<opset="norm_1/3 "/>
+</bind>
+</comp>
+
+<comp id="216" class="1004" name="grp_fu_216">
+<pin_list>
+<pin id="217" dir="0" index="0" bw="64" slack="0"/>
+<pin id="218" dir="0" index="1" bw="64" slack="0"/>
+<pin id="219" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dsqrt(518) " fcode="dsqrt"/>
+<opset="bias_norm/3 "/>
+</bind>
+</comp>
+
+<comp id="222" class="1004" name="grp_fu_222">
+<pin_list>
+<pin id="223" dir="0" index="0" bw="64" slack="0"/>
+<pin id="224" dir="0" index="1" bw="64" slack="0"/>
+<pin id="225" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dsqrt(518) " fcode="dsqrt"/>
+<opset="norm/3 "/>
+</bind>
+</comp>
+
+<comp id="228" class="1004" name="grp_fu_228">
+<pin_list>
+<pin id="229" dir="0" index="0" bw="64" slack="0"/>
+<pin id="230" dir="0" index="1" bw="64" slack="0"/>
+<pin id="231" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dsqrt(518) " fcode="dsqrt"/>
+<opset="bias_norm_3/3 "/>
+</bind>
+</comp>
+
+<comp id="234" class="1004" name="grp_fu_234">
+<pin_list>
+<pin id="235" dir="0" index="0" bw="64" slack="0"/>
+<pin id="236" dir="0" index="1" bw="64" slack="0"/>
+<pin id="237" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dsqrt(518) " fcode="dsqrt"/>
+<opset="norm_3/3 "/>
+</bind>
+</comp>
+
+<comp id="240" class="1004" name="grp_fu_240">
+<pin_list>
+<pin id="241" dir="0" index="0" bw="64" slack="0"/>
+<pin id="242" dir="0" index="1" bw="64" slack="0"/>
+<pin id="243" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dsqrt(518) " fcode="dsqrt"/>
+<opset="bias_norm_4/3 "/>
+</bind>
+</comp>
+
+<comp id="246" class="1004" name="norm_2_loc_load_load_fu_246">
+<pin_list>
+<pin id="247" dir="0" index="0" bw="64" slack="2"/>
+<pin id="248" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="norm_2_loc_load/3 "/>
+</bind>
+</comp>
+
+<comp id="250" class="1004" name="bias_norm_1_loc_load_load_fu_250">
+<pin_list>
+<pin id="251" dir="0" index="0" bw="64" slack="2"/>
+<pin id="252" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="bias_norm_1_loc_load/3 "/>
+</bind>
+</comp>
+
+<comp id="254" class="1004" name="norm_4_loc_load_load_fu_254">
+<pin_list>
+<pin id="255" dir="0" index="0" bw="64" slack="2"/>
+<pin id="256" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="norm_4_loc_load/3 "/>
+</bind>
+</comp>
+
+<comp id="258" class="1004" name="bias_norm_4_loc_load_load_fu_258">
+<pin_list>
+<pin id="259" dir="0" index="0" bw="64" slack="2"/>
+<pin id="260" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="bias_norm_4_loc_load/3 "/>
+</bind>
+</comp>
+
+<comp id="262" class="1004" name="norm_7_loc_load_load_fu_262">
+<pin_list>
+<pin id="263" dir="0" index="0" bw="64" slack="2"/>
+<pin id="264" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="norm_7_loc_load/3 "/>
+</bind>
+</comp>
+
+<comp id="266" class="1004" name="bias_norm_7_loc_load_load_fu_266">
+<pin_list>
+<pin id="267" dir="0" index="0" bw="64" slack="2"/>
+<pin id="268" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="bias_norm_7_loc_load/3 "/>
+</bind>
+</comp>
+
+<comp id="270" class="1005" name="p_read_4_reg_270">
+<pin_list>
+<pin id="271" dir="0" index="0" bw="64" slack="1"/>
+<pin id="272" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_4 "/>
+</bind>
+</comp>
+
+<comp id="275" class="1005" name="p_read_5_reg_275">
+<pin_list>
+<pin id="276" dir="0" index="0" bw="64" slack="1"/>
+<pin id="277" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_5 "/>
+</bind>
+</comp>
+
+<comp id="280" class="1005" name="p_read_6_reg_280">
+<pin_list>
+<pin id="281" dir="0" index="0" bw="64" slack="1"/>
+<pin id="282" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_6 "/>
+</bind>
+</comp>
+
+<comp id="285" class="1005" name="bias_norm_7_loc_reg_285">
+<pin_list>
+<pin id="286" dir="0" index="0" bw="64" slack="0"/>
+<pin id="287" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="bias_norm_7_loc "/>
+</bind>
+</comp>
+
+<comp id="291" class="1005" name="norm_7_loc_reg_291">
+<pin_list>
+<pin id="292" dir="0" index="0" bw="64" slack="0"/>
+<pin id="293" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="norm_7_loc "/>
+</bind>
+</comp>
+
+<comp id="297" class="1005" name="bias_norm_4_loc_reg_297">
+<pin_list>
+<pin id="298" dir="0" index="0" bw="64" slack="0"/>
+<pin id="299" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="bias_norm_4_loc "/>
+</bind>
+</comp>
+
+<comp id="303" class="1005" name="norm_4_loc_reg_303">
+<pin_list>
+<pin id="304" dir="0" index="0" bw="64" slack="0"/>
+<pin id="305" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="norm_4_loc "/>
+</bind>
+</comp>
+
+<comp id="309" class="1005" name="bias_norm_1_loc_reg_309">
+<pin_list>
+<pin id="310" dir="0" index="0" bw="64" slack="0"/>
+<pin id="311" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="bias_norm_1_loc "/>
+</bind>
+</comp>
+
+<comp id="315" class="1005" name="norm_2_loc_reg_315">
+<pin_list>
+<pin id="316" dir="0" index="0" bw="64" slack="0"/>
+<pin id="317" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="norm_2_loc "/>
+</bind>
+</comp>
+
+<comp id="339" class="1005" name="norm_1_reg_339">
+<pin_list>
+<pin id="340" dir="0" index="0" bw="64" slack="1"/>
+<pin id="341" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="norm_1 "/>
+</bind>
+</comp>
+
+<comp id="344" class="1005" name="bias_norm_reg_344">
+<pin_list>
+<pin id="345" dir="0" index="0" bw="64" slack="1"/>
+<pin id="346" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="bias_norm "/>
+</bind>
+</comp>
+
+<comp id="349" class="1005" name="norm_reg_349">
+<pin_list>
+<pin id="350" dir="0" index="0" bw="64" slack="1"/>
+<pin id="351" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="norm "/>
+</bind>
+</comp>
+
+<comp id="354" class="1005" name="bias_norm_3_reg_354">
+<pin_list>
+<pin id="355" dir="0" index="0" bw="64" slack="1"/>
+<pin id="356" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="bias_norm_3 "/>
+</bind>
+</comp>
+
+<comp id="359" class="1005" name="norm_3_reg_359">
+<pin_list>
+<pin id="360" dir="0" index="0" bw="64" slack="1"/>
+<pin id="361" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="norm_3 "/>
+</bind>
+</comp>
+
+<comp id="364" class="1005" name="bias_norm_4_reg_364">
+<pin_list>
+<pin id="365" dir="0" index="0" bw="64" slack="1"/>
+<pin id="366" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="bias_norm_4 "/>
+</bind>
+</comp>
+
+<comp id="369" class="1004" name="grp_fu_369">
+<pin_list>
+<pin id="370" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="371" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="372" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="dadd(508) dsub(509) " fcode="dadd"/>
+<opset="sub/8 norm/18 "/>
+</bind>
+</comp>
+
+<comp id="373" class="1004" name="grp_fu_373">
+<pin_list>
+<pin id="374" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="375" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="376" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="dmul(510) " fcode="dmul"/>
+<opset="mul4/3 mul2/13 "/>
+</bind>
+</comp>
+
+<comp id="377" class="1004" name="grp_fu_377">
+<pin_list>
+<pin id="378" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="379" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="380" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="dadd(508) dsub(509) " fcode="dadd"/>
+<opset="sub1/8 bias_norm_2/18 "/>
+</bind>
+</comp>
+
+<comp id="381" class="1004" name="grp_fu_381">
+<pin_list>
+<pin id="382" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="383" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="384" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="dmul(510) " fcode="dmul"/>
+<opset="mul/3 mul1/13 "/>
+</bind>
+</comp>
+
+<comp id="385" class="1004" name="grp_fu_385">
+<pin_list>
+<pin id="386" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="387" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="388" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="ddiv(511) " fcode="ddiv"/>
+<opset="div/3 "/>
+</bind>
+</comp>
+
+<comp id="389" class="1004" name="grp_fu_389">
+<pin_list>
+<pin id="390" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="391" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="392" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="dmul(510) " fcode="dmul"/>
+<opset="mul6/3 mul7/13 "/>
+</bind>
+</comp>
+
+<comp id="393" class="1004" name="grp_fu_393">
+<pin_list>
+<pin id="394" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="395" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="396" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="dmul(510) " fcode="dmul"/>
+<opset="mul3/3 mul5/13 "/>
+</bind>
+</comp>
+
+<comp id="397" class="1004" name="grp_fu_397">
+<pin_list>
+<pin id="398" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="399" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="400" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="dmul(510) " fcode="dmul"/>
+<opset="mul/3 mul1/13 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="71"><net_src comp="30" pin="0"/><net_sink comp="68" pin=0"/></net>
+
+<net id="75"><net_src comp="30" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="79"><net_src comp="30" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="83"><net_src comp="30" pin="0"/><net_sink comp="80" pin=0"/></net>
+
+<net id="87"><net_src comp="30" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="91"><net_src comp="30" pin="0"/><net_sink comp="88" pin=0"/></net>
+
+<net id="96"><net_src comp="28" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="97"><net_src comp="26" pin="0"/><net_sink comp="92" pin=1"/></net>
+
+<net id="102"><net_src comp="28" pin="0"/><net_sink comp="98" pin=0"/></net>
+
+<net id="103"><net_src comp="24" pin="0"/><net_sink comp="98" pin=1"/></net>
+
+<net id="108"><net_src comp="28" pin="0"/><net_sink comp="104" pin=0"/></net>
+
+<net id="109"><net_src comp="22" pin="0"/><net_sink comp="104" pin=1"/></net>
+
+<net id="116"><net_src comp="32" pin="0"/><net_sink comp="110" pin=0"/></net>
+
+<net id="117"><net_src comp="6" pin="0"/><net_sink comp="110" pin=1"/></net>
+
+<net id="118"><net_src comp="0" pin="0"/><net_sink comp="110" pin=2"/></net>
+
+<net id="125"><net_src comp="34" pin="0"/><net_sink comp="119" pin=0"/></net>
+
+<net id="126"><net_src comp="18" pin="0"/><net_sink comp="119" pin=1"/></net>
+
+<net id="127"><net_src comp="12" pin="0"/><net_sink comp="119" pin=2"/></net>
+
+<net id="134"><net_src comp="36" pin="0"/><net_sink comp="128" pin=0"/></net>
+
+<net id="135"><net_src comp="8" pin="0"/><net_sink comp="128" pin=1"/></net>
+
+<net id="136"><net_src comp="2" pin="0"/><net_sink comp="128" pin=2"/></net>
+
+<net id="143"><net_src comp="38" pin="0"/><net_sink comp="137" pin=0"/></net>
+
+<net id="144"><net_src comp="20" pin="0"/><net_sink comp="137" pin=1"/></net>
+
+<net id="145"><net_src comp="14" pin="0"/><net_sink comp="137" pin=2"/></net>
+
+<net id="152"><net_src comp="40" pin="0"/><net_sink comp="146" pin=0"/></net>
+
+<net id="153"><net_src comp="10" pin="0"/><net_sink comp="146" pin=1"/></net>
+
+<net id="154"><net_src comp="4" pin="0"/><net_sink comp="146" pin=2"/></net>
+
+<net id="163"><net_src comp="42" pin="0"/><net_sink comp="155" pin=0"/></net>
+
+<net id="164"><net_src comp="104" pin="2"/><net_sink comp="155" pin=1"/></net>
+
+<net id="165"><net_src comp="98" pin="2"/><net_sink comp="155" pin=2"/></net>
+
+<net id="166"><net_src comp="92" pin="2"/><net_sink comp="155" pin=3"/></net>
+
+<net id="167"><net_src comp="16" pin="0"/><net_sink comp="155" pin=4"/></net>
+
+<net id="173"><net_src comp="46" pin="0"/><net_sink comp="168" pin=0"/></net>
+
+<net id="174"><net_src comp="0" pin="0"/><net_sink comp="168" pin=1"/></net>
+
+<net id="180"><net_src comp="48" pin="0"/><net_sink comp="175" pin=0"/></net>
+
+<net id="181"><net_src comp="12" pin="0"/><net_sink comp="175" pin=1"/></net>
+
+<net id="187"><net_src comp="50" pin="0"/><net_sink comp="182" pin=0"/></net>
+
+<net id="188"><net_src comp="2" pin="0"/><net_sink comp="182" pin=1"/></net>
+
+<net id="194"><net_src comp="52" pin="0"/><net_sink comp="189" pin=0"/></net>
+
+<net id="195"><net_src comp="14" pin="0"/><net_sink comp="189" pin=1"/></net>
+
+<net id="201"><net_src comp="54" pin="0"/><net_sink comp="196" pin=0"/></net>
+
+<net id="202"><net_src comp="4" pin="0"/><net_sink comp="196" pin=1"/></net>
+
+<net id="208"><net_src comp="56" pin="0"/><net_sink comp="203" pin=0"/></net>
+
+<net id="209"><net_src comp="16" pin="0"/><net_sink comp="203" pin=1"/></net>
+
+<net id="214"><net_src comp="210" pin="2"/><net_sink comp="168" pin=2"/></net>
+
+<net id="215"><net_src comp="44" pin="0"/><net_sink comp="210" pin=0"/></net>
+
+<net id="220"><net_src comp="216" pin="2"/><net_sink comp="175" pin=2"/></net>
+
+<net id="221"><net_src comp="44" pin="0"/><net_sink comp="216" pin=0"/></net>
+
+<net id="226"><net_src comp="222" pin="2"/><net_sink comp="182" pin=2"/></net>
+
+<net id="227"><net_src comp="44" pin="0"/><net_sink comp="222" pin=0"/></net>
+
+<net id="232"><net_src comp="228" pin="2"/><net_sink comp="189" pin=2"/></net>
+
+<net id="233"><net_src comp="44" pin="0"/><net_sink comp="228" pin=0"/></net>
+
+<net id="238"><net_src comp="234" pin="2"/><net_sink comp="196" pin=2"/></net>
+
+<net id="239"><net_src comp="44" pin="0"/><net_sink comp="234" pin=0"/></net>
+
+<net id="244"><net_src comp="240" pin="2"/><net_sink comp="203" pin=2"/></net>
+
+<net id="245"><net_src comp="44" pin="0"/><net_sink comp="240" pin=0"/></net>
+
+<net id="249"><net_src comp="246" pin="1"/><net_sink comp="210" pin=1"/></net>
+
+<net id="253"><net_src comp="250" pin="1"/><net_sink comp="216" pin=1"/></net>
+
+<net id="257"><net_src comp="254" pin="1"/><net_sink comp="222" pin=1"/></net>
+
+<net id="261"><net_src comp="258" pin="1"/><net_sink comp="228" pin=1"/></net>
+
+<net id="265"><net_src comp="262" pin="1"/><net_sink comp="234" pin=1"/></net>
+
+<net id="269"><net_src comp="266" pin="1"/><net_sink comp="240" pin=1"/></net>
+
+<net id="273"><net_src comp="92" pin="2"/><net_sink comp="270" pin=0"/></net>
+
+<net id="274"><net_src comp="270" pin="1"/><net_sink comp="155" pin=3"/></net>
+
+<net id="278"><net_src comp="98" pin="2"/><net_sink comp="275" pin=0"/></net>
+
+<net id="279"><net_src comp="275" pin="1"/><net_sink comp="155" pin=2"/></net>
+
+<net id="283"><net_src comp="104" pin="2"/><net_sink comp="280" pin=0"/></net>
+
+<net id="284"><net_src comp="280" pin="1"/><net_sink comp="155" pin=1"/></net>
+
+<net id="288"><net_src comp="68" pin="1"/><net_sink comp="285" pin=0"/></net>
+
+<net id="289"><net_src comp="285" pin="1"/><net_sink comp="155" pin=5"/></net>
+
+<net id="290"><net_src comp="285" pin="1"/><net_sink comp="266" pin=0"/></net>
+
+<net id="294"><net_src comp="72" pin="1"/><net_sink comp="291" pin=0"/></net>
+
+<net id="295"><net_src comp="291" pin="1"/><net_sink comp="146" pin=3"/></net>
+
+<net id="296"><net_src comp="291" pin="1"/><net_sink comp="262" pin=0"/></net>
+
+<net id="300"><net_src comp="76" pin="1"/><net_sink comp="297" pin=0"/></net>
+
+<net id="301"><net_src comp="297" pin="1"/><net_sink comp="137" pin=3"/></net>
+
+<net id="302"><net_src comp="297" pin="1"/><net_sink comp="258" pin=0"/></net>
+
+<net id="306"><net_src comp="80" pin="1"/><net_sink comp="303" pin=0"/></net>
+
+<net id="307"><net_src comp="303" pin="1"/><net_sink comp="128" pin=3"/></net>
+
+<net id="308"><net_src comp="303" pin="1"/><net_sink comp="254" pin=0"/></net>
+
+<net id="312"><net_src comp="84" pin="1"/><net_sink comp="309" pin=0"/></net>
+
+<net id="313"><net_src comp="309" pin="1"/><net_sink comp="119" pin=3"/></net>
+
+<net id="314"><net_src comp="309" pin="1"/><net_sink comp="250" pin=0"/></net>
+
+<net id="318"><net_src comp="88" pin="1"/><net_sink comp="315" pin=0"/></net>
+
+<net id="319"><net_src comp="315" pin="1"/><net_sink comp="110" pin=3"/></net>
+
+<net id="320"><net_src comp="315" pin="1"/><net_sink comp="246" pin=0"/></net>
+
+<net id="342"><net_src comp="210" pin="2"/><net_sink comp="339" pin=0"/></net>
+
+<net id="343"><net_src comp="339" pin="1"/><net_sink comp="168" pin=2"/></net>
+
+<net id="347"><net_src comp="216" pin="2"/><net_sink comp="344" pin=0"/></net>
+
+<net id="348"><net_src comp="344" pin="1"/><net_sink comp="175" pin=2"/></net>
+
+<net id="352"><net_src comp="222" pin="2"/><net_sink comp="349" pin=0"/></net>
+
+<net id="353"><net_src comp="349" pin="1"/><net_sink comp="182" pin=2"/></net>
+
+<net id="357"><net_src comp="228" pin="2"/><net_sink comp="354" pin=0"/></net>
+
+<net id="358"><net_src comp="354" pin="1"/><net_sink comp="189" pin=2"/></net>
+
+<net id="362"><net_src comp="234" pin="2"/><net_sink comp="359" pin=0"/></net>
+
+<net id="363"><net_src comp="359" pin="1"/><net_sink comp="196" pin=2"/></net>
+
+<net id="367"><net_src comp="240" pin="2"/><net_sink comp="364" pin=0"/></net>
+
+<net id="368"><net_src comp="364" pin="1"/><net_sink comp="203" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: weights1 | {1 2 23 24 }
+	Port: weights2 | {1 2 23 24 }
+	Port: weights3 | {1 2 23 24 }
+	Port: biases1 | {1 2 23 24 }
+	Port: biases2 | {1 2 23 24 }
+	Port: biases3 | {1 2 23 24 }
+ - Input state : 
+	Port: update_weights.1 : weights1 | {1 2 23 24 }
+	Port: update_weights.1 : weights2 | {1 2 23 24 }
+	Port: update_weights.1 : weights3 | {1 2 23 24 }
+	Port: update_weights.1 : d_weights1 | {1 2 }
+	Port: update_weights.1 : d_weights2 | {1 2 }
+	Port: update_weights.1 : d_weights3 | {1 2 }
+	Port: update_weights.1 : biases1 | {1 2 23 24 }
+	Port: update_weights.1 : biases2 | {1 2 23 24 }
+	Port: update_weights.1 : biases3 | {1 2 23 24 }
+	Port: update_weights.1 : d_biases1 | {1 2 }
+	Port: update_weights.1 : d_biases2 | {1 2 }
+	Port: update_weights.1 : p_read | {1 }
+	Port: update_weights.1 : p_read1 | {1 }
+	Port: update_weights.1 : p_read2 | {1 }
+  - Chain level:
+	State 1
+		call_ln0 : 1
+		call_ln0 : 1
+		call_ln0 : 1
+		call_ln0 : 1
+		call_ln0 : 1
+		call_ln0 : 1
+	State 2
+	State 3
+		norm_1 : 1
+		bias_norm : 1
+		norm : 1
+		bias_norm_3 : 1
+		norm_3 : 1
+		bias_norm_4 : 1
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+		call_ln174 : 1
+		call_ln175 : 1
+		call_ln200 : 1
+		call_ln201 : 1
+		call_ln226 : 1
+		call_ln227 : 1
+	State 24
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+| Operation|                              Functional Unit                             |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+|          |  grp_update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2_fu_110  |    14   | 4.24829 |   1298  |   1131  |
+|          |           grp_update_weights_1_Pipeline_VITIS_LOOP_169_3_fu_119          |    14   | 4.24829 |   1276  |   1062  |
+|          |  grp_update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8_fu_128  |    14   | 4.24829 |   1308  |   1141  |
+|          |           grp_update_weights_1_Pipeline_VITIS_LOOP_195_9_fu_137          |    14   | 4.24829 |   1276  |   1062  |
+|          | grp_update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14_fu_146 |    14   | 4.24829 |   1305  |   1158  |
+|   call   |          grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155          |    14   | 4.24829 |   1263  |   1069  |
+|          |  grp_update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5_fu_168  |    0    |  1.688  |   288   |    94   |
+|          |           grp_update_weights_1_Pipeline_VITIS_LOOP_182_6_fu_175          |    0    |  1.688  |   270   |    42   |
+|          | grp_update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11_fu_182 |    0    |  1.688  |   296   |   102   |
+|          |          grp_update_weights_1_Pipeline_VITIS_LOOP_208_12_fu_189          |    0    |  1.688  |   270   |    42   |
+|          | grp_update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17_fu_196 |    0    |  1.688  |   282   |   138   |
+|          |          grp_update_weights_1_Pipeline_VITIS_LOOP_234_18_fu_203          |    0    |  1.688  |   261   |    36   |
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+|          |                                grp_fu_373                                |    11   |    0    |   299   |   203   |
+|          |                                grp_fu_381                                |    11   |    0    |   299   |   203   |
+|   dmul   |                                grp_fu_389                                |    11   |    0    |   299   |   203   |
+|          |                                grp_fu_393                                |    11   |    0    |   299   |   203   |
+|          |                                grp_fu_397                                |    11   |    0    |   299   |   203   |
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+|   dadd   |                                grp_fu_369                                |    3    |    0    |   445   |   782   |
+|          |                                grp_fu_377                                |    3    |    0    |   445   |   782   |
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+|          |                            p_read_4_read_fu_92                           |    0    |    0    |    0    |    0    |
+|   read   |                            p_read_5_read_fu_98                           |    0    |    0    |    0    |    0    |
+|          |                           p_read_6_read_fu_104                           |    0    |    0    |    0    |    0    |
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+|          |                                grp_fu_210                                |    0    |    0    |    0    |    0    |
+|          |                                grp_fu_216                                |    0    |    0    |    0    |    0    |
+|   dsqrt  |                                grp_fu_222                                |    0    |    0    |    0    |    0    |
+|          |                                grp_fu_228                                |    0    |    0    |    0    |    0    |
+|          |                                grp_fu_234                                |    0    |    0    |    0    |    0    |
+|          |                                grp_fu_240                                |    0    |    0    |    0    |    0    |
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+|   ddiv   |                                grp_fu_385                                |    0    |    0    |    0    |    0    |
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                                                          |   145   | 35.6177 |  11778  |   9656  |
+|----------|--------------------------------------------------------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-----------------------+--------+
+|                       |   FF   |
++-----------------------+--------+
+|bias_norm_1_loc_reg_309|   64   |
+|  bias_norm_3_reg_354  |   64   |
+|bias_norm_4_loc_reg_297|   64   |
+|  bias_norm_4_reg_364  |   64   |
+|bias_norm_7_loc_reg_285|   64   |
+|   bias_norm_reg_344   |   64   |
+|     norm_1_reg_339    |   64   |
+|   norm_2_loc_reg_315  |   64   |
+|     norm_3_reg_359    |   64   |
+|   norm_4_loc_reg_303  |   64   |
+|   norm_7_loc_reg_291  |   64   |
+|      norm_reg_349     |   64   |
+|    p_read_4_reg_270   |   64   |
+|    p_read_5_reg_275   |   64   |
+|    p_read_6_reg_280   |   64   |
++-----------------------+--------+
+|         Total         |   960  |
++-----------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------------------------------------------------------------------------|------|------|------|--------||---------||---------|
+|                                   Comp                                   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|--------------------------------------------------------------------------|------|------|------|--------||---------||---------|
+|          grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155          |  p1  |   2  |  64  |   128  ||    9    |
+|          grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155          |  p2  |   2  |  64  |   128  ||    9    |
+|          grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155          |  p3  |   2  |  64  |   128  ||    9    |
+|  grp_update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5_fu_168  |  p2  |   2  |  64  |   128  ||    9    |
+|           grp_update_weights_1_Pipeline_VITIS_LOOP_182_6_fu_175          |  p2  |   2  |  64  |   128  ||    9    |
+| grp_update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11_fu_182 |  p2  |   2  |  64  |   128  ||    9    |
+|          grp_update_weights_1_Pipeline_VITIS_LOOP_208_12_fu_189          |  p2  |   2  |  64  |   128  ||    9    |
+| grp_update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17_fu_196 |  p2  |   2  |  64  |   128  ||    9    |
+|          grp_update_weights_1_Pipeline_VITIS_LOOP_234_18_fu_203          |  p2  |   2  |  64  |   128  ||    9    |
+|--------------------------------------------------------------------------|------|------|------|--------||---------||---------|
+|                                   Total                                  |      |      |      |  1152  ||  7.596  ||    81   |
+|--------------------------------------------------------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |   145  |   35   |  11778 |  9656  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    7   |    -   |   81   |
+|  Register |    -   |    -   |   960  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   145  |   43   |  12738 |  9737  |
++-----------+--------+--------+--------+--------+

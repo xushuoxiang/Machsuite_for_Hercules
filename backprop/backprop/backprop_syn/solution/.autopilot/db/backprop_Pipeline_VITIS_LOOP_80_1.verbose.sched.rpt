@@ -1,0 +1,280 @@
+
+
+================================================================
+== Vitis HLS Report for 'backprop_Pipeline_VITIS_LOOP_80_1'
+================================================================
+* Date:           Wed Dec 20 21:42:28 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        backprop_syn
+* Solution:       solution (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7v585t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.148 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   16|   16|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_80_1  |       14|       14|        13|          1|          1|     3|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 13
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 13, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.61>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 16 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%output_difference_1 = alloca i32 1"   --->   Operation 17 'alloca' 'output_difference_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%output_difference_1_1 = alloca i32 1"   --->   Operation 18 'alloca' 'output_difference_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%output_difference_1_2 = alloca i32 1"   --->   Operation 19 'alloca' 'output_difference_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %training_targets, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%dactivations3_2_1_reload_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %dactivations3_2_1_reload"   --->   Operation 21 'read' 'dactivations3_2_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%dactivations3_1_1_reload_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %dactivations3_1_1_reload"   --->   Operation 22 'read' 'dactivations3_1_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%dactivations3_0_1_reload_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %dactivations3_0_1_reload"   --->   Operation 23 'read' 'dactivations3_0_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%sub_ln81_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %sub_ln81"   --->   Operation 24 'read' 'sub_ln81_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%net_outputs_2_1_reload_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %net_outputs_2_1_reload"   --->   Operation 25 'read' 'net_outputs_2_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%net_outputs_1_1_reload_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %net_outputs_1_1_reload"   --->   Operation 26 'read' 'net_outputs_1_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%net_outputs_0_1_reload_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %net_outputs_0_1_reload"   --->   Operation 27 'read' 'net_outputs_0_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%output_difference_0_023_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %output_difference_0_023"   --->   Operation 28 'read' 'output_difference_0_023_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%output_difference_1_024_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %output_difference_1_024"   --->   Operation 29 'read' 'output_difference_1_024_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%output_difference_2_025_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %output_difference_2_025"   --->   Operation 30 'read' 'output_difference_2_025_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.84ns)   --->   "%store_ln0 = store i64 %output_difference_2_025_read, i64 %output_difference_1_2"   --->   Operation 31 'store' 'store_ln0' <Predicate = true> <Delay = 0.84>
+ST_1 : Operation 32 [1/1] (0.84ns)   --->   "%store_ln0 = store i64 %output_difference_1_024_read, i64 %output_difference_1_1"   --->   Operation 32 'store' 'store_ln0' <Predicate = true> <Delay = 0.84>
+ST_1 : Operation 33 [1/1] (0.84ns)   --->   "%store_ln0 = store i64 %output_difference_0_023_read, i64 %output_difference_1"   --->   Operation 33 'store' 'store_ln0' <Predicate = true> <Delay = 0.84>
+ST_1 : Operation 34 [1/1] (0.84ns)   --->   "%store_ln0 = store i2 0, i2 %i"   --->   Operation 34 'store' 'store_ln0' <Predicate = true> <Delay = 0.84>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i110"   --->   Operation 35 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%i_8 = load i2 %i" [backprop.c:80]   --->   Operation 36 'load' 'i_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 37 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.48ns)   --->   "%icmp_ln80 = icmp_eq  i2 %i_8, i2 3" [backprop.c:80]   --->   Operation 38 'icmp' 'icmp_ln80' <Predicate = true> <Delay = 0.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3"   --->   Operation 39 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.85ns)   --->   "%add_ln80 = add i2 %i_8, i2 1" [backprop.c:80]   --->   Operation 40 'add' 'add_ln80' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln80 = br i1 %icmp_ln80, void %for.inc.i110.split, void %VITIS_LOOP_90_2.i.preheader.exitStub" [backprop.c:80]   --->   Operation 41 'br' 'br_ln80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln81 = zext i2 %i_8" [backprop.c:81]   --->   Operation 42 'zext' 'zext_ln81' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (1.35ns)   --->   "%add_ln81 = add i9 %zext_ln81, i9 %sub_ln81_read" [backprop.c:81]   --->   Operation 43 'add' 'add_ln81' <Predicate = (!icmp_ln80)> <Delay = 1.35> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln81_1 = zext i9 %add_ln81" [backprop.c:81]   --->   Operation 44 'zext' 'zext_ln81_1' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%training_targets_addr = getelementptr i64 %training_targets, i64 0, i64 %zext_ln81_1" [backprop.c:81]   --->   Operation 45 'getelementptr' 'training_targets_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 46 [2/2] (2.26ns)   --->   "%training_targets_load = load i9 %training_targets_addr" [backprop.c:81]   --->   Operation 46 'load' 'training_targets_load' <Predicate = (!icmp_ln80)> <Delay = 2.26> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 489> <RAM>
+ST_1 : Operation 47 [1/1] (0.48ns)   --->   "%switch_ln81 = switch i2 %i_8, void %branch20, i2 0, void %for.inc.i110.split.for.inc.i110.split412_crit_edge, i2 1, void %for.inc.i110.split.for.inc.i110.split412_crit_edge11" [backprop.c:81]   --->   Operation 47 'switch' 'switch_ln81' <Predicate = (!icmp_ln80)> <Delay = 0.48>
+ST_1 : Operation 48 [1/1] (0.84ns)   --->   "%store_ln80 = store i2 %add_ln80, i2 %i" [backprop.c:80]   --->   Operation 48 'store' 'store_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.84>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln80 = br void %for.inc.i110" [backprop.c:80]   --->   Operation 49 'br' 'br_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.26>
+ST_2 : Operation 50 [1/2] (2.26ns)   --->   "%training_targets_load = load i9 %training_targets_addr" [backprop.c:81]   --->   Operation 50 'load' 'training_targets_load' <Predicate = true> <Delay = 2.26> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 489> <RAM>
+
+State 3 <SV = 2> <Delay = 6.72>
+ST_3 : Operation 51 [1/1] (0.85ns)   --->   "%tmp_9 = mux i64 @_ssdm_op_Mux.ap_auto.3double.i2, i64 %net_outputs_0_1_reload_read, i64 %net_outputs_1_1_reload_read, i64 %net_outputs_2_1_reload_read, i2 %i_8" [backprop.c:81]   --->   Operation 51 'mux' 'tmp_9' <Predicate = true> <Delay = 0.85> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%bitcast_ln81 = bitcast i64 %training_targets_load" [backprop.c:81]   --->   Operation 52 'bitcast' 'bitcast_ln81' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [5/5] (5.86ns)   --->   "%sub_i4 = dsub i64 %tmp_9, i64 %bitcast_ln81" [backprop.c:81]   --->   Operation 53 'dsub' 'sub_i4' <Predicate = true> <Delay = 5.86> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 5.86> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 5.86>
+ST_4 : Operation 54 [4/5] (5.86ns)   --->   "%sub_i4 = dsub i64 %tmp_9, i64 %bitcast_ln81" [backprop.c:81]   --->   Operation 54 'dsub' 'sub_i4' <Predicate = true> <Delay = 5.86> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 5.86> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 5.86>
+ST_5 : Operation 55 [3/5] (5.86ns)   --->   "%sub_i4 = dsub i64 %tmp_9, i64 %bitcast_ln81" [backprop.c:81]   --->   Operation 55 'dsub' 'sub_i4' <Predicate = true> <Delay = 5.86> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 5.86> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 5.86>
+ST_6 : Operation 56 [2/5] (5.86ns)   --->   "%sub_i4 = dsub i64 %tmp_9, i64 %bitcast_ln81" [backprop.c:81]   --->   Operation 56 'dsub' 'sub_i4' <Predicate = true> <Delay = 5.86> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 5.86> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.41>
+ST_7 : Operation 57 [1/5] (5.86ns)   --->   "%sub_i4 = dsub i64 %tmp_9, i64 %bitcast_ln81" [backprop.c:81]   --->   Operation 57 'dsub' 'sub_i4' <Predicate = true> <Delay = 5.86> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 5.86> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 58 [1/1] (0.00ns)   --->   "%bitcast_ln81_1 = bitcast i64 %sub_i4" [backprop.c:81]   --->   Operation 58 'bitcast' 'bitcast_ln81_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 59 [1/1] (0.54ns)   --->   "%xor_ln81 = xor i64 %bitcast_ln81_1, i64 9223372036854775808" [backprop.c:81]   --->   Operation 59 'xor' 'xor_ln81' <Predicate = true> <Delay = 0.54> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 60 [1/1] (0.85ns)   --->   "%tmp_s = mux i64 @_ssdm_op_Mux.ap_auto.3double.i2, i64 %dactivations3_0_1_reload_read, i64 %dactivations3_1_1_reload_read, i64 %dactivations3_2_1_reload_read, i2 %i_8" [backprop.c:81]   --->   Operation 60 'mux' 'tmp_s' <Predicate = true> <Delay = 0.85> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.14>
+ST_8 : Operation 61 [1/1] (0.00ns)   --->   "%bitcast_ln81_2 = bitcast i64 %xor_ln81" [backprop.c:81]   --->   Operation 61 'bitcast' 'bitcast_ln81_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 62 [5/5] (7.14ns)   --->   "%output_difference_1_4 = dmul i64 %bitcast_ln81_2, i64 %tmp_s" [backprop.c:81]   --->   Operation 62 'dmul' 'output_difference_1_4' <Predicate = true> <Delay = 7.14> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 7.14> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.14>
+ST_9 : Operation 63 [4/5] (7.14ns)   --->   "%output_difference_1_4 = dmul i64 %bitcast_ln81_2, i64 %tmp_s" [backprop.c:81]   --->   Operation 63 'dmul' 'output_difference_1_4' <Predicate = true> <Delay = 7.14> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 7.14> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.14>
+ST_10 : Operation 64 [3/5] (7.14ns)   --->   "%output_difference_1_4 = dmul i64 %bitcast_ln81_2, i64 %tmp_s" [backprop.c:81]   --->   Operation 64 'dmul' 'output_difference_1_4' <Predicate = true> <Delay = 7.14> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 7.14> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.14>
+ST_11 : Operation 65 [2/5] (7.14ns)   --->   "%output_difference_1_4 = dmul i64 %bitcast_ln81_2, i64 %tmp_s" [backprop.c:81]   --->   Operation 65 'dmul' 'output_difference_1_4' <Predicate = true> <Delay = 7.14> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 7.14> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.14>
+ST_12 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln79 = specloopname void @_ssdm_op_SpecLoopName, void @empty_24" [backprop.c:79]   --->   Operation 66 'specloopname' 'specloopname_ln79' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 67 [1/5] (7.14ns)   --->   "%output_difference_1_4 = dmul i64 %bitcast_ln81_2, i64 %tmp_s" [backprop.c:81]   --->   Operation 67 'dmul' 'output_difference_1_4' <Predicate = true> <Delay = 7.14> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 7.14> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 74 [1/1] (0.00ns)   --->   "%output_difference_1_load = load i64 %output_difference_1"   --->   Operation 74 'load' 'output_difference_1_load' <Predicate = (icmp_ln80)> <Delay = 0.00>
+ST_12 : Operation 75 [1/1] (0.00ns)   --->   "%output_difference_1_1_load = load i64 %output_difference_1_1"   --->   Operation 75 'load' 'output_difference_1_1_load' <Predicate = (icmp_ln80)> <Delay = 0.00>
+ST_12 : Operation 76 [1/1] (0.00ns)   --->   "%output_difference_1_2_load = load i64 %output_difference_1_2"   --->   Operation 76 'load' 'output_difference_1_2_load' <Predicate = (icmp_ln80)> <Delay = 0.00>
+ST_12 : Operation 77 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.doubleP0A, i64 %output_difference_2_1_out, i64 %output_difference_1_2_load"   --->   Operation 77 'write' 'write_ln0' <Predicate = (icmp_ln80)> <Delay = 0.00>
+ST_12 : Operation 78 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.doubleP0A, i64 %output_difference_1_1_out, i64 %output_difference_1_1_load"   --->   Operation 78 'write' 'write_ln0' <Predicate = (icmp_ln80)> <Delay = 0.00>
+ST_12 : Operation 79 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.doubleP0A, i64 %output_difference_0_1_out, i64 %output_difference_1_load"   --->   Operation 79 'write' 'write_ln0' <Predicate = (icmp_ln80)> <Delay = 0.00>
+ST_12 : Operation 80 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 80 'ret' 'ret_ln0' <Predicate = (icmp_ln80)> <Delay = 0.00>
+
+State 13 <SV = 12> <Delay = 0.84>
+ST_13 : Operation 68 [1/1] (0.84ns)   --->   "%store_ln81 = store i64 %output_difference_1_4, i64 %output_difference_1_1" [backprop.c:81]   --->   Operation 68 'store' 'store_ln81' <Predicate = (i_8 == 1)> <Delay = 0.84>
+ST_13 : Operation 69 [1/1] (0.00ns)   --->   "%br_ln81 = br void %for.inc.i110.split412" [backprop.c:81]   --->   Operation 69 'br' 'br_ln81' <Predicate = (i_8 == 1)> <Delay = 0.00>
+ST_13 : Operation 70 [1/1] (0.84ns)   --->   "%store_ln81 = store i64 %output_difference_1_4, i64 %output_difference_1" [backprop.c:81]   --->   Operation 70 'store' 'store_ln81' <Predicate = (i_8 == 0)> <Delay = 0.84>
+ST_13 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln81 = br void %for.inc.i110.split412" [backprop.c:81]   --->   Operation 71 'br' 'br_ln81' <Predicate = (i_8 == 0)> <Delay = 0.00>
+ST_13 : Operation 72 [1/1] (0.84ns)   --->   "%store_ln81 = store i64 %output_difference_1_4, i64 %output_difference_1_2" [backprop.c:81]   --->   Operation 72 'store' 'store_ln81' <Predicate = (i_8 != 0 & i_8 != 1)> <Delay = 0.84>
+ST_13 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln81 = br void %for.inc.i110.split412" [backprop.c:81]   --->   Operation 73 'br' 'br_ln81' <Predicate = (i_8 != 0 & i_8 != 1)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.62ns
+The critical path consists of the following:
+	'alloca' operation ('i') [15]  (0 ns)
+	'load' operation ('i', backprop.c:80) on local variable 'i' [36]  (0 ns)
+	'add' operation ('add_ln81', backprop.c:81) [46]  (1.35 ns)
+	'getelementptr' operation ('training_targets_addr', backprop.c:81) [48]  (0 ns)
+	'load' operation ('training_targets_load', backprop.c:81) on array 'training_targets' [49]  (2.27 ns)
+
+ <State 2>: 2.27ns
+The critical path consists of the following:
+	'load' operation ('training_targets_load', backprop.c:81) on array 'training_targets' [49]  (2.27 ns)
+
+ <State 3>: 6.72ns
+The critical path consists of the following:
+	'mux' operation ('tmp_9', backprop.c:81) [44]  (0.858 ns)
+	'dsub' operation ('sub_i4', backprop.c:81) [51]  (5.87 ns)
+
+ <State 4>: 5.87ns
+The critical path consists of the following:
+	'dsub' operation ('sub_i4', backprop.c:81) [51]  (5.87 ns)
+
+ <State 5>: 5.87ns
+The critical path consists of the following:
+	'dsub' operation ('sub_i4', backprop.c:81) [51]  (5.87 ns)
+
+ <State 6>: 5.87ns
+The critical path consists of the following:
+	'dsub' operation ('sub_i4', backprop.c:81) [51]  (5.87 ns)
+
+ <State 7>: 6.41ns
+The critical path consists of the following:
+	'dsub' operation ('sub_i4', backprop.c:81) [51]  (5.87 ns)
+	'xor' operation ('xor_ln81', backprop.c:81) [53]  (0.546 ns)
+
+ <State 8>: 7.15ns
+The critical path consists of the following:
+	'dmul' operation ('output_difference[1]', backprop.c:81) [56]  (7.15 ns)
+
+ <State 9>: 7.15ns
+The critical path consists of the following:
+	'dmul' operation ('output_difference[1]', backprop.c:81) [56]  (7.15 ns)
+
+ <State 10>: 7.15ns
+The critical path consists of the following:
+	'dmul' operation ('output_difference[1]', backprop.c:81) [56]  (7.15 ns)
+
+ <State 11>: 7.15ns
+The critical path consists of the following:
+	'dmul' operation ('output_difference[1]', backprop.c:81) [56]  (7.15 ns)
+
+ <State 12>: 7.15ns
+The critical path consists of the following:
+	'dmul' operation ('output_difference[1]', backprop.c:81) [56]  (7.15 ns)
+
+ <State 13>: 0.844ns
+The critical path consists of the following:
+	'store' operation ('store_ln81', backprop.c:81) of variable 'output_difference[1]', backprop.c:81 on local variable 'output_difference[1]' [59]  (0.844 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

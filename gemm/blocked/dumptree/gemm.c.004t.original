@@ -1,0 +1,198 @@
+
+;; Function __bswap_16 (null)
+;; enabled by -tree-original
+
+
+{
+  return (__uint16_t) __builtin_bswap16 ((int) __bsx);
+}
+
+
+;; Function __bswap_32 (null)
+;; enabled by -tree-original
+
+
+{
+  return (__uint32_t) __builtin_bswap32 (__bsx);
+}
+
+
+;; Function __bswap_64 (null)
+;; enabled by -tree-original
+
+
+{
+  return (__uint64_t) __builtin_bswap64 (__bsx);
+}
+
+
+;; Function __uint16_identity (null)
+;; enabled by -tree-original
+
+
+{
+  return __x;
+}
+
+
+;; Function __uint32_identity (null)
+;; enabled by -tree-original
+
+
+{
+  return __x;
+}
+
+
+;; Function __uint64_identity (null)
+;; enabled by -tree-original
+
+
+{
+  return __x;
+}
+
+
+;; Function prng_rand (null)
+;; enabled by -tree-original
+
+
+{
+  uint_fast16_t i;
+  uint_fast16_t r;
+  uint_fast16_t new_rands = 0;
+
+    uint_fast16_t i;
+    uint_fast16_t r;
+    uint_fast16_t new_rands = 0;
+  if (state->c == 0)
+    {
+      new_rands = new_rands + 496;
+      state->c = 54;
+    }
+  else
+    {
+      new_rands = 1;
+      state->c-- ;
+    }
+  r = 0;
+  goto <D.3004>;
+  <D.3003>:;
+  i = state->i;
+  state->s[i & 63] = state->s[i + 40 & 63] + state->s[i + 9 & 63];
+  state->i++ ;
+  r++ ;
+  <D.3004>:;
+  if (r < new_rands) goto <D.3003>; else goto <D.3005>;
+  <D.3005>:;
+  return state->s[i & 63];
+}
+
+
+;; Function prng_srand (null)
+;; enabled by -tree-original
+
+
+{
+  uint_fast16_t i;
+
+    uint_fast16_t i;
+  state->c = 55;
+  state->i = 0;
+  state->s[0] = seed;
+  i = 1;
+  goto <D.3012>;
+  <D.3011>:;
+  state->s[i] = (long unsigned int) i * 2147483647 + (long unsigned int) seed;
+  i++ ;
+  <D.3012>:;
+  if (i <= 63) goto <D.3011>; else goto <D.3013>;
+  <D.3013>:;
+  i = 0;
+  goto <D.3015>;
+  <D.3014>:;
+  prng_rand (state);
+  i++ ;
+  <D.3015>:;
+  if (i <= 9999) goto <D.3014>; else goto <D.3016>;
+  <D.3016>:;
+}
+
+
+;; Function bbgemm (null)
+;; enabled by -tree-original
+
+
+{
+  int i;
+  int k;
+  int j;
+  int jj;
+  int kk;
+  int i_row;
+  int k_row;
+  double temp_x;
+  double mul;
+  void loopjj = <<< error >>>;
+  void loopkk = <<< error >>>;
+  void loopi = <<< error >>>;
+  void loopk = <<< error >>>;
+  void loopj = <<< error >>>;
+
+    int i;
+    int k;
+    int j;
+    int jj;
+    int kk;
+    int i_row;
+    int k_row;
+    double temp_x;
+    double mul;
+  loopjj:;
+  jj = 0;
+  goto <D.3078>;
+  <D.3077>:;
+  loopkk:;
+  kk = 0;
+  goto <D.3075>;
+  <D.3074>:;
+  loopi:;
+  i = 0;
+  goto <D.3072>;
+  <D.3071>:;
+  loopk:;
+  k = 0;
+  goto <D.3069>;
+  <D.3068>:;
+  i_row = i * 64;
+  k_row = (k + kk) * 64;
+  temp_x = *(m1 + (sizetype) ((long unsigned int) ((i_row + k) + kk) * 8));
+  loopj:;
+  j = 0;
+  goto <D.3066>;
+  <D.3065>:;
+  mul = *(m2 + (sizetype) ((long unsigned int) ((k_row + j) + jj) * 8)) * temp_x;
+  *(prod + (sizetype) ((long unsigned int) ((i_row + j) + jj) * 8)) = *(prod + (sizetype) ((long unsigned int) ((i_row + j) + jj) * 8)) + mul;
+   ++j;
+  <D.3066>:;
+  if (j <= 7) goto <D.3065>; else goto <D.3067>;
+  <D.3067>:;
+   ++k;
+  <D.3069>:;
+  if (k <= 7) goto <D.3068>; else goto <D.3070>;
+  <D.3070>:;
+   ++i;
+  <D.3072>:;
+  if (i <= 63) goto <D.3071>; else goto <D.3073>;
+  <D.3073>:;
+  kk = kk + 8;
+  <D.3075>:;
+  if (kk <= 63) goto <D.3074>; else goto <D.3076>;
+  <D.3076>:;
+  jj = jj + 8;
+  <D.3078>:;
+  if (jj <= 63) goto <D.3077>; else goto <D.3079>;
+  <D.3079>:;
+  *hercules_buffer_size = global_time;
+}
+

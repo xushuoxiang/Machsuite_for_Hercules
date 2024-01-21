@@ -1,0 +1,299 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "ss_sort",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "a"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "ss_sort",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "b"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "ss_sort",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "bucket"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "ss_sort",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "sum"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "update",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "a"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "update",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "b"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "update",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "bucket"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "hist",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "a"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "hist",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "bucket"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "init",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "bucket"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "last_step_scan",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "bucket"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "last_step_scan",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "sum"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "sum_scan",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "bucket"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "sum_scan",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "sum"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "local_scan",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "bucket"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P_BRAM"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "ss_sort",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ss_sort"
+              }]
+          }
+        },
+        {
+          "functionName": "ss_sort",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ss_sort"
+              }]
+          }
+        }
+      ]
+    }]}

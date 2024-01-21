@@ -1,0 +1,9 @@
+231,234c231,233
+< ID:14, Address:0, Data:145, Time:230
+< ID:14, Address:0, Data:37, Time:231
+< ID:14, Address:0, Data:239, Time:232
+< ID:14, Address:0, Data:193, Time:233
+---
+> ID:14, Address:0, Data:37, Time:230
+> ID:14, Address:0, Data:239, Time:231
+> ID:14, Address:0, Data:193, Time:232

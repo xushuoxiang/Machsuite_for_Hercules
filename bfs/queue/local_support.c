@@ -6,7 +6,7 @@ int INPUT_SIZE = sizeof(struct bench_args_t);
 
 void run_benchmark( void *vargs ) {
   struct bench_args_t *args = (struct bench_args_t *)vargs;
-  bfs(args->nodes, args->edges, args->starting_node, args->level, args->level_counts);
+  bfs(args->nodes, args->edges, args->starting_node, args->level, args->level_counts, args->checkdata, &args->hercules_buffer_size);
 }
 
 /* Input format:
@@ -103,7 +103,9 @@ int check_data( void *vdata, void *vref ) {
   struct bench_args_t *ref = (struct bench_args_t *)vref;
   int has_errors = 0;
   int i;
-
+#ifdef ENABLE_HERCULES
+  dump_checkdata(data->checkdata, data->hercules_buffer_size);
+#endif
   // Check that the horizons have the same number of nodes
   for(i=0; i<N_LEVELS; i++) {
     has_errors |= (data->level_counts[i]!=ref->level_counts[i]);

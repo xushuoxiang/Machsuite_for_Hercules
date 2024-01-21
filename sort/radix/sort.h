@@ -9,6 +9,7 @@ In Proceedings of the 3rd Workshop on General-Purpose Computation on Graphics Pr
 #include <stdlib.h>
 #include <string.h>
 #include "../../common/support.h"
+#include "../../common/hercules.h"
 
 #define TYPE int32_t
 #define TYPE_MAX INT32_MAX
@@ -24,22 +25,8 @@ In Proceedings of the 3rd Workshop on General-Purpose Computation on Graphics Pr
 #define SCAN_BLOCK 16
 #define SCAN_RADIX BUCKETSIZE/SCAN_BLOCK
 
-//#define ENABLE_HERCULES 1
-#define HERCULES_BUFFER 256*1024
-#define ID_a 0
-#define ID_b 1
-#define ID_bucket 2
-#define ID_sum 3
-//enum DataID{ID_a=0, ID_b, ID_bucket, ID_sum};
-typedef struct hercules_checkdata
-{
-  int ID;
-  int address;
-  int data;
-  int time;
-}hercules_checkdata;
 
-void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX], hercules_checkdata checkdata[HERCULES_BUFFER]);
+void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX], hercules_checkdata checkdata[HERCULES_BUFFER], int* hercules_buffer_size);
 
 ////////////////////////////////////////////////////////////////////////////////
 // Test harness interface code.
@@ -50,4 +37,5 @@ struct bench_args_t {
   int bucket[BUCKETSIZE];
   int sum[SCAN_RADIX];
   hercules_checkdata checkdata[HERCULES_BUFFER];
+  int hercules_buffer_size;
 };

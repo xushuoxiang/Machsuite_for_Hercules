@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vitis HLS Report for 'ms_mergesort'
+================================================================
+* Date:           Tue Jan 16 02:18:13 2024
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        sort_syn
+* Solution:       solution (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu19eg-ffvc1760-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.465 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- mergesort_label1   |        ?|        ?|         ?|          -|          -|    11|        no|
+        | + mergesort_label2  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 6 2 
+4 --> 5 
+5 --> 3 
+6 --> 5 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2"   --->   Operation 7 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %a, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %a"   --->   Operation 9 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %checkdata, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %checkdata"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %hercules_buffer_size"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %hercules_buffer_size, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i128 %checkdata"   --->   Operation 14 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%br_ln92 = br void" [sort.c:92]   --->   Operation 15 'br' 'br_ln92' <Predicate = true> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.06>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%m = phi i32 1, void, i32 %m_1, void"   --->   Operation 16 'phi' 'm' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp = partselect i21 @_ssdm_op_PartSelect.i21.i32.i32.i32, i32 %m, i32 11, i32 31" [sort.c:92]   --->   Operation 17 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.06ns)   --->   "%icmp_ln92 = icmp_slt  i21 %tmp, i21 1" [sort.c:92]   --->   Operation 18 'icmp' 'icmp_ln92' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 11, i64 11, i64 11"   --->   Operation 19 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln92 = br i1 %icmp_ln92, void, void" [sort.c:92]   --->   Operation 20 'br' 'br_ln92' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln84 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [sort.c:84]   --->   Operation 21 'specloopname' 'specloopname_ln84' <Predicate = (icmp_ln92)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%m_1 = shl i32 %m, i32 1"   --->   Operation 22 'shl' 'm_1' <Predicate = (icmp_ln92)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.42ns)   --->   "%br_ln99 = br void" [sort.c:99]   --->   Operation 23 'br' 'br_ln99' <Predicate = (icmp_ln92)> <Delay = 0.42>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%global_time_1_load = load i32 %global_time_1" [sort.c:128]   --->   Operation 24 'load' 'global_time_1_load' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%write_ln128 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %hercules_buffer_size, i32 %global_time_1_load" [sort.c:128]   --->   Operation 25 'write' 'write_ln128' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln130 = ret" [sort.c:130]   --->   Operation 26 'ret' 'ret_ln130' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.98>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%i_2 = phi i32 0, void, i32 %i, void"   --->   Operation 27 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i21 @_ssdm_op_PartSelect.i21.i32.i32.i32, i32 %i_2, i32 11, i32 31" [sort.c:99]   --->   Operation 28 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (1.06ns)   --->   "%icmp_ln99 = icmp_slt  i21 %tmp_1, i21 1" [sort.c:99]   --->   Operation 29 'icmp' 'icmp_ln99' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln99 = br i1 %icmp_ln99, void, void" [sort.c:99]   --->   Operation 30 'br' 'br_ln99' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%specpipeline_ln84 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [sort.c:84]   --->   Operation 31 'specpipeline' 'specpipeline_ln84' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%specloopname_ln84 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [sort.c:84]   --->   Operation 32 'specloopname' 'specloopname_ln84' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln101 = add i32 %i_2, i32 %m" [sort.c:101]   --->   Operation 33 'add' 'add_ln101' <Predicate = (icmp_ln99)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync>
+ST_3 : Operation 34 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%mid = add i32 %add_ln101, i32 4294967295" [sort.c:101]   --->   Operation 34 'add' 'mid' <Predicate = (icmp_ln99)> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%global_time_1_load_1 = load i32 %global_time_1" [../../common/hercules.c:9]   --->   Operation 35 'load' 'global_time_1_load_1' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln9 = zext i32 %global_time_1_load_1" [../../common/hercules.c:9]   --->   Operation 36 'zext' 'zext_ln9' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%checkdata_addr = getelementptr i128 %checkdata, i64 0, i64 %zext_ln9" [../../common/hercules.c:9]   --->   Operation 37 'getelementptr' 'checkdata_addr' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%tmp2 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i64, i32 %global_time_1_load_1, i32 %mid, i64 0" [../../common/hercules.c:12]   --->   Operation 38 'bitconcatenate' 'tmp2' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%or_ln12 = or i128 %tmp2, i128 15" [../../common/hercules.c:12]   --->   Operation 39 'or' 'or_ln12' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (1.23ns)   --->   "%store_ln12 = store void @_ssdm_op_Write.bram.i128, i21 %checkdata_addr, i128 %or_ln12, i16 65535" [../../common/hercules.c:12]   --->   Operation 40 'store' 'store_ln12' <Predicate = (icmp_ln99)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 2097152> <RAM>
+ST_3 : Operation 41 [1/1] (1.01ns)   --->   "%add_ln13 = add i32 %global_time_1_load_1, i32 1" [../../common/hercules.c:13]   --->   Operation 41 'add' 'add_ln13' <Predicate = (icmp_ln99)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (1.01ns)   --->   "%to = add i32 %mid, i32 %m" [sort.c:107]   --->   Operation 42 'add' 'to' <Predicate = (icmp_ln99)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln9_1 = zext i32 %add_ln13" [../../common/hercules.c:9]   --->   Operation 43 'zext' 'zext_ln9_1' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%checkdata_addr_1 = getelementptr i128 %checkdata, i64 0, i64 %zext_ln9_1" [../../common/hercules.c:9]   --->   Operation 44 'getelementptr' 'checkdata_addr_1' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%tmp7 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i64, i32 %add_ln13, i32 %to, i64 0" [../../common/hercules.c:12]   --->   Operation 45 'bitconcatenate' 'tmp7' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%or_ln12_1 = or i128 %tmp7, i128 16" [../../common/hercules.c:12]   --->   Operation 46 'or' 'or_ln12_1' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (1.23ns)   --->   "%store_ln12 = store void @_ssdm_op_Write.bram.i128, i21 %checkdata_addr_1, i128 %or_ln12_1, i16 65535" [../../common/hercules.c:12]   --->   Operation 47 'store' 'store_ln12' <Predicate = (icmp_ln99)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 2097152> <RAM>
+ST_3 : Operation 48 [1/1] (1.01ns)   --->   "%add_ln13_1 = add i32 %global_time_1_load_1, i32 2" [../../common/hercules.c:13]   --->   Operation 48 'add' 'add_ln13_1' <Predicate = (icmp_ln99)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%store_ln13 = store i32 %add_ln13_1, i32 %global_time_1" [../../common/hercules.c:13]   --->   Operation 49 'store' 'store_ln13' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i21 @_ssdm_op_PartSelect.i21.i32.i32.i32, i32 %to, i32 11, i32 31" [sort.c:113]   --->   Operation 50 'partselect' 'tmp_2' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (1.06ns)   --->   "%icmp_ln113 = icmp_slt  i21 %tmp_2, i21 1" [sort.c:113]   --->   Operation 51 'icmp' 'icmp_ln113' <Predicate = (icmp_ln99)> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln113 = br i1 %icmp_ln113, void, void" [sort.c:113]   --->   Operation 52 'br' 'br_ln113' <Predicate = (icmp_ln99)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln92 = br void" [sort.c:92]   --->   Operation 53 'br' 'br_ln92' <Predicate = (!icmp_ln99)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.44>
+ST_4 : Operation 54 [2/2] (1.44ns)   --->   "%call_ln117 = call void @merge.1, i32 %a, i128 %checkdata, i32 %i_2, i32 %mid, i32 2048, i32 %global_time_1" [sort.c:117]   --->   Operation 54 'call' 'call_ln117' <Predicate = true> <Delay = 1.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 1.01>
+ST_5 : Operation 55 [1/2] (0.00ns)   --->   "%call_ln117 = call void @merge.1, i32 %a, i128 %checkdata, i32 %i_2, i32 %mid, i32 2048, i32 %global_time_1" [sort.c:117]   --->   Operation 55 'call' 'call_ln117' <Predicate = (!icmp_ln113)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 56 'br' 'br_ln0' <Predicate = (!icmp_ln113)> <Delay = 0.00>
+ST_5 : Operation 57 [1/2] (0.00ns)   --->   "%call_ln114 = call void @merge.1, i32 %a, i128 %checkdata, i32 %i_2, i32 %mid, i32 %to, i32 %global_time_1" [sort.c:114]   --->   Operation 57 'call' 'call_ln114' <Predicate = (icmp_ln113)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln115 = br void" [sort.c:115]   --->   Operation 58 'br' 'br_ln115' <Predicate = (icmp_ln113)> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (1.01ns)   --->   "%i = add i32 %m_1, i32 %i_2" [sort.c:99]   --->   Operation 59 'add' 'i' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln99 = br void" [sort.c:99]   --->   Operation 60 'br' 'br_ln99' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 1.44>
+ST_6 : Operation 61 [2/2] (1.44ns)   --->   "%call_ln114 = call void @merge.1, i32 %a, i128 %checkdata, i32 %i_2, i32 %mid, i32 %to, i32 %global_time_1" [sort.c:114]   --->   Operation 61 'call' 'call_ln114' <Predicate = true> <Delay = 1.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('m') with incoming values : ('m') [16]  (0.427 ns)
+
+ <State 2>: 1.07ns
+The critical path consists of the following:
+	'phi' operation ('m') with incoming values : ('m') [16]  (0 ns)
+	'icmp' operation ('icmp_ln92', sort.c:92) [18]  (1.07 ns)
+
+ <State 3>: 2.98ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', sort.c:99) [26]  (0 ns)
+	'add' operation ('add_ln101', sort.c:101) [33]  (0 ns)
+	'add' operation ('mid', sort.c:101) [34]  (0.731 ns)
+	'add' operation ('to', sort.c:107) [42]  (1.02 ns)
+	'or' operation ('or_ln12_1', ../../common/hercules.c:12) [46]  (0 ns)
+	'store' operation ('store_ln12', ../../common/hercules.c:12) of constant <constant:_ssdm_op_Write.bram.i128> on array 'checkdata' [47]  (1.24 ns)
+
+ <State 4>: 1.44ns
+The critical path consists of the following:
+	'call' operation ('call_ln117', sort.c:117) to 'merge.1' [54]  (1.44 ns)
+
+ <State 5>: 1.02ns
+The critical path consists of the following:
+	'add' operation ('i', sort.c:99) [60]  (1.02 ns)
+
+ <State 6>: 1.44ns
+The critical path consists of the following:
+	'call' operation ('call_ln114', sort.c:114) to 'merge.1' [57]  (1.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

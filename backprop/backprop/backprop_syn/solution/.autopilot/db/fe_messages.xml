@@ -1,0 +1,48 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nfs/home/xushuoxiang/Machsuite_V0.1/backprop/backprop/backprop_syn/solution/csynth.tcl:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="backprop" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=backprop" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:36:0" msg_body="Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_input_layer'">
+        <args Callee="add_bias_to_activations" Caller="matrix_vector_product_with_bias_input_layer"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:50:0" msg_body="Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_second_layer'">
+        <args Callee="add_bias_to_activations" Caller="matrix_vector_product_with_bias_second_layer"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:64:0" msg_body="Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_output_layer'">
+        <args Callee="add_bias_to_activations" Caller="matrix_vector_product_with_bias_output_layer"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'matrix_vector_product_with_bias_input_layer' into 'backprop'">
+        <args Callee="matrix_vector_product_with_bias_input_layer" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'RELU' into 'backprop'">
+        <args Callee="RELU" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'matrix_vector_product_with_bias_second_layer' into 'backprop'">
+        <args Callee="matrix_vector_product_with_bias_second_layer" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'matrix_vector_product_with_bias_output_layer' into 'backprop'">
+        <args Callee="matrix_vector_product_with_bias_output_layer" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'soft_max' into 'backprop'">
+        <args Callee="soft_max" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'take_difference' into 'backprop'">
+        <args Callee="take_difference" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'get_delta_matrix_weights3' into 'backprop'">
+        <args Callee="get_delta_matrix_weights3" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'get_oracle_activations2' into 'backprop'">
+        <args Callee="get_oracle_activations2" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'get_delta_matrix_weights2' into 'backprop'">
+        <args Callee="get_delta_matrix_weights2" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'get_oracle_activations1' into 'backprop'">
+        <args Callee="get_oracle_activations1" Caller="backprop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="backprop.c:246:0" msg_body="Inlining function 'get_delta_matrix_weights1' into 'backprop'">
+        <args Callee="get_delta_matrix_weights1" Caller="backprop"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

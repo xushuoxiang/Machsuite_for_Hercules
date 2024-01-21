@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "*.rmd": "markdown",
-        "support.h": "c"
+        "support.h": "c",
+        "time.h": "c",
+        "hercules.h": "c"
     }
 }

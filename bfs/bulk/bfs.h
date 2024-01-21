@@ -9,6 +9,7 @@ Hong, Oguntebi, Olukotun. "Efficient Parallel Graph Exploration on Multi-Core CP
 #include <stdio.h>
 #include <string.h>
 #include "../../common/support.h"
+#include "../../common/hercules.h"
 
 // Terminology (but not values) from graph500 spec
 //   graph density = 2^-(2*SCALE - EDGE_FACTOR)
@@ -49,7 +50,9 @@ struct bench_args_t {
   node_index_t starting_node;
   level_t level[N_NODES];
   edge_index_t level_counts[N_LEVELS];
+  hercules_checkdata checkdata[HERCULES_BUFFER];
+  int hercules_buffer_size;
 };
 
-void bfs(node_t nodes[N_NODES], edge_t edges[N_EDGES], node_index_t starting_node, level_t level[N_NODES], edge_index_t level_counts[N_LEVELS]);
+void bfs(node_t nodes[N_NODES], edge_t edges[N_EDGES], node_index_t starting_node, level_t level[N_NODES], edge_index_t level_counts[N_LEVELS], hercules_checkdata checkdata[HERCULES_BUFFER], int* hercules_buffer_size);
 

@@ -7,7 +7,7 @@ int INPUT_SIZE = sizeof(struct bench_args_t);
 
 void run_benchmark( void *vargs ) {
   struct bench_args_t *args = (struct bench_args_t *)vargs;
-  bbgemm( args->m1, args->m2, args->prod );
+  bbgemm( args->m1, args->m2, args->prod, args->checkdata, &args->hercules_buffer_size);
 }
 
 /* Input format:
@@ -72,6 +72,9 @@ int check_data( void *vdata, void *vref ) {
   int has_errors = 0;
   int r,c;
   TYPE diff;
+#ifdef ENABLE_HERCULES
+  dump_checkdata(data->checkdata, data->hercules_buffer_size);
+#endif
 
   for( r=0; r<row_size; r++ ) {
     for( c=0; c<col_size; c++ ) {

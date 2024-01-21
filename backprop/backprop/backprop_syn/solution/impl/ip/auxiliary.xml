@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="backprop" xd:componentRef="backprop" xd:initiationInterval="4490000" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="*(weights1_d0)" xd:originalName="weights1" xd:direction="out" xd:interfaceRef="weights1_d0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(weights1_q0)" xd:originalName="weights1" xd:direction="in" xd:interfaceRef="weights1_q0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(weights1_q1)" xd:originalName="weights1" xd:direction="in" xd:interfaceRef="weights1_q1" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(weights2_d0)" xd:originalName="weights2" xd:direction="out" xd:interfaceRef="weights2_d0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(weights2_q0)" xd:originalName="weights2" xd:direction="in" xd:interfaceRef="weights2_q0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(weights2_q1)" xd:originalName="weights2" xd:direction="in" xd:interfaceRef="weights2_q1" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(weights3_d0)" xd:originalName="weights3" xd:direction="out" xd:interfaceRef="weights3_d0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(weights3_q0)" xd:originalName="weights3" xd:direction="in" xd:interfaceRef="weights3_q0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(weights3_q1)" xd:originalName="weights3" xd:direction="in" xd:interfaceRef="weights3_q1" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases1_d0)" xd:originalName="biases1" xd:direction="out" xd:interfaceRef="biases1_d0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases1_q0)" xd:originalName="biases1" xd:direction="in" xd:interfaceRef="biases1_q0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases1_q1)" xd:originalName="biases1" xd:direction="in" xd:interfaceRef="biases1_q1" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases2_d0)" xd:originalName="biases2" xd:direction="out" xd:interfaceRef="biases2_d0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases2_q0)" xd:originalName="biases2" xd:direction="in" xd:interfaceRef="biases2_q0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases2_q1)" xd:originalName="biases2" xd:direction="in" xd:interfaceRef="biases2_q1" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases3_d0)" xd:originalName="biases3" xd:direction="out" xd:interfaceRef="biases3_d0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases3_q0)" xd:originalName="biases3" xd:direction="in" xd:interfaceRef="biases3_q0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(biases3_q1)" xd:originalName="biases3" xd:direction="in" xd:interfaceRef="biases3_q1" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(training_data_q0)" xd:originalName="training_data" xd:direction="in" xd:interfaceRef="training_data_q0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(training_data_q1)" xd:originalName="training_data" xd:direction="in" xd:interfaceRef="training_data_q1" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(training_targets)" xd:originalName="training_targets" xd:direction="in" xd:interfaceRef="training_targets_q0" xd:busTypeRef="ap_memory" xd:dataWidth="64"/>
+  <xd:latencyEstimates xd:best-case="4489999" xd:worst-case="4489999" xd:average-case="4489999"/>
+  <xd:resourceEstimates xd:LUT="35889" xd:FF="65748" xd:BRAM="0" xd:DSP="110"/>
+</xd:acceleratorMap>

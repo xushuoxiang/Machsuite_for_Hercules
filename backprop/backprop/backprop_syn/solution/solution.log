@@ -3,3 +3,946 @@ Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
 Tool Version Limit: 2022.04
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7v585t-ffg1761-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7v585t-ffg1761-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 753.211 MB.
+INFO: [HLS 200-10] Analyzing design file 'backprop.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'local_support.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.48 seconds. CPU system time: 0.51 seconds. Elapsed time: 2.01 seconds; current allocated memory: 753.211 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_input_layer' (backprop.c:36:0)
+INFO: [HLS 214-178] Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_second_layer' (backprop.c:50:0)
+INFO: [HLS 214-178] Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_output_layer' (backprop.c:64:0)
+INFO: [HLS 214-178] Inlining function 'matrix_vector_product_with_bias_input_layer' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'RELU' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'matrix_vector_product_with_bias_second_layer' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'matrix_vector_product_with_bias_output_layer' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'soft_max' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'take_difference' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_delta_matrix_weights3' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_oracle_activations2' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_delta_matrix_weights2' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_oracle_activations1' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_delta_matrix_weights1' into 'backprop' (backprop.c:246:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.97 seconds. CPU system time: 0.32 seconds. Elapsed time: 3.05 seconds; current allocated memory: 753.211 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 753.211 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 754.246 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 754.867 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_164_2' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_169_3' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_178_5' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_182_6' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_190_8' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_195_9' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_204_11' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_208_12' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_216_14' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_221_15' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_230_17' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_234_18' (backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_1' (backprop.c:37) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (backprop.c:27) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (backprop.c:17) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_52_1' (backprop.c:51) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (backprop.c:27) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (backprop.c:17) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_66_1' (backprop.c:65) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (backprop.c:27) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (backprop.c:17) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_8_1' (backprop.c:4) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_11_2' (backprop.c:4) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_80_1' (backprop.c:79) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_89_1' (backprop.c:88) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_101_1' (backprop.c:100) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_114_1' (backprop.c:113) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_126_1' (backprop.c:125) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_139_1' (backprop.c:138) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_265_2' (backprop.c:247) in function 'backprop' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_38_1' (backprop.c:37) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_52_1' (backprop.c:51) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_66_1' (backprop.c:65) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_89_1' (backprop.c:88) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_101_1' (backprop.c:100) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_114_1' (backprop.c:113) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_126_1' (backprop.c:125) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_139_1' (backprop.c:138) in function 'backprop' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_40_2' (backprop.c:37) in function 'backprop' completely with a factor of 13.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_54_2' (backprop.c:51) in function 'backprop' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_68_2' (backprop.c:65) in function 'backprop' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_90_2' (backprop.c:88) in function 'backprop' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_103_2' (backprop.c:100) in function 'backprop' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_115_2' (backprop.c:113) in function 'backprop' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_128_2' (backprop.c:125) in function 'backprop' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_140_2' (backprop.c:138) in function 'backprop' completely with a factor of 64.
+INFO: [XFORM 203-102] Automatically partitioning small array 'activations3' (backprop.c:251) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'dactivations3' (backprop.c:254) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'net_outputs' (backprop.c:255) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'output_difference' (backprop.c:257) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'activations3' (backprop.c:251) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dactivations3' (backprop.c:254) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'net_outputs' (backprop.c:255) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'output_difference' (backprop.c:257) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (backprop.c:247:11) to (backprop.c:265:27) in function 'backprop'... converting 7 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.56 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.71 seconds; current allocated memory: 784.539 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_163_1' (backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_177_4' (backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_189_7' (backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_203_10' (backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_215_13' (backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_229_16' (backprop.c:158:9) in function 'update_weights.1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_264_1' (backprop.c:247:9) in function 'backprop' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'activations1' (backprop.c:266:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations2' (backprop.c:267:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations1' (backprop.c:41:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations1' (backprop.c:29:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'dactivations1' (backprop.c:19:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations1' (backprop.c:20:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations2' (backprop.c:55:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'delta_weights3' (backprop.c:91:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'oracle_activations2' (backprop.c:106:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'delta_weights2' (backprop.c:116:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'oracle_activations1' (backprop.c:131:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'delta_weights1' (backprop.c:141:38)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.41 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.5 seconds; current allocated memory: 1.063 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'backprop' ...
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2' to 'update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_169_3' to 'update_weights_1_Pipeline_VITIS_LOOP_169_3'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5' to 'update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_182_6' to 'update_weights_1_Pipeline_VITIS_LOOP_182_6'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8' to 'update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_195_9' to 'update_weights_1_Pipeline_VITIS_LOOP_195_9'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11' to 'update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_208_12' to 'update_weights_1_Pipeline_VITIS_LOOP_208_12'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14' to 'update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_221_15' to 'update_weights_1_Pipeline_VITIS_LOOP_221_15'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17' to 'update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1_Pipeline_VITIS_LOOP_234_18' to 'update_weights_1_Pipeline_VITIS_LOOP_234_18'.
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1' to 'update_weights_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_265_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_265_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_265_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.066 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.066 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_38_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_38_1' (loop 'VITIS_LOOP_38_1'): Unable to schedule 'load' operation ('weights1_load_1', backprop.c:41) on array 'weights1' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_38_1' (loop 'VITIS_LOOP_38_1'): Unable to schedule 'load' operation ('weights1_load_3', backprop.c:41) on array 'weights1' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_38_1' (loop 'VITIS_LOOP_38_1'): Unable to schedule 'load' operation ('weights1_load_5', backprop.c:41) on array 'weights1' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_38_1' (loop 'VITIS_LOOP_38_1'): Unable to schedule 'load' operation ('weights1_load_7', backprop.c:41) on array 'weights1' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_38_1' (loop 'VITIS_LOOP_38_1'): Unable to schedule 'load' operation ('weights1_load_9', backprop.c:41) on array 'weights1' due to limited memory ports (II = 5). Please consider using a memory core with more ports or partitioning the array 'weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_38_1' (loop 'VITIS_LOOP_38_1'): Unable to schedule 'load' operation ('weights1_load_11', backprop.c:41) on array 'weights1' due to limited memory ports (II = 6). Please consider using a memory core with more ports or partitioning the array 'weights1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 73, loop 'VITIS_LOOP_38_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.067 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.067 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.068 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.068 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 43, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.068 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.068 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_52_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_52_1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_52_1' (loop 'VITIS_LOOP_52_1'): Unable to schedule 'load' operation ('weights2_load_1', backprop.c:55) on array 'weights2' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_52_1' (loop 'VITIS_LOOP_52_1'): Unable to schedule 'load' operation ('weights2_load_3', backprop.c:55) on array 'weights2' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_52_1' (loop 'VITIS_LOOP_52_1'): Unable to schedule 'load' operation ('weights2_load_5', backprop.c:55) on array 'weights2' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_52_1' (loop 'VITIS_LOOP_52_1'): Unable to schedule 'load' operation ('weights2_load_7', backprop.c:55) on array 'weights2' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_52_1' (loop 'VITIS_LOOP_52_1'): Unable to schedule 'load' operation ('weights2_load_37', backprop.c:55) on array 'weights2' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_52_1' (loop 'VITIS_LOOP_52_1'): Unable to schedule 'load' operation ('weights2_load_53', backprop.c:55) on array 'weights2' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_52_1' (loop 'VITIS_LOOP_52_1'): Unable to schedule 'load' operation ('weights2_load_61', backprop.c:55) on array 'weights2' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 328, loop 'VITIS_LOOP_52_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.06 seconds. CPU system time: 0 seconds. Elapsed time: 1.12 seconds; current allocated memory: 1.072 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.13 seconds. CPU system time: 0 seconds. Elapsed time: 1.19 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_28_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.53 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.075 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_18_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 43, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.075 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_66_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_66_1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_66_1' (loop 'VITIS_LOOP_66_1'): Unable to schedule 'load' operation ('weights3_load_1', backprop.c:69) on array 'weights3' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'weights3'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_66_1' (loop 'VITIS_LOOP_66_1'): Unable to schedule 'load' operation ('weights3_load_3', backprop.c:69) on array 'weights3' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'weights3'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_66_1' (loop 'VITIS_LOOP_66_1'): Unable to schedule 'load' operation ('weights3_load_5', backprop.c:69) on array 'weights3' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'weights3'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_66_1' (loop 'VITIS_LOOP_66_1'): Unable to schedule 'load' operation ('weights3_load_7', backprop.c:69) on array 'weights3' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'weights3'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_66_1' (loop 'VITIS_LOOP_66_1'): Unable to schedule 'load' operation ('weights3_load_37', backprop.c:69) on array 'weights3' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'weights3'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_66_1' (loop 'VITIS_LOOP_66_1'): Unable to schedule 'load' operation ('weights3_load_53', backprop.c:69) on array 'weights3' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'weights3'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_66_1' (loop 'VITIS_LOOP_66_1'): Unable to schedule 'load' operation ('weights3_load_61', backprop.c:69) on array 'weights3' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'weights3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 327, loop 'VITIS_LOOP_66_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.08 seconds. CPU system time: 0 seconds. Elapsed time: 1.14 seconds; current allocated memory: 1.079 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.2 seconds; current allocated memory: 1.081 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_28_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_28_13' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'dadd' operation ('activations3[1]', backprop.c:29) and 'mux' operation ('tmp_5', backprop.c:29).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_28_13' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'dadd' operation ('activations3[1]', backprop.c:29) and 'mux' operation ('tmp_5', backprop.c:29).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_28_13' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'dadd' operation ('activations3[1]', backprop.c:29) and 'mux' operation ('tmp_5', backprop.c:29).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_28_13' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'dadd' operation ('activations3[1]', backprop.c:29) and 'mux' operation ('tmp_5', backprop.c:29).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 6, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.54 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.72 seconds; current allocated memory: 1.082 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_18_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_18_14' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'ddiv' operation ('activations3[1]', backprop.c:20) and 'mux' operation ('tmp_6', backprop.c:19).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_18_14' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'ddiv' operation ('activations3[1]', backprop.c:20) and 'mux' operation ('tmp_6', backprop.c:19).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_18_14' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'ddiv' operation ('activations3[1]', backprop.c:20) and 'mux' operation ('tmp_6', backprop.c:19).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_18_14' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'ddiv' operation ('activations3[1]', backprop.c:20) and 'mux' operation ('tmp_6', backprop.c:19).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_18_14' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between 'ddiv' operation ('activations3[1]', backprop.c:20) and 'mux' operation ('tmp_6', backprop.c:19).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_18_14' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between 'ddiv' operation ('activations3[1]', backprop.c:20) and 'mux' operation ('tmp_6', backprop.c:19).
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_18_14' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 40, distance = 1, offset = 1) between 'ddiv' operation ('activations3[1]', backprop.c:20) and 'mux' operation ('tmp_6', backprop.c:19).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 41, Depth = 42, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.083 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_8_1' (loop 'VITIS_LOOP_8_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln8', backprop.c:8) of variable 'sum', backprop.c:9 on local variable 'sum' and 'load' operation ('sum_load', backprop.c:9) on local variable 'sum'.
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_8_1' (loop 'VITIS_LOOP_8_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln8', backprop.c:8) of variable 'sum', backprop.c:9 on local variable 'sum' and 'load' operation ('sum_load', backprop.c:9) on local variable 'sum'.
+WARNING: [HLS 200-880] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_8_1' (loop 'VITIS_LOOP_8_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln8', backprop.c:8) of variable 'sum', backprop.c:9 on local variable 'sum' and 'load' operation ('sum_load', backprop.c:9) on local variable 'sum'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 19, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.083 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_11_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 36, loop 'VITIS_LOOP_11_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_80_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_80_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_80_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_89_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_89_1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_89_1' (loop 'VITIS_LOOP_89_1'): Unable to schedule 'store' operation ('delta_weights3_addr_1_write_ln91', backprop.c:91) of variable 'mul_i3_1', backprop.c:91 on array 'delta_weights3' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'delta_weights3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 9, loop 'VITIS_LOOP_89_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_101_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_101_1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_101_1' (loop 'VITIS_LOOP_101_1'): Unable to schedule 'load' operation ('weights3_load_64', backprop.c:104) on array 'weights3' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'weights3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 29, loop 'VITIS_LOOP_101_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_114_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_114_1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_114_1' (loop 'VITIS_LOOP_114_1'): Unable to schedule 'store' operation ('delta_weights2_addr_1_write_ln116', backprop.c:116) of variable 'mul_i4_1', backprop.c:116 on array 'delta_weights2' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'delta_weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_114_1' (loop 'VITIS_LOOP_114_1'): Unable to schedule 'store' operation ('delta_weights2_addr_3_write_ln116', backprop.c:116) of variable 'mul_i4_3', backprop.c:116 on array 'delta_weights2' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'delta_weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_114_1' (loop 'VITIS_LOOP_114_1'): Unable to schedule 'store' operation ('delta_weights2_addr_5_write_ln116', backprop.c:116) of variable 'mul_i4_5', backprop.c:116 on array 'delta_weights2' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'delta_weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_114_1' (loop 'VITIS_LOOP_114_1'): Unable to schedule 'store' operation ('delta_weights2_addr_7_write_ln116', backprop.c:116) of variable 'mul_i4_7', backprop.c:116 on array 'delta_weights2' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'delta_weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_114_1' (loop 'VITIS_LOOP_114_1'): Unable to schedule 'store' operation ('delta_weights2_addr_37_write_ln116', backprop.c:116) of variable 'mul_i4_36', backprop.c:116 on array 'delta_weights2' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'delta_weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_114_1' (loop 'VITIS_LOOP_114_1'): Unable to schedule 'store' operation ('delta_weights2_addr_53_write_ln116', backprop.c:116) of variable 'mul_i4_52', backprop.c:116 on array 'delta_weights2' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'delta_weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_114_1' (loop 'VITIS_LOOP_114_1'): Unable to schedule 'store' operation ('delta_weights2_addr_61_write_ln116', backprop.c:116) of variable 'mul_i4_60', backprop.c:116 on array 'delta_weights2' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'delta_weights2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 39, loop 'VITIS_LOOP_114_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.65 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.77 seconds; current allocated memory: 1.088 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 1.088 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_126_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_126_1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_126_1' (loop 'VITIS_LOOP_126_1'): Unable to schedule 'load' operation ('weights2_load_64', backprop.c:129) on array 'weights2' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_126_1' (loop 'VITIS_LOOP_126_1'): Unable to schedule 'load' operation ('weights2_load_66', backprop.c:129) on array 'weights2' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_126_1' (loop 'VITIS_LOOP_126_1'): Unable to schedule 'load' operation ('weights2_load_68', backprop.c:129) on array 'weights2' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_126_1' (loop 'VITIS_LOOP_126_1'): Unable to schedule 'load' operation ('weights2_load_70', backprop.c:129) on array 'weights2' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_126_1' (loop 'VITIS_LOOP_126_1'): Unable to schedule 'load' operation ('weights2_load_100', backprop.c:129) on array 'weights2' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_126_1' (loop 'VITIS_LOOP_126_1'): Unable to schedule 'load' operation ('weights2_load_116', backprop.c:129) on array 'weights2' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_126_1' (loop 'VITIS_LOOP_126_1'): Unable to schedule 'load' operation ('weights2_load_124', backprop.c:129) on array 'weights2' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'weights2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 333, loop 'VITIS_LOOP_126_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.23 seconds. CPU system time: 0 seconds. Elapsed time: 1.36 seconds; current allocated memory: 1.092 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.16 seconds; current allocated memory: 1.094 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop_Pipeline_VITIS_LOOP_139_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_139_1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_139_1' (loop 'VITIS_LOOP_139_1'): Unable to schedule 'store' operation ('delta_weights1_addr_1_write_ln141', backprop.c:141) of variable 'mul_i6_1', backprop.c:141 on array 'delta_weights1' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'delta_weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_139_1' (loop 'VITIS_LOOP_139_1'): Unable to schedule 'store' operation ('delta_weights1_addr_3_write_ln141', backprop.c:141) of variable 'mul_i6_3', backprop.c:141 on array 'delta_weights1' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'delta_weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_139_1' (loop 'VITIS_LOOP_139_1'): Unable to schedule 'store' operation ('delta_weights1_addr_5_write_ln141', backprop.c:141) of variable 'mul_i6_5', backprop.c:141 on array 'delta_weights1' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'delta_weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_139_1' (loop 'VITIS_LOOP_139_1'): Unable to schedule 'store' operation ('delta_weights1_addr_7_write_ln141', backprop.c:141) of variable 'mul_i6_7', backprop.c:141 on array 'delta_weights1' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'delta_weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_139_1' (loop 'VITIS_LOOP_139_1'): Unable to schedule 'store' operation ('delta_weights1_addr_37_write_ln141', backprop.c:141) of variable 'mul_i6_36', backprop.c:141 on array 'delta_weights1' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'delta_weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_139_1' (loop 'VITIS_LOOP_139_1'): Unable to schedule 'store' operation ('delta_weights1_addr_53_write_ln141', backprop.c:141) of variable 'mul_i6_52', backprop.c:141 on array 'delta_weights1' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'delta_weights1'.
+WARNING: [HLS 200-885] The II Violation in module 'backprop_Pipeline_VITIS_LOOP_139_1' (loop 'VITIS_LOOP_139_1'): Unable to schedule 'store' operation ('delta_weights1_addr_61_write_ln141', backprop.c:141) of variable 'mul_i6_60', backprop.c:141 on array 'delta_weights1' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'delta_weights1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 39, loop 'VITIS_LOOP_139_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.35 seconds; current allocated memory: 1.097 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.098 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2' (loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('norm_2_write_ln164', backprop.c:164) of variable 'norm', backprop.c:166 on local variable 'norm' and 'load' operation ('norm_2_load', backprop.c:166) on local variable 'norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2' (loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('norm_2_write_ln164', backprop.c:164) of variable 'norm', backprop.c:166 on local variable 'norm' and 'load' operation ('norm_2_load', backprop.c:166) on local variable 'norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2' (loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('norm_2_write_ln164', backprop.c:164) of variable 'norm', backprop.c:166 on local variable 'norm' and 'load' operation ('norm_2_load', backprop.c:166) on local variable 'norm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 22, loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.47 seconds; current allocated memory: 1.099 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.099 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_169_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_169_3'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_169_3' (loop 'VITIS_LOOP_169_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('bias_norm_1_write_ln169', backprop.c:169) of variable 'bias_norm', backprop.c:171 on local variable 'bias_norm' and 'load' operation ('bias_norm_1_load', backprop.c:171) on local variable 'bias_norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_169_3' (loop 'VITIS_LOOP_169_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('bias_norm_1_write_ln169', backprop.c:169) of variable 'bias_norm', backprop.c:171 on local variable 'bias_norm' and 'load' operation ('bias_norm_1_load', backprop.c:171) on local variable 'bias_norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_169_3' (loop 'VITIS_LOOP_169_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('bias_norm_1_write_ln169', backprop.c:169) of variable 'bias_norm', backprop.c:171 on local variable 'bias_norm' and 'load' operation ('bias_norm_1_load', backprop.c:171) on local variable 'bias_norm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 22, loop 'VITIS_LOOP_169_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 25, loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_182_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_182_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 25, loop 'VITIS_LOOP_182_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8' (loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('norm_write_ln190', backprop.c:190) of variable 'norm_2', backprop.c:192 on local variable 'norm' and 'load' operation ('norm_load_2', backprop.c:192) on local variable 'norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8' (loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('norm_write_ln190', backprop.c:190) of variable 'norm_2', backprop.c:192 on local variable 'norm' and 'load' operation ('norm_load_2', backprop.c:192) on local variable 'norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8' (loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('norm_write_ln190', backprop.c:190) of variable 'norm_2', backprop.c:192 on local variable 'norm' and 'load' operation ('norm_load_2', backprop.c:192) on local variable 'norm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 22, loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.101 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.101 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_195_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_195_9'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_195_9' (loop 'VITIS_LOOP_195_9'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('bias_norm_write_ln195', backprop.c:195) of variable 'bias_norm', backprop.c:197 on local variable 'bias_norm' and 'load' operation ('bias_norm_load_2', backprop.c:197) on local variable 'bias_norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_195_9' (loop 'VITIS_LOOP_195_9'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('bias_norm_write_ln195', backprop.c:195) of variable 'bias_norm', backprop.c:197 on local variable 'bias_norm' and 'load' operation ('bias_norm_load_2', backprop.c:197) on local variable 'bias_norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_195_9' (loop 'VITIS_LOOP_195_9'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('bias_norm_write_ln195', backprop.c:195) of variable 'bias_norm', backprop.c:197 on local variable 'bias_norm' and 'load' operation ('bias_norm_load_2', backprop.c:197) on local variable 'bias_norm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 22, loop 'VITIS_LOOP_195_9'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.101 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.101 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 25, loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.102 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_208_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_208_12'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 25, loop 'VITIS_LOOP_208_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.102 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_215_13_VITIS_LOOP_216_14'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14' (loop 'VITIS_LOOP_215_13_VITIS_LOOP_216_14'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('norm_write_ln216', backprop.c:216) of variable 'norm_1', backprop.c:218 on local variable 'norm' and 'load' operation ('norm_load_1', backprop.c:218) on local variable 'norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14' (loop 'VITIS_LOOP_215_13_VITIS_LOOP_216_14'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('norm_write_ln216', backprop.c:216) of variable 'norm_1', backprop.c:218 on local variable 'norm' and 'load' operation ('norm_load_1', backprop.c:218) on local variable 'norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14' (loop 'VITIS_LOOP_215_13_VITIS_LOOP_216_14'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('norm_write_ln216', backprop.c:216) of variable 'norm_1', backprop.c:218 on local variable 'norm' and 'load' operation ('norm_load_1', backprop.c:218) on local variable 'norm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 22, loop 'VITIS_LOOP_215_13_VITIS_LOOP_216_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.103 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.103 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_221_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_221_15'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_221_15' (loop 'VITIS_LOOP_221_15'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('bias_norm_write_ln221', backprop.c:221) of variable 'bias_norm', backprop.c:223 on local variable 'bias_norm' and 'load' operation ('bias_norm_load_1', backprop.c:223) on local variable 'bias_norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_221_15' (loop 'VITIS_LOOP_221_15'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('bias_norm_write_ln221', backprop.c:221) of variable 'bias_norm', backprop.c:223 on local variable 'bias_norm' and 'load' operation ('bias_norm_load_1', backprop.c:223) on local variable 'bias_norm'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1_Pipeline_VITIS_LOOP_221_15' (loop 'VITIS_LOOP_221_15'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('bias_norm_write_ln221', backprop.c:221) of variable 'bias_norm', backprop.c:223 on local variable 'bias_norm' and 'load' operation ('bias_norm_load_1', backprop.c:223) on local variable 'bias_norm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 21, loop 'VITIS_LOOP_221_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.103 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.103 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_229_16_VITIS_LOOP_230_17'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 25, loop 'VITIS_LOOP_229_16_VITIS_LOOP_230_17'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.103 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.103 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1_Pipeline_VITIS_LOOP_234_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_234_18'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 25, loop 'VITIS_LOOP_234_18'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.104 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.104 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.104 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.104 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.68 seconds. CPU system time: 0 seconds. Elapsed time: 0.73 seconds; current allocated memory: 1.112 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.69 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.84 seconds; current allocated memory: 1.112 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_265_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_265_2' pipeline 'VITIS_LOOP_265_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_265_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.63 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.112 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_38_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_38_1' pipeline 'VITIS_LOOP_38_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_5ns_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_38_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.113 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_28_1' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_28_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.116 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_18_1' pipeline 'VITIS_LOOP_18_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_13_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_18_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.117 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_52_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_52_1' pipeline 'VITIS_LOOP_52_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_52_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_28_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_28_11' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_28_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.91 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.12 seconds; current allocated memory: 1.133 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_18_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_18_12' pipeline 'VITIS_LOOP_18_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_13_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_18_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.134 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_66_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_66_1' pipeline 'VITIS_LOOP_66_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_66_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.141 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_28_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_28_13' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_28_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.89 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.02 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_18_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_18_14' pipeline 'VITIS_LOOP_18_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_13_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_18_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_8_1' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_13_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_8_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_11_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_11_2' pipeline 'VITIS_LOOP_11_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_13_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_11_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.155 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_80_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_80_1' pipeline 'VITIS_LOOP_80_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_80_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.157 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_89_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_89_1' pipeline 'VITIS_LOOP_89_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_89_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.158 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_101_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_101_1' pipeline 'VITIS_LOOP_101_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_101_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.160 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_114_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_114_1' pipeline 'VITIS_LOOP_114_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_114_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.164 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_126_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_126_1' pipeline 'VITIS_LOOP_126_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_126_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.54 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.7 seconds; current allocated memory: 1.175 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop_Pipeline_VITIS_LOOP_139_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'backprop_Pipeline_VITIS_LOOP_139_1' pipeline 'VITIS_LOOP_139_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop_Pipeline_VITIS_LOOP_139_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.96 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.18 seconds; current allocated memory: 1.187 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2' pipeline 'VITIS_LOOP_163_1_VITIS_LOOP_164_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.194 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_169_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_169_3' pipeline 'VITIS_LOOP_169_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_169_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.195 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5' pipeline 'VITIS_LOOP_177_4_VITIS_LOOP_178_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.197 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_182_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_182_6' pipeline 'VITIS_LOOP_182_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_182_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.198 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8' pipeline 'VITIS_LOOP_189_7_VITIS_LOOP_190_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.199 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_195_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_195_9' pipeline 'VITIS_LOOP_195_9' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_195_9'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.201 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11' pipeline 'VITIS_LOOP_203_10_VITIS_LOOP_204_11' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.202 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_208_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_208_12' pipeline 'VITIS_LOOP_208_12' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_208_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.204 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14' pipeline 'VITIS_LOOP_215_13_VITIS_LOOP_216_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.205 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_221_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_221_15' pipeline 'VITIS_LOOP_221_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_221_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.206 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17' pipeline 'VITIS_LOOP_229_16_VITIS_LOOP_230_17' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.208 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1_Pipeline_VITIS_LOOP_234_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_weights_1_Pipeline_VITIS_LOOP_234_18' pipeline 'VITIS_LOOP_234_18' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1_Pipeline_VITIS_LOOP_234_18'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.209 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_21_no_dsp_1': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/weights1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/weights2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/weights3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/biases1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/biases2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/biases3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/training_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/training_targets' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'backprop' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_22_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_13_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.73 seconds; current allocated memory: 1.221 GB.
+INFO: [RTMG 210-278] Implementing memory 'backprop_activations1_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_dactivations1_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_delta_weights1_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_delta_weights2_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_delta_weights3_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.99 seconds. CPU system time: 0.13 seconds. Elapsed time: 3.44 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.88 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.19 seconds; current allocated memory: 1.245 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for backprop.
+INFO: [VLOG 209-307] Generating Verilog RTL for backprop.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 129.92 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 36.55 seconds. CPU system time: 1.51 seconds. Elapsed time: 50.05 seconds; current allocated memory: 524.125 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

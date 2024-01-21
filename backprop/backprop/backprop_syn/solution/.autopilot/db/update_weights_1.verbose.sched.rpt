@@ -1,0 +1,460 @@
+
+
+================================================================
+== Vitis HLS Report for 'update_weights_1'
+================================================================
+* Date:           Wed Dec 20 21:42:43 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        backprop_syn
+* Solution:       solution (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7v585t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.148 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    20547|    20547|  0.205 ms|  0.205 ms|  20547|  20547|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 24
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.85>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_read_4 = read i64 @_ssdm_op_Read.ap_auto.double, i64 %p_read2"   --->   Operation 25 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_read_5 = read i64 @_ssdm_op_Read.ap_auto.double, i64 %p_read1"   --->   Operation 26 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_read_6 = read i64 @_ssdm_op_Read.ap_auto.double, i64 %p_read"   --->   Operation 27 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%bias_norm_7_loc = alloca i64 1"   --->   Operation 28 'alloca' 'bias_norm_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%norm_7_loc = alloca i64 1"   --->   Operation 29 'alloca' 'norm_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%bias_norm_4_loc = alloca i64 1"   --->   Operation 30 'alloca' 'bias_norm_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%norm_4_loc = alloca i64 1"   --->   Operation 31 'alloca' 'norm_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%bias_norm_1_loc = alloca i64 1"   --->   Operation 32 'alloca' 'bias_norm_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%norm_2_loc = alloca i64 1"   --->   Operation 33 'alloca' 'norm_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2, i64 %d_weights1, i64 %weights1, i64 %norm_2_loc"   --->   Operation 34 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_169_3, i64 %d_biases1, i64 %biases1, i64 %bias_norm_1_loc"   --->   Operation 35 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8, i64 %d_weights2, i64 %weights2, i64 %norm_4_loc"   --->   Operation 36 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_195_9, i64 %d_biases2, i64 %biases2, i64 %bias_norm_4_loc"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 38 [2/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14, i64 %d_weights3, i64 %weights3, i64 %norm_7_loc"   --->   Operation 38 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 39 [2/2] (0.85ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_221_15, i64 %p_read_6, i64 %p_read_5, i64 %p_read_4, i64 %biases3, i64 %bias_norm_7_loc"   --->   Operation 39 'call' 'call_ln0' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 40 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2, i64 %d_weights1, i64 %weights1, i64 %norm_2_loc"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 41 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_169_3, i64 %d_biases1, i64 %biases1, i64 %bias_norm_1_loc"   --->   Operation 41 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 42 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8, i64 %d_weights2, i64 %weights2, i64 %norm_4_loc"   --->   Operation 42 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 43 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_195_9, i64 %d_biases2, i64 %biases2, i64 %bias_norm_4_loc"   --->   Operation 43 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 44 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14, i64 %d_weights3, i64 %weights3, i64 %norm_7_loc"   --->   Operation 44 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 45 [1/2] (0.00ns)   --->   "%call_ln0 = call void @update_weights.1_Pipeline_VITIS_LOOP_221_15, i64 %p_read_6, i64 %p_read_5, i64 %p_read_4, i64 %biases3, i64 %bias_norm_7_loc"   --->   Operation 45 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 6.61>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%norm_2_loc_load = load i64 %norm_2_loc"   --->   Operation 46 'load' 'norm_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%bias_norm_1_loc_load = load i64 %bias_norm_1_loc"   --->   Operation 47 'load' 'bias_norm_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [21/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 48 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 49 [21/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 49 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%norm_4_loc_load = load i64 %norm_4_loc"   --->   Operation 50 'load' 'norm_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%bias_norm_4_loc_load = load i64 %bias_norm_4_loc"   --->   Operation 51 'load' 'bias_norm_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [21/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 52 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 53 [21/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 53 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%norm_7_loc_load = load i64 %norm_7_loc"   --->   Operation 54 'load' 'norm_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%bias_norm_7_loc_load = load i64 %bias_norm_7_loc"   --->   Operation 55 'load' 'bias_norm_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [21/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 56 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 57 [21/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 57 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.61>
+ST_4 : Operation 58 [20/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 58 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 59 [20/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 59 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 60 [20/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 60 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 61 [20/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 61 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 62 [20/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 62 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 63 [20/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 63 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.61>
+ST_5 : Operation 64 [19/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 64 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 65 [19/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 65 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 66 [19/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 66 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 67 [19/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 67 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 68 [19/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 68 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 69 [19/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 69 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.61>
+ST_6 : Operation 70 [18/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 70 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 71 [18/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 71 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 72 [18/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 72 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 73 [18/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 73 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 74 [18/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 74 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 75 [18/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 75 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.61>
+ST_7 : Operation 76 [17/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 76 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 77 [17/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 77 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 78 [17/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 78 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 79 [17/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 79 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 80 [17/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 80 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 81 [17/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 81 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.61>
+ST_8 : Operation 82 [16/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 82 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 83 [16/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 83 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 84 [16/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 84 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 85 [16/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 85 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 86 [16/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 86 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 87 [16/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 87 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.61>
+ST_9 : Operation 88 [15/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 88 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 89 [15/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 89 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 90 [15/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 90 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 91 [15/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 91 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 92 [15/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 92 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 93 [15/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 93 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.61>
+ST_10 : Operation 94 [14/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 94 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 95 [14/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 95 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 96 [14/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 96 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 97 [14/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 97 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 98 [14/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 98 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 99 [14/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 99 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.61>
+ST_11 : Operation 100 [13/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 100 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 101 [13/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 101 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 102 [13/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 102 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 103 [13/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 103 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 104 [13/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 104 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 105 [13/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 105 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.61>
+ST_12 : Operation 106 [12/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 106 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 107 [12/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 107 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 108 [12/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 108 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 109 [12/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 109 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 110 [12/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 110 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 111 [12/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 111 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.61>
+ST_13 : Operation 112 [11/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 112 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 113 [11/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 113 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 114 [11/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 114 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 115 [11/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 115 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 116 [11/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 116 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 117 [11/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 117 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.61>
+ST_14 : Operation 118 [10/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 118 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 119 [10/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 119 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 120 [10/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 120 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 121 [10/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 121 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 122 [10/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 122 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 123 [10/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 123 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.61>
+ST_15 : Operation 124 [9/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 124 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 125 [9/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 125 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 126 [9/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 126 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 127 [9/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 127 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 128 [9/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 128 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 129 [9/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 129 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.61>
+ST_16 : Operation 130 [8/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 130 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 131 [8/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 131 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 132 [8/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 132 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 133 [8/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 133 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 134 [8/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 134 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 135 [8/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 135 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.61>
+ST_17 : Operation 136 [7/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 136 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 137 [7/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 137 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 138 [7/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 138 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 139 [7/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 139 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 140 [7/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 140 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 141 [7/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 141 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.61>
+ST_18 : Operation 142 [6/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 142 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 143 [6/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 143 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 144 [6/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 144 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 145 [6/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 145 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 146 [6/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 146 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_18 : Operation 147 [6/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 147 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 6.61>
+ST_19 : Operation 148 [5/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 148 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 149 [5/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 149 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 150 [5/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 150 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 151 [5/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 151 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 152 [5/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 152 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 153 [5/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 153 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 6.61>
+ST_20 : Operation 154 [4/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 154 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 155 [4/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 155 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 156 [4/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 156 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 157 [4/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 157 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 158 [4/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 158 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_20 : Operation 159 [4/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 159 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 6.61>
+ST_21 : Operation 160 [3/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 160 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 161 [3/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 161 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 162 [3/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 162 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 163 [3/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 163 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 164 [3/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 164 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 165 [3/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 165 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.61>
+ST_22 : Operation 166 [2/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 166 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 167 [2/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 167 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 168 [2/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 168 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 169 [2/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 169 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 170 [2/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 170 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 171 [2/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 171 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.61>
+ST_23 : Operation 172 [1/21] (6.61ns)   --->   "%norm_1 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_2_loc_load" [backprop.c:174]   --->   Operation 172 'dsqrt' 'norm_1' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 173 [2/2] (0.00ns)   --->   "%call_ln174 = call void @update_weights.1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5, i64 %weights1, i64 %norm_1" [backprop.c:174]   --->   Operation 173 'call' 'call_ln174' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 174 [1/21] (6.61ns)   --->   "%bias_norm = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_1_loc_load" [backprop.c:175]   --->   Operation 174 'dsqrt' 'bias_norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 175 [2/2] (0.00ns)   --->   "%call_ln175 = call void @update_weights.1_Pipeline_VITIS_LOOP_182_6, i64 %biases1, i64 %bias_norm" [backprop.c:175]   --->   Operation 175 'call' 'call_ln175' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 176 [1/21] (6.61ns)   --->   "%norm = dsqrt i64 @llvm.sqrt.f64, i64 %norm_4_loc_load" [backprop.c:200]   --->   Operation 176 'dsqrt' 'norm' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 177 [2/2] (0.00ns)   --->   "%call_ln200 = call void @update_weights.1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11, i64 %weights2, i64 %norm" [backprop.c:200]   --->   Operation 177 'call' 'call_ln200' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 178 [1/21] (6.61ns)   --->   "%bias_norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_4_loc_load" [backprop.c:201]   --->   Operation 178 'dsqrt' 'bias_norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 179 [2/2] (0.00ns)   --->   "%call_ln201 = call void @update_weights.1_Pipeline_VITIS_LOOP_208_12, i64 %biases2, i64 %bias_norm_3" [backprop.c:201]   --->   Operation 179 'call' 'call_ln201' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 180 [1/21] (6.61ns)   --->   "%norm_3 = dsqrt i64 @llvm.sqrt.f64, i64 %norm_7_loc_load" [backprop.c:226]   --->   Operation 180 'dsqrt' 'norm_3' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 181 [2/2] (0.00ns)   --->   "%call_ln226 = call void @update_weights.1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17, i64 %weights3, i64 %norm_3" [backprop.c:226]   --->   Operation 181 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 182 [1/21] (6.61ns)   --->   "%bias_norm_4 = dsqrt i64 @llvm.sqrt.f64, i64 %bias_norm_7_loc_load" [backprop.c:227]   --->   Operation 182 'dsqrt' 'bias_norm_4' <Predicate = true> <Delay = 6.61> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 20> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 183 [2/2] (0.00ns)   --->   "%call_ln227 = call void @update_weights.1_Pipeline_VITIS_LOOP_234_18, i64 %biases3, i64 %bias_norm_4" [backprop.c:227]   --->   Operation 183 'call' 'call_ln227' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 0.00>
+ST_24 : Operation 184 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %biases3, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 184 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 185 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %biases2, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 185 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 186 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %biases1, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 186 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 187 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights3, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 187 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 188 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights2, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 188 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 189 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights1, void @empty_17, i32 0, i32 0, void @empty_18, i32 4294967295, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 189 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 190 [1/2] (0.00ns)   --->   "%call_ln174 = call void @update_weights.1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5, i64 %weights1, i64 %norm_1" [backprop.c:174]   --->   Operation 190 'call' 'call_ln174' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 191 [1/2] (0.00ns)   --->   "%call_ln175 = call void @update_weights.1_Pipeline_VITIS_LOOP_182_6, i64 %biases1, i64 %bias_norm" [backprop.c:175]   --->   Operation 191 'call' 'call_ln175' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 192 [1/2] (0.00ns)   --->   "%call_ln200 = call void @update_weights.1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11, i64 %weights2, i64 %norm" [backprop.c:200]   --->   Operation 192 'call' 'call_ln200' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 193 [1/2] (0.00ns)   --->   "%call_ln201 = call void @update_weights.1_Pipeline_VITIS_LOOP_208_12, i64 %biases2, i64 %bias_norm_3" [backprop.c:201]   --->   Operation 193 'call' 'call_ln201' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 194 [1/2] (0.00ns)   --->   "%call_ln226 = call void @update_weights.1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17, i64 %weights3, i64 %norm_3" [backprop.c:226]   --->   Operation 194 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 195 [1/2] (0.00ns)   --->   "%call_ln227 = call void @update_weights.1_Pipeline_VITIS_LOOP_234_18, i64 %biases3, i64 %bias_norm_4" [backprop.c:227]   --->   Operation 195 'call' 'call_ln227' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 196 [1/1] (0.00ns)   --->   "%ret_ln237 = ret" [backprop.c:237]   --->   Operation 196 'ret' 'ret_ln237' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.858ns
+The critical path consists of the following:
+	wire read operation ('p_read_4') on port 'p_read2' [15]  (0 ns)
+	'call' operation ('call_ln0') to 'update_weights.1_Pipeline_VITIS_LOOP_221_15' [48]  (0.858 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 6.62ns
+The critical path consists of the following:
+	'load' operation ('norm_2_loc_load') on local variable 'norm_2_loc' [31]  (0 ns)
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 4>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 5>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 6>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 7>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 8>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 9>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 10>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 11>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 12>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 13>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 14>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 15>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 16>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 17>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 18>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 19>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 20>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 21>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 22>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 23>: 6.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('norm', backprop.c:174) [34]  (6.62 ns)
+
+ <State 24>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

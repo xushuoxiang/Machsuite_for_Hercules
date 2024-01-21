@@ -1,0 +1,62 @@
+set SynModuleInfo {
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_265_2 MODELNAME backprop_Pipeline_VITIS_LOOP_265_2 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_265_2
+    SUBMODULES {
+      {MODELNAME backprop_flow_control_loop_pipe_sequential_init RTLNAME backprop_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME backprop_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_38_1 MODELNAME backprop_Pipeline_VITIS_LOOP_38_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_38_1
+    SUBMODULES {
+      {MODELNAME backprop_mul_6ns_5ns_10_1_1 RTLNAME backprop_mul_6ns_5ns_10_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_28_1 MODELNAME backprop_Pipeline_VITIS_LOOP_28_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_28_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_18_1 MODELNAME backprop_Pipeline_VITIS_LOOP_18_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_18_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_52_1 MODELNAME backprop_Pipeline_VITIS_LOOP_52_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_52_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_28_11 MODELNAME backprop_Pipeline_VITIS_LOOP_28_11 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_28_11}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_18_12 MODELNAME backprop_Pipeline_VITIS_LOOP_18_12 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_18_12}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_66_1 MODELNAME backprop_Pipeline_VITIS_LOOP_66_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_66_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_28_13 MODELNAME backprop_Pipeline_VITIS_LOOP_28_13 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_28_13
+    SUBMODULES {
+      {MODELNAME backprop_mux_32_64_1_1 RTLNAME backprop_mux_32_64_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_18_14 MODELNAME backprop_Pipeline_VITIS_LOOP_18_14 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_18_14}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_8_1 MODELNAME backprop_Pipeline_VITIS_LOOP_8_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_8_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_11_2 MODELNAME backprop_Pipeline_VITIS_LOOP_11_2 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_11_2}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_80_1 MODELNAME backprop_Pipeline_VITIS_LOOP_80_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_80_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_89_1 MODELNAME backprop_Pipeline_VITIS_LOOP_89_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_89_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_101_1 MODELNAME backprop_Pipeline_VITIS_LOOP_101_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_101_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_114_1 MODELNAME backprop_Pipeline_VITIS_LOOP_114_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_114_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_126_1 MODELNAME backprop_Pipeline_VITIS_LOOP_126_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_126_1}
+  {SRCNAME backprop_Pipeline_VITIS_LOOP_139_1 MODELNAME backprop_Pipeline_VITIS_LOOP_139_1 RTLNAME backprop_backprop_Pipeline_VITIS_LOOP_139_1}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_169_3 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_169_3 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_169_3}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_182_6 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_182_6 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_182_6}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_195_9 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_195_9 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_195_9}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_208_12 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_208_12 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_208_12}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_221_15 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_221_15 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_221_15}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17}
+  {SRCNAME update_weights.1_Pipeline_VITIS_LOOP_234_18 MODELNAME update_weights_1_Pipeline_VITIS_LOOP_234_18 RTLNAME backprop_update_weights_1_Pipeline_VITIS_LOOP_234_18}
+  {SRCNAME update_weights.1 MODELNAME update_weights_1 RTLNAME backprop_update_weights_1
+    SUBMODULES {
+      {MODELNAME backprop_dsqrt_64ns_64ns_64_21_no_dsp_1 RTLNAME backprop_dsqrt_64ns_64ns_64_21_no_dsp_1 BINDTYPE op TYPE dsqrt IMPL fabric LATENCY 20 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME backprop MODELNAME backprop RTLNAME backprop IS_TOP 1
+    SUBMODULES {
+      {MODELNAME backprop_dadddsub_64ns_64ns_64_5_full_dsp_1 RTLNAME backprop_dadddsub_64ns_64ns_64_5_full_dsp_1 BINDTYPE op TYPE dadd IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
+      {MODELNAME backprop_dmul_64ns_64ns_64_5_max_dsp_1 RTLNAME backprop_dmul_64ns_64ns_64_5_max_dsp_1 BINDTYPE op TYPE dmul IMPL maxdsp LATENCY 4 ALLOW_PRAGMA 1}
+      {MODELNAME backprop_ddiv_64ns_64ns_64_22_no_dsp_1 RTLNAME backprop_ddiv_64ns_64ns_64_22_no_dsp_1 BINDTYPE op TYPE ddiv IMPL fabric LATENCY 21 ALLOW_PRAGMA 1}
+      {MODELNAME backprop_dexp_64ns_64ns_64_13_full_dsp_1 RTLNAME backprop_dexp_64ns_64ns_64_13_full_dsp_1 BINDTYPE op TYPE dexp IMPL fulldsp LATENCY 12 ALLOW_PRAGMA 1}
+      {MODELNAME backprop_activations1_RAM_AUTO_1R1W RTLNAME backprop_activations1_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME backprop_dactivations1_RAM_AUTO_1R1W RTLNAME backprop_dactivations1_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME backprop_delta_weights1_RAM_AUTO_1R1W RTLNAME backprop_delta_weights1_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME backprop_delta_weights2_RAM_AUTO_1R1W RTLNAME backprop_delta_weights2_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME backprop_delta_weights3_RAM_AUTO_1R1W RTLNAME backprop_delta_weights3_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+    }
+  }
+}

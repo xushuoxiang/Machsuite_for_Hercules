@@ -1,0 +1,3647 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtex7</ProductFamily>
+        <Part>xc7v585t-ffg1761-2</Part>
+        <TopModelName>backprop</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.697</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>4489999</Best-caseLatency>
+            <Average-caseLatency>4489999</Average-caseLatency>
+            <Worst-caseLatency>4489999</Worst-caseLatency>
+            <Best-caseRealTimeLatency>44.900 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>44.900 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>44.900 ms</Worst-caseRealTimeLatency>
+            <Interval-min>4490000</Interval-min>
+            <Interval-max>4490000</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_264_1>
+                <TripCount>163</TripCount>
+                <Latency>4489998</Latency>
+                <AbsoluteTimeLatency>44899980</AbsoluteTimeLatency>
+                <IterationLatency>27546</IterationLatency>
+                <InstanceList/>
+            </VITIS_LOOP_264_1>
+        </SummaryOfLoopLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>44</BRAM_18K>
+            <DSP>110</DSP>
+            <FF>65748</FF>
+            <LUT>35889</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>1590</BRAM_18K>
+            <DSP>1260</DSP>
+            <FF>728400</FF>
+            <LUT>364200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>backprop</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>backprop</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>backprop</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>backprop</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>backprop</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>backprop</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights1_address0</name>
+            <Object>weights1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights1_ce0</name>
+            <Object>weights1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights1_we0</name>
+            <Object>weights1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights1_d0</name>
+            <Object>weights1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights1_q0</name>
+            <Object>weights1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights1_address1</name>
+            <Object>weights1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights1_ce1</name>
+            <Object>weights1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights1_q1</name>
+            <Object>weights1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights2_address0</name>
+            <Object>weights2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>12</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights2_ce0</name>
+            <Object>weights2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights2_we0</name>
+            <Object>weights2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights2_d0</name>
+            <Object>weights2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights2_q0</name>
+            <Object>weights2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights2_address1</name>
+            <Object>weights2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>12</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights2_ce1</name>
+            <Object>weights2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights2_q1</name>
+            <Object>weights2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights3_address0</name>
+            <Object>weights3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights3_ce0</name>
+            <Object>weights3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights3_we0</name>
+            <Object>weights3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights3_d0</name>
+            <Object>weights3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights3_q0</name>
+            <Object>weights3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights3_address1</name>
+            <Object>weights3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights3_ce1</name>
+            <Object>weights3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights3_q1</name>
+            <Object>weights3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases1_address0</name>
+            <Object>biases1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases1_ce0</name>
+            <Object>biases1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases1_we0</name>
+            <Object>biases1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases1_d0</name>
+            <Object>biases1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases1_q0</name>
+            <Object>biases1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases1_address1</name>
+            <Object>biases1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases1_ce1</name>
+            <Object>biases1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases1_q1</name>
+            <Object>biases1</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases2_address0</name>
+            <Object>biases2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases2_ce0</name>
+            <Object>biases2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases2_we0</name>
+            <Object>biases2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases2_d0</name>
+            <Object>biases2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases2_q0</name>
+            <Object>biases2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases2_address1</name>
+            <Object>biases2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases2_ce1</name>
+            <Object>biases2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases2_q1</name>
+            <Object>biases2</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases3_address0</name>
+            <Object>biases3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases3_ce0</name>
+            <Object>biases3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases3_we0</name>
+            <Object>biases3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases3_d0</name>
+            <Object>biases3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases3_q0</name>
+            <Object>biases3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases3_address1</name>
+            <Object>biases3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases3_ce1</name>
+            <Object>biases3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>biases3_q1</name>
+            <Object>biases3</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_data_address0</name>
+            <Object>training_data</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>12</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_data_ce0</name>
+            <Object>training_data</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_data_q0</name>
+            <Object>training_data</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_data_address1</name>
+            <Object>training_data</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>12</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_data_ce1</name>
+            <Object>training_data</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_data_q1</name>
+            <Object>training_data</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_targets_address0</name>
+            <Object>training_targets</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>9</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_targets_ce0</name>
+            <Object>training_targets</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>training_targets_q0</name>
+            <Object>training_targets</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="4">
+            <ModuleName>backprop</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_265_2_fu_2623</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_265_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2623</ID>
+                    <BindInstances>add_ln265_fu_166_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_38_1_fu_2635</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_38_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2635</ID>
+                    <BindInstances>add_ln38_fu_516_p2 mul_6ns_5ns_10_1_1_U13 add_ln41_fu_365_p2 add_ln41_1_fu_376_p2 add_ln41_2_fu_386_p2 add_ln41_3_fu_406_p2 add_ln41_4_fu_416_p2 add_ln41_5_fu_436_p2 add_ln41_6_fu_446_p2 add_ln41_7_fu_466_p2 add_ln41_8_fu_476_p2 add_ln41_9_fu_496_p2 add_ln41_10_fu_506_p2 add_ln41_11_fu_531_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_28_1_fu_2655</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_28_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2655</ID>
+                    <BindInstances>add_ln28_fu_88_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_18_1_fu_2662</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_18_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2662</ID>
+                    <BindInstances>add_ln18_fu_108_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_52_1_fu_2668</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_52_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2668</ID>
+                    <BindInstances>add_ln52_fu_1316_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_28_11_fu_2741</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_28_11</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2741</ID>
+                    <BindInstances>add_ln28_fu_88_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_18_12_fu_2748</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_18_12</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2748</ID>
+                    <BindInstances>add_ln18_fu_108_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_66_1_fu_2754</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_66_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2754</ID>
+                    <BindInstances>add_ln66_fu_1380_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_28_13_fu_2832</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_28_13</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2832</ID>
+                    <BindInstances>add_ln28_fu_158_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_18_14_fu_2844</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_18_14</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2844</ID>
+                    <BindInstances>add_ln18_fu_236_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_8_1_fu_2860</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_8_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2860</ID>
+                    <BindInstances>add_ln8_fu_105_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_11_2_fu_2868</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_11_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2868</ID>
+                    <BindInstances>add_ln11_fu_171_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_80_1_fu_2882</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_80_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2882</ID>
+                    <BindInstances>add_ln80_fu_217_p2 add_ln81_fu_227_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_89_1_fu_2901</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_89_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2901</ID>
+                    <BindInstances>add_ln89_fu_142_p2 empty_38_fu_172_p2 add_ln91_fu_183_p2 add_ln91_1_fu_194_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_101_1_fu_2910</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_101_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2910</ID>
+                    <BindInstances>add_ln101_fu_173_p2 sub_ln104_fu_195_p2 add_ln104_fu_206_p2 add_ln104_1_fu_222_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_114_1_fu_2921</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_114_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2921</ID>
+                    <BindInstances>add_ln114_fu_1244_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_126_1_fu_2993</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_126_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2993</ID>
+                    <BindInstances>add_ln126_fu_1340_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_backprop_Pipeline_VITIS_LOOP_139_1_fu_3067</InstName>
+                    <ModuleName>backprop_Pipeline_VITIS_LOOP_139_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3067</ID>
+                    <BindInstances>add_ln139_fu_1260_p2 arrayidx10_sum231_fu_1270_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_update_weights_1_fu_3141</InstName>
+                    <ModuleName>update_weights_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3141</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2_fu_110</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>110</ID>
+                            <BindInstances>add_ln163_fu_150_p2 add_ln163_1_fu_176_p2 add_ln165_fu_202_p2 add_ln164_fu_214_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_169_3_fu_119</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_169_3</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>119</ID>
+                            <BindInstances>add_ln169_fu_116_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8_fu_128</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>128</ID>
+                            <BindInstances>add_ln189_fu_146_p2 add_ln189_1_fu_172_p2 add_ln191_fu_202_p2 dadddsub_64ns_64ns_64_5_full_dsp_1_U502 dadddsub_64ns_64ns_64_5_full_dsp_1_U502 add_ln190_fu_214_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_195_9_fu_137</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_195_9</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>137</ID>
+                            <BindInstances>add_ln195_fu_116_p2 dadddsub_64ns_64ns_64_5_full_dsp_1_U507 dadddsub_64ns_64ns_64_5_full_dsp_1_U507</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14_fu_146</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>146</ID>
+                            <BindInstances>empty_34_fu_161_p2 add_ln215_fu_173_p2 add_ln215_1_fu_196_p2 p_mid131_fu_218_p2 add_ln217_fu_236_p2 dadddsub_64ns_64ns_64_5_full_dsp_1_U518 dadddsub_64ns_64ns_64_5_full_dsp_1_U518 add_ln216_fu_248_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_221_15_fu_155</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_221_15</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>155</ID>
+                            <BindInstances>add_ln221_fu_126_p2 dmul_64ns_64ns_64_5_max_dsp_1_U524 dadddsub_64ns_64ns_64_5_full_dsp_1_U523 dmul_64ns_64ns_64_5_max_dsp_1_U524 dadddsub_64ns_64ns_64_5_full_dsp_1_U523</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5_fu_168</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>168</ID>
+                            <BindInstances>add_ln177_fu_115_p2 add_ln177_1_fu_141_p2 add_ln178_fu_172_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_182_6_fu_175</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_182_6</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>175</ID>
+                            <BindInstances>add_ln182_fu_83_p2 ddiv_64ns_64ns_64_22_no_dsp_1_U499</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11_fu_182</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>182</ID>
+                            <BindInstances>add_ln203_fu_111_p2 add_ln203_1_fu_137_p2 ddiv_64ns_64ns_64_22_no_dsp_1_U512 add_ln204_fu_172_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_208_12_fu_189</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_208_12</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>189</ID>
+                            <BindInstances>add_ln208_fu_83_p2 ddiv_64ns_64ns_64_22_no_dsp_1_U515</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17_fu_196</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>196</ID>
+                            <BindInstances>sub_ln231_fu_128_p2 add_ln229_fu_140_p2 add_ln229_1_fu_163_p2 sub_ln231_1_fu_185_p2 add_ln231_fu_211_p2 ddiv_64ns_64ns_64_22_no_dsp_1_U531 add_ln230_fu_222_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_update_weights_1_Pipeline_VITIS_LOOP_234_18_fu_203</InstName>
+                            <ModuleName>update_weights_1_Pipeline_VITIS_LOOP_234_18</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>203</ID>
+                            <BindInstances>add_ln234_fu_83_p2 ddiv_64ns_64ns_64_22_no_dsp_1_U534</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>dsqrt_64ns_64ns_64_21_no_dsp_1_U537 dsqrt_64ns_64ns_64_21_no_dsp_1_U538 dsqrt_64ns_64ns_64_21_no_dsp_1_U539 dsqrt_64ns_64ns_64_21_no_dsp_1_U540 dsqrt_64ns_64ns_64_21_no_dsp_1_U541 dsqrt_64ns_64ns_64_21_no_dsp_1_U542</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>activations1_U activations2_U dactivations1_U dmul_64ns_64ns_64_5_max_dsp_1_U568 dadddsub_64ns_64ns_64_5_full_dsp_1_U566 delta_weights2_U delta_weights3_U oracle_activations1_U oracle_activations2_U add_ln264_1_fu_3181_p2 dadddsub_64ns_64ns_64_5_full_dsp_1_U566 add_ln41_1_fu_3226_p2 dmul_64ns_64ns_64_5_max_dsp_1_U569 dadddsub_64ns_64ns_64_5_full_dsp_1_U566 dmul_64ns_64ns_64_5_max_dsp_1_U568 dadddsub_64ns_64ns_64_5_full_dsp_1_U566 add_ln41_11_fu_3276_p2 dmul_64ns_64ns_64_5_max_dsp_1_U572 add_ln41_12_fu_3296_p2 dmul_64ns_64ns_64_5_max_dsp_1_U568 dadddsub_64ns_64ns_64_5_full_dsp_1_U567 dmul_64ns_64ns_64_5_max_dsp_1_U569 dadddsub_64ns_64ns_64_5_full_dsp_1_U567 sub_ln81_fu_3541_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_265_2</Name>
+            <Loops>
+                <VITIS_LOOP_265_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.130</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>66</Best-caseLatency>
+                    <Average-caseLatency>66</Average-caseLatency>
+                    <Worst-caseLatency>66</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.660 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.660 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.660 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>66</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_265_2>
+                        <Name>VITIS_LOOP_265_2</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>64</Latency>
+                        <AbsoluteTimeLatency>0.640 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_265_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>202</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>493</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_265_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln265_fu_166_p2" SOURCE="backprop.c:265" URAM="0" VARIABLE="add_ln265"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_38_1</Name>
+            <Loops>
+                <VITIS_LOOP_38_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.697</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>515</Best-caseLatency>
+                    <Average-caseLatency>515</Average-caseLatency>
+                    <Worst-caseLatency>515</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.150 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.150 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.150 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>515</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_38_1>
+                        <Name>VITIS_LOOP_38_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>513</Latency>
+                        <AbsoluteTimeLatency>5.130 us</AbsoluteTimeLatency>
+                        <PipelineII>7</PipelineII>
+                        <PipelineDepth>73</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_38_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>2613</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1128</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_fu_516_p2" SOURCE="backprop.c:38" URAM="0" VARIABLE="add_ln38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_5ns_10_1_1_U13" SOURCE="backprop.c:41" URAM="0" VARIABLE="mul_ln41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_365_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_1_fu_376_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_2_fu_386_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_3_fu_406_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_4_fu_416_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_5_fu_436_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_6_fu_446_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_7_fu_466_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_8_fu_476_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_9_fu_496_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_10_fu_506_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_11_fu_531_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_11"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_28_1</Name>
+            <Loops>
+                <VITIS_LOOP_28_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>5.865</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>72</Best-caseLatency>
+                    <Average-caseLatency>72</Average-caseLatency>
+                    <Worst-caseLatency>72</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.720 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.720 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.720 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>72</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_28_1>
+                        <Name>VITIS_LOOP_28_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>70</Latency>
+                        <AbsoluteTimeLatency>0.700 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>8</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_28_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>284</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>95</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_88_p2" SOURCE="backprop.c:28" URAM="0" VARIABLE="add_ln28"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_18_1</Name>
+            <Loops>
+                <VITIS_LOOP_18_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>107</Best-caseLatency>
+                    <Average-caseLatency>107</Average-caseLatency>
+                    <Worst-caseLatency>107</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.070 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.070 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.070 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>107</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_18_1>
+                        <Name>VITIS_LOOP_18_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>105</Latency>
+                        <AbsoluteTimeLatency>1.050 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>43</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_18_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>745</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>224</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_108_p2" SOURCE="backprop.c:18" URAM="0" VARIABLE="add_ln18"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_52_1</Name>
+            <Loops>
+                <VITIS_LOOP_52_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.671</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2345</Best-caseLatency>
+                    <Average-caseLatency>2345</Average-caseLatency>
+                    <Worst-caseLatency>2345</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>23.450 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>23.450 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>23.450 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2345</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_52_1>
+                        <Name>VITIS_LOOP_52_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>2343</Latency>
+                        <AbsoluteTimeLatency>23.430 us</AbsoluteTimeLatency>
+                        <PipelineII>32</PipelineII>
+                        <PipelineDepth>328</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_52_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>8842</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>4052</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_52_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_fu_1316_p2" SOURCE="backprop.c:52" URAM="0" VARIABLE="add_ln52"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_28_11</Name>
+            <Loops>
+                <VITIS_LOOP_28_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>5.865</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>72</Best-caseLatency>
+                    <Average-caseLatency>72</Average-caseLatency>
+                    <Worst-caseLatency>72</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.720 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.720 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.720 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>72</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_28_1>
+                        <Name>VITIS_LOOP_28_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>70</Latency>
+                        <AbsoluteTimeLatency>0.700 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>8</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_28_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>284</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>95</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_88_p2" SOURCE="backprop.c:28" URAM="0" VARIABLE="add_ln28"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_18_12</Name>
+            <Loops>
+                <VITIS_LOOP_18_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>107</Best-caseLatency>
+                    <Average-caseLatency>107</Average-caseLatency>
+                    <Worst-caseLatency>107</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.070 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.070 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.070 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>107</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_18_1>
+                        <Name>VITIS_LOOP_18_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>105</Latency>
+                        <AbsoluteTimeLatency>1.050 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>43</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_18_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>745</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>224</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_108_p2" SOURCE="backprop.c:18" URAM="0" VARIABLE="add_ln18"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_66_1</Name>
+            <Loops>
+                <VITIS_LOOP_66_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.671</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>392</Best-caseLatency>
+                    <Average-caseLatency>392</Average-caseLatency>
+                    <Worst-caseLatency>392</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.920 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.920 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.920 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>392</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_66_1>
+                        <Name>VITIS_LOOP_66_1</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>390</Latency>
+                        <AbsoluteTimeLatency>3.900 us</AbsoluteTimeLatency>
+                        <PipelineII>32</PipelineII>
+                        <PipelineDepth>327</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_66_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>9020</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>3820</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_fu_1380_p2" SOURCE="backprop.c:66" URAM="0" VARIABLE="add_ln66"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_28_13</Name>
+            <Loops>
+                <VITIS_LOOP_28_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.013</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>18</Best-caseLatency>
+                    <Average-caseLatency>18</Average-caseLatency>
+                    <Worst-caseLatency>18</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.180 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.180 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.180 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>18</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_28_1>
+                        <Name>VITIS_LOOP_28_1</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>16</Latency>
+                        <AbsoluteTimeLatency>0.160 us</AbsoluteTimeLatency>
+                        <PipelineII>5</PipelineII>
+                        <PipelineDepth>6</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_28_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>205</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>141</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_158_p2" SOURCE="backprop.c:28" URAM="0" VARIABLE="add_ln28"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_18_14</Name>
+            <Loops>
+                <VITIS_LOOP_18_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>125</Best-caseLatency>
+                    <Average-caseLatency>125</Average-caseLatency>
+                    <Worst-caseLatency>125</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.250 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.250 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.250 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>125</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_18_1>
+                        <Name>VITIS_LOOP_18_1</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>123</Latency>
+                        <AbsoluteTimeLatency>1.230 us</AbsoluteTimeLatency>
+                        <PipelineII>41</PipelineII>
+                        <PipelineDepth>41</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_18_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>754</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>425</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_236_p2" SOURCE="backprop.c:18" URAM="0" VARIABLE="add_ln18"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_8_1</Name>
+            <Loops>
+                <VITIS_LOOP_8_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.015</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>28</Best-caseLatency>
+                    <Average-caseLatency>28</Average-caseLatency>
+                    <Worst-caseLatency>28</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.280 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.280 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.280 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>28</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_8_1>
+                        <Name>VITIS_LOOP_8_1</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>26</Latency>
+                        <AbsoluteTimeLatency>0.260 us</AbsoluteTimeLatency>
+                        <PipelineII>4</PipelineII>
+                        <PipelineDepth>19</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_8_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>272</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>250</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_8_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln8_fu_105_p2" SOURCE="backprop.c:8" URAM="0" VARIABLE="add_ln8"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_11_2</Name>
+            <Loops>
+                <VITIS_LOOP_11_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.132</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>39</Best-caseLatency>
+                    <Average-caseLatency>39</Average-caseLatency>
+                    <Worst-caseLatency>39</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.390 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.390 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.390 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>39</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_11_2>
+                        <Name>VITIS_LOOP_11_2</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>37</Latency>
+                        <AbsoluteTimeLatency>0.370 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>36</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_11_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>524</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>227</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_11_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln11_fu_171_p2" SOURCE="backprop.c:11" URAM="0" VARIABLE="add_ln11"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_80_1</Name>
+            <Loops>
+                <VITIS_LOOP_80_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>16</Best-caseLatency>
+                    <Average-caseLatency>16</Average-caseLatency>
+                    <Worst-caseLatency>16</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.160 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.160 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.160 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>16</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_80_1>
+                        <Name>VITIS_LOOP_80_1</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>14</Latency>
+                        <AbsoluteTimeLatency>0.140 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>13</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_80_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>606</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>256</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln80_fu_217_p2" SOURCE="backprop.c:80" URAM="0" VARIABLE="add_ln80"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln81_fu_227_p2" SOURCE="backprop.c:81" URAM="0" VARIABLE="add_ln81"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_89_1</Name>
+            <Loops>
+                <VITIS_LOOP_89_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>136</Best-caseLatency>
+                    <Average-caseLatency>136</Average-caseLatency>
+                    <Worst-caseLatency>136</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.360 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.360 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.360 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>136</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_89_1>
+                        <Name>VITIS_LOOP_89_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>134</Latency>
+                        <AbsoluteTimeLatency>1.340 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>9</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_89_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>354</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>269</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_89_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln89_fu_142_p2" SOURCE="backprop.c:89" URAM="0" VARIABLE="add_ln89"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_89_1" OPTYPE="sub" PRAGMA="" RTLNAME="empty_38_fu_172_p2" SOURCE="" URAM="0" VARIABLE="empty_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_89_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln91_fu_183_p2" SOURCE="backprop.c:91" URAM="0" VARIABLE="add_ln91"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_89_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln91_1_fu_194_p2" SOURCE="backprop.c:91" URAM="0" VARIABLE="add_ln91_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_101_1</Name>
+            <Loops>
+                <VITIS_LOOP_101_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>156</Best-caseLatency>
+                    <Average-caseLatency>156</Average-caseLatency>
+                    <Worst-caseLatency>156</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.560 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.560 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.560 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>156</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_101_1>
+                        <Name>VITIS_LOOP_101_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>154</Latency>
+                        <AbsoluteTimeLatency>1.540 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>29</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_101_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>1021</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>516</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_101_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln101_fu_173_p2" SOURCE="backprop.c:101" URAM="0" VARIABLE="add_ln101"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_101_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln104_fu_195_p2" SOURCE="backprop.c:104" URAM="0" VARIABLE="sub_ln104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_101_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln104_fu_206_p2" SOURCE="backprop.c:104" URAM="0" VARIABLE="add_ln104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_101_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln104_1_fu_222_p2" SOURCE="backprop.c:104" URAM="0" VARIABLE="add_ln104_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_114_1</Name>
+            <Loops>
+                <VITIS_LOOP_114_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.671</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2056</Best-caseLatency>
+                    <Average-caseLatency>2056</Average-caseLatency>
+                    <Worst-caseLatency>2056</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>20.560 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>20.560 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>20.560 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2056</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_114_1>
+                        <Name>VITIS_LOOP_114_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>2054</Latency>
+                        <AbsoluteTimeLatency>20.540 us</AbsoluteTimeLatency>
+                        <PipelineII>32</PipelineII>
+                        <PipelineDepth>39</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_114_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>247</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1617</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_114_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln114_fu_1244_p2" SOURCE="backprop.c:114" URAM="0" VARIABLE="add_ln114"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_126_1</Name>
+            <Loops>
+                <VITIS_LOOP_126_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.671</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2350</Best-caseLatency>
+                    <Average-caseLatency>2350</Average-caseLatency>
+                    <Worst-caseLatency>2350</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>23.500 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>23.500 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>23.500 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2350</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_126_1>
+                        <Name>VITIS_LOOP_126_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>2348</Latency>
+                        <AbsoluteTimeLatency>23.480 us</AbsoluteTimeLatency>
+                        <PipelineII>32</PipelineII>
+                        <PipelineDepth>333</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_126_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>8977</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>4052</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_126_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln126_fu_1340_p2" SOURCE="backprop.c:126" URAM="0" VARIABLE="add_ln126"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop_Pipeline_VITIS_LOOP_139_1</Name>
+            <Loops>
+                <VITIS_LOOP_139_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.671</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>424</Best-caseLatency>
+                    <Average-caseLatency>424</Average-caseLatency>
+                    <Worst-caseLatency>424</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>4.240 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>4.240 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>4.240 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>424</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_139_1>
+                        <Name>VITIS_LOOP_139_1</Name>
+                        <TripCount>13</TripCount>
+                        <Latency>422</Latency>
+                        <AbsoluteTimeLatency>4.220 us</AbsoluteTimeLatency>
+                        <PipelineII>32</PipelineII>
+                        <PipelineDepth>39</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_139_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>304</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1533</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_139_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln139_fu_1260_p2" SOURCE="backprop.c:139" URAM="0" VARIABLE="add_ln139"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_139_1" OPTYPE="add" PRAGMA="" RTLNAME="arrayidx10_sum231_fu_1270_p2" SOURCE="backprop.c:139" URAM="0" VARIABLE="arrayidx10_sum231"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_163_1_VITIS_LOOP_164_2</Name>
+            <Loops>
+                <VITIS_LOOP_163_1_VITIS_LOOP_164_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3347</Best-caseLatency>
+                    <Average-caseLatency>3347</Average-caseLatency>
+                    <Worst-caseLatency>3347</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>33.470 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>33.470 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>33.470 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3347</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_163_1_VITIS_LOOP_164_2>
+                        <Name>VITIS_LOOP_163_1_VITIS_LOOP_164_2</Name>
+                        <TripCount>832</TripCount>
+                        <Latency>3345</Latency>
+                        <AbsoluteTimeLatency>33.450 us</AbsoluteTimeLatency>
+                        <PipelineII>4</PipelineII>
+                        <PipelineDepth>22</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_163_1_VITIS_LOOP_164_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>559</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>390</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_163_1_VITIS_LOOP_164_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln163_fu_150_p2" SOURCE="backprop.c:163" URAM="0" VARIABLE="add_ln163"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_163_1_VITIS_LOOP_164_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln163_1_fu_176_p2" SOURCE="backprop.c:163" URAM="0" VARIABLE="add_ln163_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_163_1_VITIS_LOOP_164_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln165_fu_202_p2" SOURCE="backprop.c:165" URAM="0" VARIABLE="add_ln165"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_163_1_VITIS_LOOP_164_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln164_fu_214_p2" SOURCE="backprop.c:164" URAM="0" VARIABLE="add_ln164"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_169_3</Name>
+            <Loops>
+                <VITIS_LOOP_169_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>275</Best-caseLatency>
+                    <Average-caseLatency>275</Average-caseLatency>
+                    <Worst-caseLatency>275</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.750 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.750 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.750 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>275</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_169_3>
+                        <Name>VITIS_LOOP_169_3</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>273</Latency>
+                        <AbsoluteTimeLatency>2.730 us</AbsoluteTimeLatency>
+                        <PipelineII>4</PipelineII>
+                        <PipelineDepth>22</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_169_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>541</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>285</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_169_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln169_fu_116_p2" SOURCE="backprop.c:169" URAM="0" VARIABLE="add_ln169"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_177_4_VITIS_LOOP_178_5</Name>
+            <Loops>
+                <VITIS_LOOP_177_4_VITIS_LOOP_178_5/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.288</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>857</Best-caseLatency>
+                    <Average-caseLatency>857</Average-caseLatency>
+                    <Worst-caseLatency>857</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>8.570 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>8.570 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>8.570 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>857</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_177_4_VITIS_LOOP_178_5>
+                        <Name>VITIS_LOOP_177_4_VITIS_LOOP_178_5</Name>
+                        <TripCount>832</TripCount>
+                        <Latency>855</Latency>
+                        <AbsoluteTimeLatency>8.550 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>25</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_177_4_VITIS_LOOP_178_5>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>272</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>183</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_177_4_VITIS_LOOP_178_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln177_fu_115_p2" SOURCE="backprop.c:177" URAM="0" VARIABLE="add_ln177"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_177_4_VITIS_LOOP_178_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln177_1_fu_141_p2" SOURCE="backprop.c:177" URAM="0" VARIABLE="add_ln177_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_177_4_VITIS_LOOP_178_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln178_fu_172_p2" SOURCE="backprop.c:178" URAM="0" VARIABLE="add_ln178"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_182_6</Name>
+            <Loops>
+                <VITIS_LOOP_182_6/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.288</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>89</Best-caseLatency>
+                    <Average-caseLatency>89</Average-caseLatency>
+                    <Worst-caseLatency>89</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.890 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.890 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.890 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>89</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_182_6>
+                        <Name>VITIS_LOOP_182_6</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>87</Latency>
+                        <AbsoluteTimeLatency>0.870 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>25</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_182_6>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>254</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>95</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_182_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln182_fu_83_p2" SOURCE="backprop.c:182" URAM="0" VARIABLE="add_ln182"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="21" LOOP="VITIS_LOOP_182_6" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_22_no_dsp_1_U499" SOURCE="backprop.c:183" URAM="0" VARIABLE="div1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_189_7_VITIS_LOOP_190_8</Name>
+            <Loops>
+                <VITIS_LOOP_189_7_VITIS_LOOP_190_8/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>16403</Best-caseLatency>
+                    <Average-caseLatency>16403</Average-caseLatency>
+                    <Worst-caseLatency>16403</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.164 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.164 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.164 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>16403</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_189_7_VITIS_LOOP_190_8>
+                        <Name>VITIS_LOOP_189_7_VITIS_LOOP_190_8</Name>
+                        <TripCount>4096</TripCount>
+                        <Latency>16401</Latency>
+                        <AbsoluteTimeLatency>0.164 ms</AbsoluteTimeLatency>
+                        <PipelineII>4</PipelineII>
+                        <PipelineDepth>22</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_189_7_VITIS_LOOP_190_8>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>3</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>1012</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1182</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_189_7_VITIS_LOOP_190_8" OPTYPE="add" PRAGMA="" RTLNAME="add_ln189_fu_146_p2" SOURCE="backprop.c:189" URAM="0" VARIABLE="add_ln189"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_189_7_VITIS_LOOP_190_8" OPTYPE="add" PRAGMA="" RTLNAME="add_ln189_1_fu_172_p2" SOURCE="backprop.c:189" URAM="0" VARIABLE="add_ln189_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_189_7_VITIS_LOOP_190_8" OPTYPE="add" PRAGMA="" RTLNAME="add_ln191_fu_202_p2" SOURCE="backprop.c:191" URAM="0" VARIABLE="add_ln191"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_189_7_VITIS_LOOP_190_8" OPTYPE="dsub" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U502" SOURCE="backprop.c:191" URAM="0" VARIABLE="sub3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_189_7_VITIS_LOOP_190_8" OPTYPE="dsub" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U502" SOURCE="backprop.c:192" URAM="0" VARIABLE="norm_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_189_7_VITIS_LOOP_190_8" OPTYPE="add" PRAGMA="" RTLNAME="add_ln190_fu_214_p2" SOURCE="backprop.c:190" URAM="0" VARIABLE="add_ln190"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_195_9</Name>
+            <Loops>
+                <VITIS_LOOP_195_9/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>275</Best-caseLatency>
+                    <Average-caseLatency>275</Average-caseLatency>
+                    <Worst-caseLatency>275</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.750 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.750 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.750 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>275</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_195_9>
+                        <Name>VITIS_LOOP_195_9</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>273</Latency>
+                        <AbsoluteTimeLatency>2.730 us</AbsoluteTimeLatency>
+                        <PipelineII>4</PipelineII>
+                        <PipelineDepth>22</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_195_9>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>3</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>986</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1067</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_195_9" OPTYPE="add" PRAGMA="" RTLNAME="add_ln195_fu_116_p2" SOURCE="backprop.c:195" URAM="0" VARIABLE="add_ln195"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_195_9" OPTYPE="dsub" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U507" SOURCE="backprop.c:196" URAM="0" VARIABLE="sub2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_195_9" OPTYPE="dsub" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U507" SOURCE="backprop.c:197" URAM="0" VARIABLE="bias_norm_2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_203_10_VITIS_LOOP_204_11</Name>
+            <Loops>
+                <VITIS_LOOP_203_10_VITIS_LOOP_204_11/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.288</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4121</Best-caseLatency>
+                    <Average-caseLatency>4121</Average-caseLatency>
+                    <Worst-caseLatency>4121</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>41.210 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>41.210 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>41.210 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>4121</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_203_10_VITIS_LOOP_204_11>
+                        <Name>VITIS_LOOP_203_10_VITIS_LOOP_204_11</Name>
+                        <TripCount>4096</TripCount>
+                        <Latency>4119</Latency>
+                        <AbsoluteTimeLatency>41.190 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>25</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_203_10_VITIS_LOOP_204_11>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>280</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>191</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_203_10_VITIS_LOOP_204_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln203_fu_111_p2" SOURCE="backprop.c:203" URAM="0" VARIABLE="add_ln203"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_203_10_VITIS_LOOP_204_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln203_1_fu_137_p2" SOURCE="backprop.c:203" URAM="0" VARIABLE="add_ln203_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="21" LOOP="VITIS_LOOP_203_10_VITIS_LOOP_204_11" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_22_no_dsp_1_U512" SOURCE="backprop.c:205" URAM="0" VARIABLE="div3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_203_10_VITIS_LOOP_204_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln204_fu_172_p2" SOURCE="backprop.c:204" URAM="0" VARIABLE="add_ln204"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_208_12</Name>
+            <Loops>
+                <VITIS_LOOP_208_12/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.288</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>89</Best-caseLatency>
+                    <Average-caseLatency>89</Average-caseLatency>
+                    <Worst-caseLatency>89</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.890 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.890 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.890 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>89</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_208_12>
+                        <Name>VITIS_LOOP_208_12</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>87</Latency>
+                        <AbsoluteTimeLatency>0.870 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>25</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_208_12>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>254</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>95</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_208_12" OPTYPE="add" PRAGMA="" RTLNAME="add_ln208_fu_83_p2" SOURCE="backprop.c:208" URAM="0" VARIABLE="add_ln208"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="21" LOOP="VITIS_LOOP_208_12" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_22_no_dsp_1_U515" SOURCE="backprop.c:209" URAM="0" VARIABLE="div2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_215_13_VITIS_LOOP_216_14</Name>
+            <Loops>
+                <VITIS_LOOP_215_13_VITIS_LOOP_216_14/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>787</Best-caseLatency>
+                    <Average-caseLatency>787</Average-caseLatency>
+                    <Worst-caseLatency>787</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>7.870 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>7.870 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>7.870 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>787</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_215_13_VITIS_LOOP_216_14>
+                        <Name>VITIS_LOOP_215_13_VITIS_LOOP_216_14</Name>
+                        <TripCount>192</TripCount>
+                        <Latency>785</Latency>
+                        <AbsoluteTimeLatency>7.850 us</AbsoluteTimeLatency>
+                        <PipelineII>4</PipelineII>
+                        <PipelineDepth>22</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_215_13_VITIS_LOOP_216_14>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>3</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>1013</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1198</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_215_13_VITIS_LOOP_216_14" OPTYPE="sub" PRAGMA="" RTLNAME="empty_34_fu_161_p2" SOURCE="backprop.c:215" URAM="0" VARIABLE="empty_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_215_13_VITIS_LOOP_216_14" OPTYPE="add" PRAGMA="" RTLNAME="add_ln215_fu_173_p2" SOURCE="backprop.c:215" URAM="0" VARIABLE="add_ln215"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_215_13_VITIS_LOOP_216_14" OPTYPE="add" PRAGMA="" RTLNAME="add_ln215_1_fu_196_p2" SOURCE="backprop.c:215" URAM="0" VARIABLE="add_ln215_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_215_13_VITIS_LOOP_216_14" OPTYPE="sub" PRAGMA="" RTLNAME="p_mid131_fu_218_p2" SOURCE="backprop.c:215" URAM="0" VARIABLE="p_mid131"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_215_13_VITIS_LOOP_216_14" OPTYPE="add" PRAGMA="" RTLNAME="add_ln217_fu_236_p2" SOURCE="backprop.c:217" URAM="0" VARIABLE="add_ln217"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_215_13_VITIS_LOOP_216_14" OPTYPE="dsub" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U518" SOURCE="backprop.c:217" URAM="0" VARIABLE="sub5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_215_13_VITIS_LOOP_216_14" OPTYPE="dsub" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U518" SOURCE="backprop.c:218" URAM="0" VARIABLE="norm_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_215_13_VITIS_LOOP_216_14" OPTYPE="add" PRAGMA="" RTLNAME="add_ln216_fu_248_p2" SOURCE="backprop.c:216" URAM="0" VARIABLE="add_ln216"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_221_15</Name>
+            <Loops>
+                <VITIS_LOOP_221_15/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>30</Best-caseLatency>
+                    <Average-caseLatency>30</Average-caseLatency>
+                    <Worst-caseLatency>30</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.300 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.300 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.300 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>30</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_221_15>
+                        <Name>VITIS_LOOP_221_15</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>28</Latency>
+                        <AbsoluteTimeLatency>0.280 us</AbsoluteTimeLatency>
+                        <PipelineII>4</PipelineII>
+                        <PipelineDepth>21</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_221_15>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>14</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>1216</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1257</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_221_15" OPTYPE="add" PRAGMA="" RTLNAME="add_ln221_fu_126_p2" SOURCE="backprop.c:221" URAM="0" VARIABLE="add_ln221"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="VITIS_LOOP_221_15" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U524" SOURCE="backprop.c:222" URAM="0" VARIABLE="mul8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_221_15" OPTYPE="dsub" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U523" SOURCE="backprop.c:222" URAM="0" VARIABLE="sub4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="VITIS_LOOP_221_15" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U524" SOURCE="backprop.c:223" URAM="0" VARIABLE="mul9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_221_15" OPTYPE="dsub" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U523" SOURCE="backprop.c:223" URAM="0" VARIABLE="bias_norm_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_229_16_VITIS_LOOP_230_17</Name>
+            <Loops>
+                <VITIS_LOOP_229_16_VITIS_LOOP_230_17/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.288</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>217</Best-caseLatency>
+                    <Average-caseLatency>217</Average-caseLatency>
+                    <Worst-caseLatency>217</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.170 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.170 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.170 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>217</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_229_16_VITIS_LOOP_230_17>
+                        <Name>VITIS_LOOP_229_16_VITIS_LOOP_230_17</Name>
+                        <TripCount>192</TripCount>
+                        <Latency>215</Latency>
+                        <AbsoluteTimeLatency>2.150 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>25</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_229_16_VITIS_LOOP_230_17>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>266</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>226</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_229_16_VITIS_LOOP_230_17" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln231_fu_128_p2" SOURCE="backprop.c:231" URAM="0" VARIABLE="sub_ln231"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_229_16_VITIS_LOOP_230_17" OPTYPE="add" PRAGMA="" RTLNAME="add_ln229_fu_140_p2" SOURCE="backprop.c:229" URAM="0" VARIABLE="add_ln229"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_229_16_VITIS_LOOP_230_17" OPTYPE="add" PRAGMA="" RTLNAME="add_ln229_1_fu_163_p2" SOURCE="backprop.c:229" URAM="0" VARIABLE="add_ln229_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_229_16_VITIS_LOOP_230_17" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln231_1_fu_185_p2" SOURCE="backprop.c:231" URAM="0" VARIABLE="sub_ln231_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_229_16_VITIS_LOOP_230_17" OPTYPE="add" PRAGMA="" RTLNAME="add_ln231_fu_211_p2" SOURCE="backprop.c:231" URAM="0" VARIABLE="add_ln231"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="21" LOOP="VITIS_LOOP_229_16_VITIS_LOOP_230_17" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_22_no_dsp_1_U531" SOURCE="backprop.c:231" URAM="0" VARIABLE="div5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_229_16_VITIS_LOOP_230_17" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_fu_222_p2" SOURCE="backprop.c:230" URAM="0" VARIABLE="add_ln230"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1_Pipeline_VITIS_LOOP_234_18</Name>
+            <Loops>
+                <VITIS_LOOP_234_18/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.288</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>28</Best-caseLatency>
+                    <Average-caseLatency>28</Average-caseLatency>
+                    <Worst-caseLatency>28</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.280 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.280 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.280 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>28</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_234_18>
+                        <Name>VITIS_LOOP_234_18</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>26</Latency>
+                        <AbsoluteTimeLatency>0.260 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>25</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_234_18>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>245</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>88</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_234_18" OPTYPE="add" PRAGMA="" RTLNAME="add_ln234_fu_83_p2" SOURCE="backprop.c:234" URAM="0" VARIABLE="add_ln234"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="21" LOOP="VITIS_LOOP_234_18" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_22_no_dsp_1_U534" SOURCE="backprop.c:235" URAM="0" VARIABLE="div4"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>update_weights_1</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.148</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>20547</Best-caseLatency>
+                    <Average-caseLatency>20547</Average-caseLatency>
+                    <Worst-caseLatency>20547</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.205 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.205 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.205 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>20547</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>23</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>7318</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>6907</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="20" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U537" SOURCE="backprop.c:174" URAM="0" VARIABLE="norm_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="20" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U538" SOURCE="backprop.c:175" URAM="0" VARIABLE="bias_norm"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="20" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U539" SOURCE="backprop.c:200" URAM="0" VARIABLE="norm"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="20" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U540" SOURCE="backprop.c:201" URAM="0" VARIABLE="bias_norm_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="20" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U541" SOURCE="backprop.c:226" URAM="0" VARIABLE="norm_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="20" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_21_no_dsp_1_U542" SOURCE="backprop.c:227" URAM="0" VARIABLE="bias_norm_4"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>backprop</Name>
+            <Loops>
+                <VITIS_LOOP_264_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.697</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4489999</Best-caseLatency>
+                    <Average-caseLatency>4489999</Average-caseLatency>
+                    <Worst-caseLatency>4489999</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>44.900 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>44.900 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>44.900 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>4490000</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_264_1>
+                        <Name>VITIS_LOOP_264_1</Name>
+                        <TripCount>163</TripCount>
+                        <Latency>4489998</Latency>
+                        <AbsoluteTimeLatency>44.900 ms</AbsoluteTimeLatency>
+                        <IterationLatency>27546</IterationLatency>
+                        <PipelineDepth>27546</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_265_2_fu_2623</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_38_1_fu_2635</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_28_1_fu_2655</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_18_1_fu_2662</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_52_1_fu_2668</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_28_11_fu_2741</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_18_12_fu_2748</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_66_1_fu_2754</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_28_13_fu_2832</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_18_14_fu_2844</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_8_1_fu_2860</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_11_2_fu_2868</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_80_1_fu_2882</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_89_1_fu_2901</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_101_1_fu_2910</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_114_1_fu_2921</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_126_1_fu_2993</Instance>
+                            <Instance>grp_backprop_Pipeline_VITIS_LOOP_139_1_fu_3067</Instance>
+                            <Instance>grp_update_weights_1_fu_3141</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_264_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>44</BRAM_18K>
+                    <AVAIL_BRAM>1590</AVAIL_BRAM>
+                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <DSP>110</DSP>
+                    <AVAIL_DSP>1260</AVAIL_DSP>
+                    <UTIL_DSP>8</UTIL_DSP>
+                    <FF>65748</FF>
+                    <AVAIL_FF>728400</AVAIL_FF>
+                    <UTIL_FF>9</UTIL_FF>
+                    <LUT>35889</LUT>
+                    <AVAIL_LUT>364200</AVAIL_LUT>
+                    <UTIL_LUT>9</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="activations1_U" SOURCE="backprop.c:249" URAM="0" VARIABLE="activations1"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="activations2_U" SOURCE="backprop.c:250" URAM="0" VARIABLE="activations2"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="dactivations1_U" SOURCE="backprop.c:252" URAM="0" VARIABLE="dactivations1"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U568" SOURCE="backprop.c:253" URAM="0" VARIABLE="dactivations2"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U566" SOURCE="backprop.c:258" URAM="0" VARIABLE="delta_weights1"/>
+                <BindNode BINDTYPE="storage" BRAM="16" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="delta_weights2_U" SOURCE="backprop.c:259" URAM="0" VARIABLE="delta_weights2"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="delta_weights3_U" SOURCE="backprop.c:260" URAM="0" VARIABLE="delta_weights3"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="oracle_activations1_U" SOURCE="backprop.c:261" URAM="0" VARIABLE="oracle_activations1"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="oracle_activations2_U" SOURCE="backprop.c:262" URAM="0" VARIABLE="oracle_activations2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln264_1_fu_3181_p2" SOURCE="backprop.c:264" URAM="0" VARIABLE="add_ln264_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U566" SOURCE="backprop.c:264" URAM="0" VARIABLE="add_ln264"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_1_fu_3226_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U569" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U566" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U568" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U566" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_11_fu_3276_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U572" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_12_fu_3296_p2" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U568" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U567" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U569" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="add" PRAGMA="" RTLNAME="dadddsub_64ns_64ns_64_5_full_dsp_1_U567" SOURCE="backprop.c:41" URAM="0" VARIABLE="add_ln41_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_264_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln81_fu_3541_p2" SOURCE="backprop.c:81" URAM="0" VARIABLE="sub_ln81"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="weights1" index="0" direction="inout" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="weights1_address0" name="weights1_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="weights1_ce0" name="weights1_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights1_we0" name="weights1_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights1_d0" name="weights1_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="weights1_q0" name="weights1_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights1_address1" name="weights1_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="weights1_ce1" name="weights1_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights1_q1" name="weights1_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="weights2" index="1" direction="inout" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="weights2_address0" name="weights2_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="weights2_ce0" name="weights2_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights2_we0" name="weights2_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights2_d0" name="weights2_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="weights2_q0" name="weights2_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights2_address1" name="weights2_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="weights2_ce1" name="weights2_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights2_q1" name="weights2_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="weights3" index="2" direction="inout" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="weights3_address0" name="weights3_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="weights3_ce0" name="weights3_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights3_we0" name="weights3_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights3_d0" name="weights3_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="weights3_q0" name="weights3_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights3_address1" name="weights3_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="weights3_ce1" name="weights3_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="weights3_q1" name="weights3_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="biases1" index="3" direction="inout" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="biases1_address0" name="biases1_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="biases1_ce0" name="biases1_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases1_we0" name="biases1_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases1_d0" name="biases1_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="biases1_q0" name="biases1_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="biases1_address1" name="biases1_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="biases1_ce1" name="biases1_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases1_q1" name="biases1_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="biases2" index="4" direction="inout" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="biases2_address0" name="biases2_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="biases2_ce0" name="biases2_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases2_we0" name="biases2_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases2_d0" name="biases2_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="biases2_q0" name="biases2_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="biases2_address1" name="biases2_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="biases2_ce1" name="biases2_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases2_q1" name="biases2_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="biases3" index="5" direction="inout" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="biases3_address0" name="biases3_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="biases3_ce0" name="biases3_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases3_we0" name="biases3_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases3_d0" name="biases3_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="biases3_q0" name="biases3_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="biases3_address1" name="biases3_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="biases3_ce1" name="biases3_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="biases3_q1" name="biases3_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="training_data" index="6" direction="in" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="training_data_address0" name="training_data_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="training_data_ce0" name="training_data_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="training_data_q0" name="training_data_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="training_data_address1" name="training_data_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="training_data_ce1" name="training_data_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="training_data_q1" name="training_data_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="training_targets" index="7" direction="in" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="training_targets_address0" name="training_targets_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="training_targets_ce0" name="training_targets_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="training_targets_q0" name="training_targets_q0" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="weights1_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="weights1_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights1_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights1_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights1_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights1_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights1_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights1_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights1_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights1_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="weights1_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights1_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights1_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights1_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights1_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights2_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="12">
+            <portMaps>
+                <portMap portMapName="weights2_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights2_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights2_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights2_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights2_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights2_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights2_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights2_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights2_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="12">
+            <portMaps>
+                <portMap portMapName="weights2_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights2_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights2_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights2_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights2_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights3_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights3_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights3_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights3_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights3_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights3_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights3_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights3_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights3_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights3_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights3_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights3_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights3_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="weights3_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights3_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="weights3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases1_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="biases1_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases1_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases1_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases1_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases1_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases1_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases1_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases1_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases1_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="biases1_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases1_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases1_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases1_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases1_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases2_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="biases2_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases2_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases2_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases2_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases2_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases2_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases2_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases2_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases2_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="biases2_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases2_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases2_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases2_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases2_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases3_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="2">
+            <portMaps>
+                <portMap portMapName="biases3_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases3_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases3_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases3_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases3_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases3_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases3_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases3_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases3_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="2">
+            <portMaps>
+                <portMap portMapName="biases3_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases3_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="biases3_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="biases3_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>biases3_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="biases3"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="training_data_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="12">
+            <portMaps>
+                <portMap portMapName="training_data_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>training_data_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="training_data"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="training_data_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="training_data_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>training_data_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="training_data"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="training_data_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="12">
+            <portMaps>
+                <portMap portMapName="training_data_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>training_data_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="training_data"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="training_data_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="training_data_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>training_data_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="training_data"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="training_targets_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="9">
+            <portMaps>
+                <portMap portMapName="training_targets_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>training_targets_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="training_targets"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="training_targets_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="training_targets_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>training_targets_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="training_targets"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_MEMORY">
+                <table isCollapsed="0">
+                    <keys size="2">Interface, Bitwidth</keys>
+                    <column name="biases1_address0">6, , </column>
+                    <column name="biases1_address1">6, , </column>
+                    <column name="biases1_d0">64, , </column>
+                    <column name="biases1_q0">64, , </column>
+                    <column name="biases1_q1">64, , </column>
+                    <column name="biases2_address0">6, , </column>
+                    <column name="biases2_address1">6, , </column>
+                    <column name="biases2_d0">64, , </column>
+                    <column name="biases2_q0">64, , </column>
+                    <column name="biases2_q1">64, , </column>
+                    <column name="biases3_address0">2, , </column>
+                    <column name="biases3_address1">2, , </column>
+                    <column name="biases3_d0">64, , </column>
+                    <column name="biases3_q0">64, , </column>
+                    <column name="biases3_q1">64, , </column>
+                    <column name="training_data_address0">12, , </column>
+                    <column name="training_data_address1">12, , </column>
+                    <column name="training_data_q0">64, , </column>
+                    <column name="training_data_q1">64, , </column>
+                    <column name="training_targets_address0">9, , </column>
+                    <column name="training_targets_q0">64, , </column>
+                    <column name="weights1_address0">10, , </column>
+                    <column name="weights1_address1">10, , </column>
+                    <column name="weights1_d0">64, , </column>
+                    <column name="weights1_q0">64, , </column>
+                    <column name="weights1_q1">64, , </column>
+                    <column name="weights2_address0">12, , </column>
+                    <column name="weights2_address1">12, , </column>
+                    <column name="weights2_d0">64, , </column>
+                    <column name="weights2_q0">64, , </column>
+                    <column name="weights2_q1">64, , </column>
+                    <column name="weights3_address0">8, , </column>
+                    <column name="weights3_address1">8, , </column>
+                    <column name="weights3_d0">64, , </column>
+                    <column name="weights3_q0">64, , </column>
+                    <column name="weights3_q1">64, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst">reset, ap_rst, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="weights1">inout, double*</column>
+                    <column name="weights2">inout, double*</column>
+                    <column name="weights3">inout, double*</column>
+                    <column name="biases1">inout, double*</column>
+                    <column name="biases2">inout, double*</column>
+                    <column name="biases3">inout, double*</column>
+                    <column name="training_data">in, double*</column>
+                    <column name="training_targets">in, double*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Interface, HW Type, HW Usage</keys>
+                    <column name="weights1">weights1_address0, port, offset, </column>
+                    <column name="weights1">weights1_ce0, port, , </column>
+                    <column name="weights1">weights1_we0, port, , </column>
+                    <column name="weights1">weights1_d0, port, , </column>
+                    <column name="weights1">weights1_q0, port, , </column>
+                    <column name="weights1">weights1_address1, port, offset, </column>
+                    <column name="weights1">weights1_ce1, port, , </column>
+                    <column name="weights1">weights1_q1, port, , </column>
+                    <column name="weights2">weights2_address0, port, offset, </column>
+                    <column name="weights2">weights2_ce0, port, , </column>
+                    <column name="weights2">weights2_we0, port, , </column>
+                    <column name="weights2">weights2_d0, port, , </column>
+                    <column name="weights2">weights2_q0, port, , </column>
+                    <column name="weights2">weights2_address1, port, offset, </column>
+                    <column name="weights2">weights2_ce1, port, , </column>
+                    <column name="weights2">weights2_q1, port, , </column>
+                    <column name="weights3">weights3_address0, port, offset, </column>
+                    <column name="weights3">weights3_ce0, port, , </column>
+                    <column name="weights3">weights3_we0, port, , </column>
+                    <column name="weights3">weights3_d0, port, , </column>
+                    <column name="weights3">weights3_q0, port, , </column>
+                    <column name="weights3">weights3_address1, port, offset, </column>
+                    <column name="weights3">weights3_ce1, port, , </column>
+                    <column name="weights3">weights3_q1, port, , </column>
+                    <column name="biases1">biases1_address0, port, offset, </column>
+                    <column name="biases1">biases1_ce0, port, , </column>
+                    <column name="biases1">biases1_we0, port, , </column>
+                    <column name="biases1">biases1_d0, port, , </column>
+                    <column name="biases1">biases1_q0, port, , </column>
+                    <column name="biases1">biases1_address1, port, offset, </column>
+                    <column name="biases1">biases1_ce1, port, , </column>
+                    <column name="biases1">biases1_q1, port, , </column>
+                    <column name="biases2">biases2_address0, port, offset, </column>
+                    <column name="biases2">biases2_ce0, port, , </column>
+                    <column name="biases2">biases2_we0, port, , </column>
+                    <column name="biases2">biases2_d0, port, , </column>
+                    <column name="biases2">biases2_q0, port, , </column>
+                    <column name="biases2">biases2_address1, port, offset, </column>
+                    <column name="biases2">biases2_ce1, port, , </column>
+                    <column name="biases2">biases2_q1, port, , </column>
+                    <column name="biases3">biases3_address0, port, offset, </column>
+                    <column name="biases3">biases3_ce0, port, , </column>
+                    <column name="biases3">biases3_we0, port, , </column>
+                    <column name="biases3">biases3_d0, port, , </column>
+                    <column name="biases3">biases3_q0, port, , </column>
+                    <column name="biases3">biases3_address1, port, offset, </column>
+                    <column name="biases3">biases3_ce1, port, , </column>
+                    <column name="biases3">biases3_q1, port, , </column>
+                    <column name="training_data">training_data_address0, port, offset, </column>
+                    <column name="training_data">training_data_ce0, port, , </column>
+                    <column name="training_data">training_data_q0, port, , </column>
+                    <column name="training_data">training_data_address1, port, offset, </column>
+                    <column name="training_data">training_data_ce1, port, , </column>
+                    <column name="training_data">training_data_q1, port, , </column>
+                    <column name="training_targets">training_targets_address0, port, offset, </column>
+                    <column name="training_targets">training_targets_ce0, port, , </column>
+                    <column name="training_targets">training_targets_q0, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport/>
+</profile>
+

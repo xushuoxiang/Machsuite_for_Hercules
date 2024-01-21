@@ -3,8 +3,8 @@ ALG=blocked
 
 CFLAGS?=-O3 -Wall -Wno-unused-label
 
-SRCS=$(KERN).c local_support.c ../../common/support.c
-FILES=$(SRCS) $(KERN).h ../../common/support.h
+SRCS=$(KERN).c local_support.c ../../common/support.c ../../common/hercules.c
+FILES=$(SRCS) $(KERN).h ../../common/support.h ../../common/hercules.h
 
 $(KERN): $(FILES) ../../common/harness.c
 	$(CC) $(CFLAGS) -I../../common -o $(KERN) $(SRCS) ../../common/harness.c
@@ -17,7 +17,13 @@ generate: $(FILES) generate.c
 	./generate
 
 hls: $(KERN).c $(KERN).h
-	vitis_hls hls.tcl
+	hls_operation=2 vitis_hls hls.tcl
+
+csynth: $(KERN).c $(KERN).h
+	hls_operation=0 vitis_hls hls.tcl
+
+cosim: $(KERN).c $(KERN).h
+	hls_operation=1 vitis_hls hls.tcl 
 
 clean:
 	rm -f $(KERN) generate output.data *.log -r gemm_syn 
